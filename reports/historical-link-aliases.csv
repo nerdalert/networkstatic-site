@@ -1,0 +1,26 @@
+alias_path,target_permalink,target_wp_id,linked_from_source_wp_ids,evidence
+/2012/02/otv-configuration-notes/,/otv-configuration-notes/,223,1485,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/04/22/nox-openflow-controller-installation-screencast/,/nox-openflow-controller-installation-screencast/,441,128|497,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/04/23/openstack-essex-scripted-installation-on-ubuntu-12-04-part-2/,/openstack-essex-scripted-installation-on-ubuntu-12-04-part-2/,472,450,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/09/openstack-essex-operational-demo/,/openstack-essex-operational-demo/,515,539,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/12/openstack-essex-installation-walkthrough-from-scratch-part2/,/openstack-essex-installation-walkthrough-from-scratch-part2/,537,525,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/12/openstack-essex-installation-walkthrough-from-scratch-part3/,/openstack-essex-installation-walkthrough-from-scratch-part3/,539,537,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/12/troubleshooting-common-openstack-errors/,/troubleshooting-common-openstack-errors/,545,539,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/,/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/,617,1917,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/openstack-essex-installation-and-configuration-screencast-from-scratch/,/openstack-essex-installation-and-configuration-screencast-from-scratch/,525,1938,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/openstack-essex-operational-demo/,/openstack-essex-operational-demo/,515,2112,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/,/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/,768,390|1615,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/05/sdn-business-cases/,/sdn-business-cases/,588,1851|1917|2495,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/06/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/,/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/,1005,967|1162,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/06/openflow-openvswitch-lab/,/openflow-openvswitch-lab/,1074,1096|1615|1765,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/06/the-northbound-api-2/,/the-northbound-api-2/,967,1005|1162|1405|1917,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/07/configuring-vxlan-and-gre-tunnels-on-openvswitch/,/configuring-vxlan-and-gre-tunnels-on-openvswitch/,1485,1765|2307,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/07/floodlight-gui-topology-addition/,/floodlight-gui-topology-addition/,1615,1878,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/07/sdn-apis-this-all-feels-pretty-familair/,/sdn-apis-this-all-feels-pretty-familair/,1568,1851|2300,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/08/building-a-windows-image-for-openstack/,/building-a-windows-image-for-openstack/,2007,2071|2300,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/08/openstack-essex-installer-script/,/openstack-essex-installer-script/,1938,2071,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/08/public-cloud-network-as-a-service/,/public-cloud-network-as-a-service/,2307,2300,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/08/the-hp-public-cloud-and-openstack/,/the-hp-public-cloud-and-openstack/,2300,2307,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/08/why-enterprise-wireless-networks-got-it-right/,/why-enterprise-wireless-networks-got-it-right/,2039,2039|2307|2495|2499,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/09/enterprise-wireless-and-wired-traffic-part2,/enterprise-wireless-and-wired-traffic-part2/,2495,2499,internal link in eligible published source; backup post slug and date prefix match uniquely
+/2012/09/enterprise-wireless-and-wired-traffic-part2/,/enterprise-wireless-and-wired-traffic-part2/,2495,2039|2495|2499,internal link in eligible published source; backup post slug and date prefix match uniquely

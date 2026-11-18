@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{ if .IsHome }}{{ .Site.Title }} — Networking, Programming &amp; Infrastructure{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+{{ if not hugo.IsProduction }}<meta name="robots" content="noindex, nofollow">
+{{ else }}<link rel="canonical" href="{{ printf "https://networkstatic.net%s" .RelPermalink }}">
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "images/networkstatic-mark.svg" | absURL }}">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="{{ "images/networkstatic-mark.svg" | relURL }}">
+{{ if not .Site.Params.disableRSSLink }}<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | relURL }}">{{ end }}
+<link rel="stylesheet" href="{{ "css/networkstatic.css" | relURL }}">

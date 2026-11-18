@@ -1,0 +1,2 @@
+{{- $base := strings.TrimSuffix "/" .Site.BaseURL -}}
+{{- printf "%s%s" $base (.Get 0) -}}

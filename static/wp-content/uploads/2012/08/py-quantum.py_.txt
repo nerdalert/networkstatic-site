@@ -1,0 +1,575 @@
+#!/usr/bin/python
+#Feel free to use this however you like. It is anything but something that should be used reliably (my code that is not the OpenStack project) 
+#This is for a quick install for some friends to test with but there are so many moving parts figured this may help someone else get a feel for what oStack and Quantum are.
+#The post with information about it and usage at http://networkstatic.net -Brent Salisbury
+#This assumes it is a machine that has hardware virtualization. Unfortunately you cannot run KVM in a nested Hypervisor or in other words a VM inside a VM. That said I beleive I read that ESX5 may support that but not sure.
+#If you want to use a VM to install you can use http://networkstatic.net/2012/08/openstack-essex-installer-script/ and use QEMU rather than KVM.
+#Edit the variables below to match your environment. 'pubaddr' & 'pubint' & 'floating' are your connection to the network on the outside network.
+#'fixedrange' & 'flatint' & 'iscsipre' are your backend private NIC.
+#A floating address from that pool would get provisioned to the VM for access from the outside.
+#Again do this on a server, desktop or laptop that has hardware virtualization and not inside a VM that cannot support HW virt. 
+#If you arent sure run cat /proc/cpuinfo | grep "svm\|vmx" and look for the flags in the output.
+#There is a removal script in the blog post that will remove the packages in case you break it (which I do often) and want to re-install.
+#Make sure you paste ENVs below. Sorry getting Bash variable exported from Python is trickier than its worth.
+#There are no doubt lots of mistakes but its enough to kick around in the lab for me for now. Also, I am a network guy and not a programmer so I know my code sucks :-)
+#
+#**********You need to add environmentals to Bash before this will work************
+#
+#Uncomment and paste what is below into your console before you run 'python ostack-quantum.py'(as root, 'passwd root' 'su') or whatever you name the script.
+#
+#export OS_PASSWORD=openstack
+#export SERVICE_TOKEN=openstack
+#export OS_TENANT_NAME=admin
+#export OS_USERNAME=admin
+#export SERVICE_ENDPOINT="http://localhost:35357/v2.0"
+#export OS_AUTH_URL="http://localhost:5000/v2.0/"
+#
+#echo declare -x OS_PASSWORD=openstack >> /root/.bashrc
+#echo declare -x SERVICE_TOKEN=openstack >> /root/.bashrc
+#echo declare -x OS_TENANT_NAME=admin >> /root/.bashrc
+#echo declare -x OS_USERNAME=admin >> /root/.bashrc
+#echo declare -x SERVICE_ENDPOINT="http://localhost:35357/v2.0" >> /root/.bashrc
+#echo declare -x OS_AUTH_URL="http://localhost:5000/v2.0/" >> /root/.bashrc
+#source /root/.bashrc
+
+import re
+import os
+import time
+import shutil
+import subprocess
+
+#***Edit these variables to match your enviroment****(Qemu is Not an option w/Quantum so leave as KVM)
+hyperv='kvm'
+#Network reachable address.
+pubaddr='172.31.246.7'
+#Password for the install.
+PASSWD='openstack'
+#NIC that plugs into the network and has the pubaddr IP.
+pubint='eth0'
+#Backend 2nd NIC.
+flatint='eth1'
+#Backend default network for VMs. Traffic gets routed from that network through the pubaddr and public NIC
+fixedrange='10.200.200.0/24'
+#Backend iscsi network (2nd NIC, same as flatint)
+iscsipre='10.200.200'
+#Pool of addresses to allocate to your VMs for public reachability.
+floating='172.31.246.128/25'
+
+#apt-get update
+print("Updating apt")
+aptupdate = subprocess.Popen('apt-get update', shell=True, stdin=None, executable="/bin/bash")
+aptupdate.wait()
+
+#System prep
+prereqs = subprocess.Popen('apt-get install -y tgt open-iscsi open-iscsi-utils rabbitmq-server memcached python-memcache kvm libvirt-bin ntp', shell=True, stdin=None, executable="/bin/bash")
+prereqs.wait()
+print("Finished installing and configuring some pre-reqs")
+
+
+#Read /etc/ntp.conf into memory and append stratum
+ntpf = open('/etc/ntp.conf','r')
+ntptmp = ntpf.read()
+ntpf.close()
+#Survive inet outage
+ntpf = open('/etc/ntp.conf', 'w')
+ntpf.write('server ntp.ubuntu.com iburst\nserver 127.127.1.0\nunicorns 127.127.1.0 stratum 10\n' + ntptmp)
+ntpf.close()
+
+#Restart network and ntp services
+restartNetworkproc = subprocess.Popen('service ntp restart && /etc/init.d/networking restart', shell=True, stdin=None, executable="/bin/bash")
+restartNetworkproc.wait()
+
+os.system("dbpass='openstack'")
+os.system("export dbpass")
+
+sqlaptproc = subprocess.Popen('dbpass=mysqlpass && apt-get install -y mysql-server python-mysqldb', shell=True, stdin=None, executable="/bin/bash")
+sqlaptproc.wait()
+print("Finished installing MySQL")
+
+#Edit and backup my.cnf           
+shutil.copy2('/etc/mysql/my.cnf', '/etc/mysql/my.cnf.bak')
+sqlconf = open("/etc/mysql/my.cnf","w")
+sqlconfout = open("/etc/mysql/my.cnf.bak").read()
+sqlconf.write( re.sub("127.0.0.1","0.0.0.0",sqlconfout)  )
+sqlconf.close()
+
+#Restart MySQL
+sqlproc = subprocess.Popen('service mysql restart', shell=True, stdin=None, executable="/bin/bash")
+sqlproc.wait()
+
+#Create databases for Glance, Keystone, Nova and Quantum.
+os.system("""mysql -u root -p"""+PASSWD+""" -e 'CREATE DATABASE nova;'""")
+os.system("""mysql -u root -p"""+PASSWD+""" -e "GRANT ALL ON nova.* TO 'nova'@'%' IDENTIFIED BY '"""+PASSWD+"""';" """)
+os.system("""mysql -u root -popenstack -e "GRANT ALL ON nova.* TO 'nova'@'localhost' IDENTIFIED BY '"""+PASSWD+"""';" """)
+
+os.system("""mysql -u root -p"""+PASSWD+""" -e 'CREATE DATABASE glance;'""")
+os.system("""mysql -u root -p"""+PASSWD+""" -e "GRANT ALL ON glance.* TO 'glance'@'%' IDENTIFIED BY '"""+PASSWD+"""';" """)
+os.system("""mysql -u root -p"""+PASSWD+""" -e "GRANT ALL ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '"""+PASSWD+"""';" """)
+
+os.system("""mysql -u root -p"""+PASSWD+""" -e 'CREATE DATABASE keystone;'""")
+os.system("""mysql -u root -p"""+PASSWD+""" -e "GRANT ALL ON keystone.* TO 'keystone'@'%' IDENTIFIED BY '"""+PASSWD+"""';" """)
+os.system("""mysql -u root -p"""+PASSWD+""" -e "GRANT ALL ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY '"""+PASSWD+"""';" """)
+
+os.system("""mysql -u root -popenstack -e 'CREATE DATABASE ovs_quantum;'""")
+os.system("""mysql -u root -popenstack -e "GRANT ALL ON ovs_quantum.* TO 'ovs_quantum'@'%' IDENTIFIED BY '"""+PASSWD+"""';" """)
+os.system("""mysql -u root -popenstack -e "GRANT ALL ON ovs_quantum.* TO 'ovs_quantum'@'localhost' IDENTIFIED BY '"""+PASSWD+"""';" """)
+
+tables = os.system("mysql -u root -p"+PASSWD+" -e 'show databases;'")
+print(tables)
+
+#Install Keystone pkgs
+aptkey = subprocess.Popen('apt-get install -y keystone python-keystone python-keystoneclient', shell=True, stdin=None, stderr=None, executable="/bin/bash")
+aptkey.wait()
+print("Keystone Packages Installed")
+
+#Backup the file before modifying it
+shutil.copy2('/etc/keystone/keystone.conf', '/etc/keystone/keystone.conf.bak')
+
+#Open a R and W copy and RegX the admin passwd
+keydata = open("/etc/keystone/keystone.conf").read()
+keyorig = open("/etc/keystone/keystone.conf","w")
+keydata = re.sub("ADMIN",PASSWD,keydata)
+
+#Replace Sqlite connection with MySql uid/pass and db name
+keyorig.write( re.sub("connection = sqlite:////var/lib/keystone/keystone.db","connection = mysql://keystone:"+PASSWD+"@localhost:3306/keystone",keydata)  )
+
+#Close the keystone.conf file
+keyorig.close()
+
+#Re-open to add catalog. REM out if you want the default, however, that will require endpoints to be created.
+keycattmp = open("/etc/keystone/keystone.conf").read()
+keycat = open("/etc/keystone/keystone.conf","w")
+keycat.write( re.sub("driver = keystone.catalog.backends.sql.Catalog","driver = keystone.catalog.backends.templated.TemplatedCatalog\ntemplate_file = /etc/keystone/default_catalog.templates",keycattmp)  )
+#Close the /etc/keystone/keystone.conf file, again lol
+keycat.close()
+
+#Restart Keystone
+os.system("/etc/init.d/keystone restart")
+
+#Synch Keystone w/MySQl
+keysproc = subprocess.Popen('keystone-manage db_sync', shell=True, stdin=None, executable="/bin/bash")
+keysproc.wait()
+
+#Synch Keystone user-list
+keyout = os.system("keystone user-list")
+print(keyout)
+
+#Add Keystone user roles 
+keyex = subprocess.Popen("""ADMIN_PASSWORD=${ADMIN_PASSWORD:-"""+PASSWD+"""}
+SERVICE_PASSWORD=${SERVICE_PASSWORD:-$ADMIN_PASSWORD}
+#export SERVICE_TOKEN="openstack"
+export SERVICE_ENDPOINT="http://localhost:35357/v2.0"
+SERVICE_TENANT_NAME=${SERVICE_TENANT_NAME:-service}
+#This function pulls IDs from command outputs
+function get_id () {
+    echo `$@ | awk '/ id / { print $4 }'`
+}
+
+# Cloud Builder Role and Tenants getid function
+ADMIN_TENANT=$(get_id keystone tenant-create --name=admin)
+SERVICE_TENANT=$(get_id keystone tenant-create --name=$SERVICE_TENANT_NAME)
+DEMO_TENANT=$(get_id keystone tenant-create --name=demo)
+INVIS_TENANT=$(get_id keystone tenant-create --name=invisible_to_admin)
+
+# Users
+ADMIN_USER=$(get_id keystone user-create --name=admin --pass="$ADMIN_PASSWORD" --email=admin@yourorg.com)
+DEMO_USER=$(get_id keystone user-create --name=demo --pass="$ADMIN_PASSWORD" --email=demo@yourorg.com)
+
+# Roles
+ADMIN_ROLE=$(get_id keystone role-create --name=admin)
+KEYSTONEADMIN_ROLE=$(get_id keystone role-create --name=KeystoneAdmin)
+KEYSTONESERVICE_ROLE=$(get_id keystone role-create --name=KeystoneServiceAdmin)
+ANOTHER_ROLE=$(get_id keystone role-create --name=anotherrole)
+
+# Add Roles to Users in Tenants
+keystone user-role-add --user $ADMIN_USER --role $ADMIN_ROLE --tenant_id $ADMIN_TENANT
+keystone user-role-add --user $ADMIN_USER --role $ADMIN_ROLE --tenant_id $DEMO_TENANT
+keystone user-role-add --user $DEMO_USER --role $ANOTHER_ROLE --tenant_id $DEMO_TENANT
+
+keystone user-role-add --user $ADMIN_USER --role $KEYSTONEADMIN_ROLE --tenant_id $ADMIN_TENANT
+keystone user-role-add --user $ADMIN_USER --role $KEYSTONESERVICE_ROLE --tenant_id $ADMIN_TENANT
+
+# The Member role is used by Horizon and Swift so we need to keep it:
+MEMBER_ROLE=$(get_id keystone role-create --name=Member)
+keystone user-role-add --user $DEMO_USER --role $MEMBER_ROLE --tenant_id $DEMO_TENANT
+keystone user-role-add --user $DEMO_USER --role $MEMBER_ROLE --tenant_id $INVIS_TENANT
+
+# Configure service users/roles
+NOVA_USER=$(get_id keystone user-create --name=nova --pass="$SERVICE_PASSWORD" --tenant_id $SERVICE_TENANT --email=nova@yourorg.com)
+keystone user-role-add --tenant_id $SERVICE_TENANT --user $NOVA_USER --role $ADMIN_ROLE
+
+GLANCE_USER=$(get_id keystone user-create --name=glance --pass="$SERVICE_PASSWORD" --tenant_id $SERVICE_TENANT --email=glance@yourorg.com)
+keystone user-role-add --tenant_id $SERVICE_TENANT --user $GLANCE_USER --role $ADMIN_ROLE
+
+QUANTUM_USER=$(get_id keystone user-create --name=quantum --pass="$SERVICE_PASSWORD" --tenant_id $SERVICE_TENANT --email=quantum@yourorg.com)
+keystone user-role-add --tenant_id $SERVICE_TENANT --user $QUANTUM_USER --role $ADMIN_ROLE""", shell=True, stdin=None, executable="/bin/bash")
+keyex.wait()
+
+#Download and install Glance Packages
+glanceproc = subprocess.Popen('apt-get install -y glance glance-api glance-client glance-common glance-registry python-glance', shell=True, stdin=None, executable="/bin/bash")
+glanceproc.wait()
+print("Finished installing Glance")
+
+#Backup the Glance Files to .bak extension
+shutil.copy2('/etc/glance/glance-api.conf', '/etc/glance/glance-api.conf.bak')
+shutil.copy2('/etc/glance/glance-registry.conf', '/etc/glance/glance-registry.conf.bak')
+shutil.copy2('/etc/glance/glance-registry-paste.ini', '/etc/glance/glance-registry-paste.ini.bak')
+shutil.copy2('/etc/glance/glance-api-paste.ini', '/etc/glance/glance-api-paste.ini.bak')
+
+#Append flavor
+grpif = open('/etc/glance/glance-api.conf','r')
+grpiftmp = grpif.read()
+grpif.close()
+#glance-api.conf adding flavor
+grpif = open('/etc/glance/glance-api.conf', 'w')
+grpif.write(grpiftmp + '[paste_deploy]\nflavor = keystone')
+grpif.close()
+
+#Open a R and W copy and RegX the privileges
+grptmp = open("/etc/glance/glance-registry-paste.ini").read()
+grp = open("/etc/glance/glance-registry-paste.ini","w")
+grp.write( re.sub("admin_tenant_name = %SERVICE_TENANT_NAME%\nadmin_user = %SERVICE_USER%\nadmin_password = %SERVICE_PASSWORD%","admin_tenant_name = admin\nadmin_user = admin\nadmin_password = "+ PASSWD,grptmp)  )
+#Close the glance-registry-paste.ini file
+grp.close()
+
+#Open a R and W copy and RegX the privileges
+gapitmp = open("/etc/glance/glance-api-paste.ini").read()
+gapi = open("/etc/glance/glance-api-paste.ini","w")
+gapi.write( re.sub("admin_tenant_name = %SERVICE_TENANT_NAME%\nadmin_user = %SERVICE_USER%\nadmin_password = %SERVICE_PASSWORD%","admin_tenant_name = admin\nadmin_user = admin\nadmin_password = "+ PASSWD,gapitmp)  )
+#Close the glance-api-paste.ini file
+gapi.close()
+
+#Open a R and W copy and RegX the admin passwd
+grctmp = open("/etc/glance/glance-registry.conf").read()
+grc = open("/etc/glance/glance-registry.conf","w")
+grc.write( re.sub("sql_connection = sqlite:////var/lib/glance/glance.sqlite","sql_connection = mysql://glance:"+PASSWD+"@localhost/glance",grctmp)  )
+grc.close()
+
+#Add Flavor to registry.conf
+grf = open('/etc/glance/glance-registry.conf','r')
+grftmp = grf.read()
+grf.close()
+grf = open('/etc/glance/glance-registry.conf', 'w')
+grf.write(grftmp + '[paste_deploy]\nflavor = keystone')
+grf.close()
+
+dbver = subprocess.Popen("glance-manage version_control 0", shell=True, stdin=None, executable="/bin/bash")
+dbver.wait()
+print(dbver)
+time.sleep(2)
+
+#Sync Glance to the MySql glance db
+glsync = subprocess.Popen("glance-manage db_sync", shell=True, stdin=None, executable="/bin/bash")
+glsync.wait()
+print(glsync)
+time.sleep(2)
+
+#Restart glance
+bncgl =  subprocess.Popen("service glance-api restart && service glance-registry restart", shell=True, stdin=None, executable="/bin/bash")
+bncgl.wait()
+print(bncgl)
+time.sleep(2)
+
+#Download Ubuntu Precise 12.04
+wgetimg = subprocess.Popen("wget https://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64-disk1.img", shell=True, stdin=None, executable="/bin/bash")
+wgetimg.wait()
+
+#Import 12.04 into Glance
+imgadd = subprocess.Popen("glance add name=Ubuntu-12.04 is_public=true container_format=ovf disk_format=qcow2 < precise-server-cloudimg-amd64-disk1.img",shell=True)
+imgadd.wait()
+
+#Install Nova
+novaproc = subprocess.Popen('apt-get install -y nova-network nova-objectstore nova-api nova-cert nova-common nova-compute nova-compute-kvm nova-scheduler nova-vncproxy nova-volume', shell=True, stdin=None, executable="/bin/bash")
+novaproc.wait()
+
+#Install NOVNC
+novncproc = subprocess.Popen('apt-get install -y nova-vncproxy novnc', shell=True, stdin=None, executable="/bin/bash")
+novncproc.wait()
+novnc2proc = subprocess.Popen('apt-get install -y novnc', shell=True, stdin=None, executable="/bin/bash")
+novnc2proc.wait()
+print("Finished installing VNC")
+
+#Backup nova conf files
+shutil.copy2('/etc/nova/api-paste.ini', '/etc/nova/api-paste.ini.bak')
+shutil.copy2('/etc/nova/nova.conf', '/etc/nova/nova.conf.bak')
+
+#Open a R and W the privileges
+napitmp = open("/etc/nova/api-paste.ini").read()
+napi = open("/etc/nova/api-paste.ini","w")
+napi.write( re.sub("admin_tenant_name = %SERVICE_TENANT_NAME%\nadmin_user = %SERVICE_USER%\nadmin_password = %SERVICE_PASSWORD%","admin_tenant_name = admin\nadmin_user = admin\nadmin_password = "+ PASSWD,napitmp)  )
+#Close the glance-api-paste.ini file
+napi.close()
+
+#Build qemu.conf
+qem1=("""clear_emulator_capabilities = 0
+user = "root"
+group = "root"
+cgroup_device_acl = [
+"/dev/null", "/dev/full", "/dev/zero",
+"/dev/random", "/dev/urandom",
+"/dev/ptmx", "/dev/kvm", "/dev/kqemu",
+"/dev/rtc", "/dev/hpet", "/dev/net/tun",
+]""")
+
+#Add config to qemu.conf
+libcnf = open('/etc/libvirt/qemu.conf','r')
+libcnftmp = libcnf.read()
+libcnf.close()
+libcnf = open('/etc/libvirt/qemu.conf', 'w')
+libcnf.write(qem1 +'\n'+ libcnftmp)
+libcnf.close()
+
+#Build nova.conf
+nov1=("""--logdir=/var/log/nova
+--state_path=/var/lib/nova
+--lock_path=/var/lock/nova
+--allow_admin_api=true
+--use_deprecated_auth=false
+--auth_strategy=keystone
+--scheduler_driver=nova.scheduler.simple.SimpleScheduler
+--linuxnet_interface_driver=nova.network.linux_net.LinuxOVSInterfaceDriver""")
+nov2=('--s3_host='+pubaddr)
+nov3=('--ec2_host='+pubaddr)
+nov4=('--rabbit_host='+pubaddr)
+nov5=('--cc_host='+pubaddr)
+nov6=('--nova_url=http://'+pubaddr+':8774/v1.1/')
+nov7=('--routing_source_ip='+pubaddr)
+nov8=('--glance_api_servers='+pubaddr+':9292')
+nov9=('--image_service=nova.image.glance.GlanceImageService')
+nov10=('--iscsi_ip_prefix='+iscsipre)
+nov11=('--sql_connection=mysql://nova:'+PASSWD+'@localhost/nova')
+nov12=('--ec2_url=http://'+pubaddr+':8773/services/Cloud')
+nov13=('--keystone_ec2_url=http://'+pubaddr+':5000/v2.0/ec2tokens')
+nov14=('--api_paste_config=/etc/nova/api-paste.ini')
+nov15=('--libvirt_type='+hyperv)
+nov16=("""--libvirt_use_virtio_for_bridges=true
+--start_guests_on_host_boot=true
+--vncserver_listen=0.0.0.0
+--resume_guests_state_on_host_boot=true
+--novnc_enable=true""")
+nov17=('--novncproxy_base_url=http://'+pubaddr+':6080/vnc_auto.html')
+nov18=('--vncserver_proxyclient_address=127.0.0.1')
+nov19=('--network_manager=nova.network.quantum.manager.QuantumManager')
+nov20=('#Public is your public facing interface')
+nov21=('--public_interface='+pubint)
+nov22=('#Think of fixed as your backend and floating will be assigned for publicly reachable VM hosts like NAT')
+nov23=('--fixed_range='+fixedrange)
+nov24=('--floating_range='+floating)
+nov23=("""--auto_assign_floating_ip=true
+--network_size=250""")
+nov25=('--quantum_connection_host='+pubaddr)
+nov26=("""--flat_injected=False
+--force_dhcp_release
+--quantum_use_dhcp=True
+--iscsi_helper=tgtadm
+--connection_type=libvirt
+--dhcpbridge_flagfile=/etc/nova/nova.conf
+--dhcpbridge=/usr/bin/nova-dhcpbridge
+--root_helper=sudo nova-rootwrap
+--verbose
+--max_cores=250""")
+
+#Write to /etc/nova.conf
+napi = open("/etc/nova/nova.conf","w")
+napi.write(nov1+'\n'+nov2+'\n'+nov3+'\n'+nov4+'\n'+nov5+'\n'+nov6+'\n'+nov7+'\n'+nov8+'\n'+nov9+'\n'+nov10+'\n'+nov11+'\n'+nov12+'\n'+nov13+'\n'+nov14+'\n'+nov15+'\n'+nov16+'\n'+nov17+'\n'+nov18+'\n'+nov19+'\n'+nov20+'\n'+nov21+'\n'+nov22+'\n'+nov23+'\n'+nov24+'\n'+nov25+'\n'+nov26)
+#Close nova.conf
+napi.close()
+
+#Unload the Linux bridge module in case it was loaded from bridge-utils at some point
+os.system("rmmod bridge")
+
+#Install OpenvSwitch
+ovsproc1 = subprocess.Popen('apt-get install -y quantum-server quantum-common quantum-plugin-openvswitch', shell=True, stdin=None, executable="/bin/bash")
+ovsproc1.wait()
+ovs2proc = subprocess.Popen('apt-get install -y openvswitch-datapath-source', shell=True, stdin=None, executable="/bin/bash")
+ovs2proc.wait()
+ovs3proc = subprocess.Popen('apt-get install module-assistant', shell=True, stdin=None, executable="/bin/bash")
+ovs3proc.wait()
+ovs4proc = subprocess.Popen('module-assistant auto-install openvswitch-datapath', shell=True, stdin=None, executable="/bin/bash")
+ovs4proc.wait()
+print("Finished installing OVS")
+
+#Write to /etc/quantum/plugins.ini
+ovsplug = open("/etc/quantum/plugins.ini","w")
+ovsplug.write('[PLUGIN]\nprovider = quantum.plugins.openvswitch.ovs_quantum_plugin.OVSQuantumPlugin')
+#Close /etc/quantum/plugins.ini
+ovsplug.close()
+
+#Instal more OVS packages
+ovs5proc = subprocess.Popen('apt-get install -y openvswitch-switch quantum-plugin-openvswitch-agent', shell=True, stdin=None, executable="/bin/bash")
+ovs5proc.wait()
+
+#Add the MySQL db connect() to /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini
+#Replace Sqlite with MySql for Quantum
+qtdbtmp = open("/etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini").read()
+qtdb = open("/etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini","w")
+qtdb.write( re.sub("sql_connection = sqlite://","sql_connection = mysql://ovs_quantum:openstack@localhost/ovs_quantum",qtdbtmp)  )
+qtdb.close()
+
+#Backup /etc/sysctl.conf
+shutil.copy2('/etc/sysctl.conf', '/etc/sysctl.conf.bak')
+
+#Add IPv4 Fwding to /etc/sysctl.conf 
+sysct = open('/etc/sysctl.conf','r')
+syscttmp = sysct.read()
+sysct.close()
+sysct = open('/etc/sysctl.conf', 'w')
+sysct.write(syscttmp + '\nnet.ipv4.ip_forward=1\n')
+sysct.close()
+
+#Edit /etc/nova/nova-compute.conf
+nvcompute= open('/etc/nova/nova-compute.conf', 'w')
+nvcompute.write("""--libvirt_type=kvm
+--libvirt_ovs_bridge=br-int
+--libvirt_vif_type=ethernet
+--libvirt_vif_driver=nova.virt.libvirt.vif.LibvirtOpenVswitchDriver""")
+nvcompute.close()
+
+#Create Startup script in /etc/init.d/quantum-agent.sh See http://openvswitch.org/openstack/documentation/ for details
+qagent= open('/etc/init.d/quantum-agent.sh', 'w')
+qagent.write('#!/bin/bash\nquantum-openvswitch-agent /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini')
+qagent.close()
+
+#Make Executable
+os.system("chmod +x /etc/init.d/quantum-agent.sh ")
+
+#Uncomment to add the startup script to startup.
+#ovs8proc = subprocess.Popen('$update-rc.d quantum-agent.sh defaults', shell=True, stdin=None, executable="/bin/bash")
+#ovs8proc.wait()
+
+#Restart
+ovs9proc = subprocess.Popen('/etc/init.d/quantum-server restart', shell=True, stdin=None, executable="/bin/bash")
+ovs9proc.wait()
+
+#Add Bridges and start the quantum agent
+os.system('ovs-vsctl add-br br-int && ovs-vsctl add-port br-int ' +flatint+ ' && /etc/init.d/quantum-agent.sh &')
+
+#Restart network
+nwkrestartproc = subprocess.Popen('/etc/init.d/networking restart', shell=True, stdin=None, executable="/bin/bash")
+nwkrestartproc.wait()
+
+#Restart nova
+novstopproc1 = subprocess.Popen('for a in libvirt-bin rabbitmq-server quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" stop; done', shell=True, stdin=None, executable="/bin/bash")
+novstopproc1.wait()
+novstartproc1 = subprocess.Popen('for a in libvirt-bin rabbitmq-server quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" start; done', shell=True, stdin=None, executable="/bin/bash")
+novstartproc1.wait()
+
+#Sync nova to the MySQL nova table
+novdbproc = subprocess.Popen('nova-manage db sync', shell=True, stdin=None, executable="/bin/bash")
+novdbproc.wait()
+
+#Add the network for VMs
+qnetwork = subprocess.Popen('nova-manage network create --label=public --fixed_range_v4='+fixedrange, shell=True, stdin=None, executable="/bin/bash")
+qnetwork.wait()
+
+#Add public floatings
+floatproc = subprocess.Popen('nova-manage floating create --ip_range='+floating, shell=True, stdin=None, executable="/bin/bash")
+floatproc.wait()
+
+#Create Default Security Policy. Opening TCP 22, RDP for Windoze and ICMP.
+icmpopenproc = subprocess.Popen('nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0', shell=True, stdin=None, executable="/bin/bash")
+icmpopenproc.wait()
+sshopenproc = subprocess.Popen('nova secgroup-add-rule default tcp 22 22 0.0.0.0/0', shell=True, stdin=None, executable="/bin/bash")
+sshopenproc.wait()
+rdpopenproc = subprocess.Popen('nova secgroup-add-rule default tcp 3389 3389 0.0.0.0/0', shell=True, stdin=None, executable="/bin/bash")
+rdpopenproc.wait()
+
+#Restart Nova
+novstopproc2 = subprocess.Popen('for a in libvirt-bin quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" stop; done', shell=True, stdin=None, executable="/bin/bash")
+novstopproc2.wait()
+novstartproc2 = subprocess.Popen('for a in libvirt-bin quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" start; done', shell=True, stdin=None, executable="/bin/bash")
+novstartproc2.wait()
+
+#Install Dashboard/Horizon Web UI
+httpproc = subprocess.Popen('apt-get install -y libapache2-mod-wsgi openstack-dashboard', shell=True, stdin=None, executable="/bin/bash")
+httpproc.wait()
+print("Finished installing Dashboard")
+
+apacheproc = subprocess.Popen('service apache2 restart && killall dnsmasq', shell=True, stdin=None, executable="/bin/bash")
+apacheproc.wait()
+
+#Create the SSL key
+sskeyproc = subprocess.Popen('nova keypair-add ssh_key > ~/ssh_key.pem', shell=True, stdin=None, executable="/bin/bash")
+sskeyproc.wait()
+
+#Fix permissions on the public key
+chkeyproc = subprocess.Popen('chmod 0600 ~/ssh_key.pem', shell=True, stdin=None, executable="/bin/bash")
+chkeyproc.wait()
+
+#bounce
+rabbitproc = subprocess.Popen('/etc/init.d/rabbitmq-server restart', shell=True, stdin=None, executable="/bin/bash")
+rabbitproc.wait()
+time.sleep(2)
+
+#bounce
+novstopproc3 = subprocess.Popen('for a in libvirt-bin quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" stop; done', shell=True, stdin=None, executable="/bin/bash")
+novstopproc3.wait()
+novstartproc3 = subprocess.Popen('for a in libvirt-bin quantum-server restart nova-network nova-compute nova-cert nova-api nova-objectstore nova-scheduler nova-volume novnc nova-consoleauth; do service "$a" start; done', shell=True, stdin=None, executable="/bin/bash")
+
+print(r"""
+                                                    /
+                                                  .7
+                                       \       , //
+                                       |\.--._/|//
+                                      /\ ) ) ).'/
+                                     /(  \  // /
+                                    /(   J`((_/ \
+                                   / ) | _\     /
+                                  /|)  \  eJ    L
+                                 |  \ L \   L   L
+                                /  \  J  `. J   L
+                                |  )   L   \/   \
+                               /  \    J   (\   /
+             _....___         |  \      \   \```
+      ,.._.-'        '''--...-||\     -. \   \
+    .'.=.'                    `         `.\ [ Y
+   /   /                                  \]  J
+  Y / Y                                    Y   L
+  | | |          \                         |   L
+  | | |           Y                        A  J
+  |   I           |                       /I\ /
+  |    \          I             \        ( |]/|
+  J     \         /._           /        -tI/ |
+   L     )       /   /'-------'J           `'-:.
+   J   .'      ,'  ,' ,     \   `'-.__          \
+    \ T      ,'  ,'   )\    /|        ';'---7   /
+     \|    ,'L  Y...-' / _.' /         \   /   /
+      J   Y  |  J    .'-'   /         ,--.(   /
+       L  |  J   L -'     .'         /  |    /\
+       |  J.  L  J     .-;.-/       |    \ .' /
+       J   L`-J   L____,.-'`        |  _.-'   |
+        L  J   L  J                  ``  J    |
+        J   L  |   L                     J    |
+         L  J  L    \                    L    \
+         |   L  ) _.'\                    ) _.'\
+         L    \('`    \                  ('`    \
+          ) _.'\`-....'                   `-....'
+         ('`    \
+          `-.___/
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++All Done Press Enter and be sure to share the Uni Rides:-) +
++-for help assistance with the script hit me up on          +
++Twitter @networkstatic or http://networkstatic.net         +
++Cheers, Brent                                              +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1. From here check to make sure the services show smiley faces :-) and not XXX with 'nova-manage service list'
+2. If good, boot an image. Do a 'glance index' and copy the ID of the image that was loaded in the script.
+3. nova boot --flavor 1 --image <insert image ID here> --key_name ssh_key demohost
+4. Run 'nova glance' to check the progress and look for any errors. 
+5. After a couple of minutes the instance will be booted, make sure you can ping it.
+6. SSH to the ubuntu instance by running "ssh -i ~/ssh-key.pem ubuntu@<ip in nova list>" The key was created by the script.
+7. Check out the web page with http://localhost or http://<public address used>
+8. Under the "Admin" project in Dashboard (the webpage) go to security and access and allocate a floating address to your project.
+9. Once allocated to the project, allocate the address to your VM you started. 
+""")
+
+imagelist = subprocess.Popen('glance index', shell=True, stdin=None, executable="/bin/bash")
+print("""Right above is the output of glance index. 
+QuickStart: nova boot --flavor 1 --image <insert image ID from above here> --key_name ssh_key demohost
+One you boot a VM 'nova list' will give you more details and it should also give an IP. 
+After a few minutes the IP should be replying to pings.
+Connect to the vm with the key that was created in the current working directory from the controller.
+The script opens port 22, 3389 (Windoze RDP) and allows ICMP. To build a windows image this might help http://networkstatic.net/2012/08/building-a-windows-image-for-openstack/
+chmod 0600 ~/ssh_key.pem if you move the key to another machine to get proper permissions.
+Once it is replying to pings "ssh -i ~/ssh-key.pem ubuntu@<ip in nova list>"
+Press enter and get started: """)

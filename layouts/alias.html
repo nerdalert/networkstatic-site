@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  {{ if hugo.IsProduction }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ else }}
+  <meta name="robots" content="noindex, nofollow">
+  {{ end }}
+  <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+</head>
+<body><p>This page moved to <a href="{{ .Permalink }}">{{ .Permalink }}</a>.</p></body>
+</html>

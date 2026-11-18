@@ -1,0 +1,13 @@
+{
+  "selection_policy": "post_type in ['post','page'] AND post_status == 'publish' AND post_password == ''",
+  "eligible_public_published_posts": 183,
+  "eligible_public_published_pages": 7,
+  "excluded_password_protected_published_count": 0,
+  "excluded_nonpublished_counts_by_type_status": {
+    "page/draft": 5,
+    "post/auto-draft": 1,
+    "post/draft": 48,
+    "post/private": 1
+  },
+  "excluded_rows_include_titles_or_content": false
+}

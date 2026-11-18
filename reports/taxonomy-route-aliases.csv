@@ -1,0 +1,7 @@
+source_path,target_path,taxonomy,term_name,alias_registered
+/tag/business-2/,/tag/business/,post_tag,Business,yes
+/tag/openvswitch/,/tag/open-vswitch/,post_tag,Open vSwitch,yes
+/tag/sdn/,/tag/software-defined-networking/,post_tag,Software Defined Networking,yes
+/tag/cat/,/tag/cat-pictures/,post_tag,Cat Pictures,yes
+/tag/bigswitch/,/tag/big-switch/,post_tag,Big Switch,yes
+/tag/programming-2/,/tag/programming/,post_tag,Programming,yes

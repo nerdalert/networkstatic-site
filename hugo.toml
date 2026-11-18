@@ -1,0 +1,77 @@
+baseURL = "https://networkstatic.net/"
+title = "NetworkStatic"
+theme = "hugo-theme-cleanwhite"
+locale = "en-US"
+timeZone = "UTC"
+summaryLength = 40
+enableRobotsTXT = false
+canonifyURLs = false
+
+[permalinks]
+  posts = "/:slug/"
+  [permalinks.taxonomy]
+    categories = "/category/"
+    tags = "/tag/"
+  [permalinks.term]
+    categories = "/category/:slug/"
+    tags = "/tag/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[pagination]
+  pagerSize = 8
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
+[outputFormats.SearchIndex]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true
+  notAlternative = true
+
+[params]
+  description = "Networking, programming, and infrastructure."
+  SEOTitle = "NetworkStatic — Networking, Programming & Infrastructure"
+  slogan = "Networking, Programming & Infrastructure"
+  auto_theme = false
+  dark_mode_toggle = false
+  featured_tags = true
+  about_me = true
+  friends = false
+  bookmarks = false
+  reward = false
+  algolia_search = false
+  page_view_counter = false
+  ba_track_id = ""
+  disqus_proxy = ""
+  disqus_site = ""
+  twikoo_env_id = ""
+  custom_css = ["css/networkstatic.css"]
+  sidebar_avatar = "images/brent-salisbury-profile.jpg"
+  sidebar_about_description = "Brent Salisbury has been in network programming for 25+ yrs and currently works in the Office of the CTO at Red Hat"
+
+[params.social]
+  rss = true
+  twitter = "https://x.com/networkstatic"
+  github = "https://github.com/nerdalert/"
+  linkedin = "https://www.linkedin.com/in/brentsalisbury"
+
+[services.disqus]
+  shortname = ""
+
+[services.googleAnalytics]
+  id = ""
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = "github"
+  noClasses = false
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3

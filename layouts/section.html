@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="sidebar-layout archive-layout">
+  <section class="main-column archive-page">
+    <header class="page-heading"><p class="eyebrow">{{ .Section | humanize }}</p><h1>{{ .Title }}</h1>{{ with .Content }}<div class="intro">{{ . }}</div>{{ end }}</header>
+    <div class="article-list">{{ range .Paginator.Pages }}{{ partial "article-card.html" . }}{{ end }}</div>
+    {{ partial "pagination.html" . }}
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

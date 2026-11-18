@@ -1,0 +1,6 @@
+<article class="article-card">
+  <p class="article-date"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Summary }}<p class="card-summary">{{ . | plainify | htmlUnescape | truncate 220 }}</p>{{ end }}
+  {{ with .Params.categories }}<div class="card-topics">{{ range first 3 . }}<a href="{{ "category/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
+</article>

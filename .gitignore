@@ -1,0 +1,34 @@
+# Local WordPress backup material and transient exports
+*.tar
+*.tar.gz
+*.tgz
+*.sql
+*.sql.gz
+wp-config.php
+.env
+.env.*
+private/
+source-data/
+raw-inventory/
+
+# Generated Hugo artifacts
+/public/
+/public-staging/
+/public-production-preview/
+/public-review/
+/migration-review/
+/resources/
+.hugo_build.lock
+.hugo_cache/
+/themes/
+
+# Locally sensitive full media inventory (unreferenced paths may expose private/orphan media)
+/reports/asset-candidates.csv
+/reports/attachment-records.private.csv
+
+# Tool and editor artifacts
+.DS_Store
+*.swp
+*.swo
+__pycache__/
+*.py[cod]

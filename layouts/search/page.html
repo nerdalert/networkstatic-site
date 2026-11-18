@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="sidebar-layout search-layout">
+  <section class="main-column search-page">
+    <header class="page-heading"><p class="eyebrow">Local index</p><h1>Search the archive</h1><p>Search post titles, summaries, and text.</p></header>
+    <label class="search-label" for="site-search">Search NetworkStatic</label>
+    <input id="site-search" class="search-input" type="search" autocomplete="off" placeholder="Try BGP, Docker, OpenFlow…">
+    <p id="search-status" class="search-status" aria-live="polite"></p>
+    <ol id="search-results" class="search-results"></ol>
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+<script defer src="{{ "js/search.js" | relURL }}"></script>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">NetworkStatic</p>
+    <h1>Networking, Programming<br> &amp; Infrastructure</h1>
+    <p class="hero-copy">Brent Salisbury's travels in Networking Programming.</p>
+    <a class="hero-link" href="{{ "archive/" | relURL }}">Explore the archive <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="topology" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span></span></div>
+</section>
+<div class="sidebar-layout home-layout">
+  <section class="content-shell home-section" aria-labelledby="latest-heading">
+    <div class="section-heading">
+      <div><h2 id="latest-heading">Latest Posts</h2></div>
+      <a class="text-link" href="{{ "archive/" | relURL }}">All Posts <span aria-hidden="true">→</span></a>
+    </div>
+    {{ $pages := where site.RegularPages "Section" "posts" }}
+    {{ if $pages }}<div class="home-article-list">
+      {{ range first 8 $pages.ByDate.Reverse }}{{ partial "article-card.html" . }}{{ end }}
+    </div>{{ else }}
+      <p class="empty-note">The post archive is being prepared.</p>
+    {{ end }}
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

@@ -1,0 +1,2750 @@
+{
+  "asset_to_pages": {
+    "2012/01/virt-manager.png": [
+      "/installing-openvswitch-and-kvm-on-centos-6-2/"
+    ],
+    "2012/02/gre-tap1.jpeg": [
+      "/openvswitch-and-gre-tunnel-notes/"
+    ],
+    "2012/02/lab-gre.jpeg": [
+      "/openvswitch-and-gre-tunnel-notes/"
+    ],
+    "2012/04/1-bridge.jpg": [
+      "/open-vswitch-gre-tunnel-configuration/"
+    ],
+    "2012/04/1-slide11.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/2intro-summ.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/4-node.jpg": [
+      "/basic-mplsvpn-using-cisco-ios/"
+    ],
+    "2012/04/IP-Header-Packet2.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/bgp-l3vpn1.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/bgp-l3vpn2.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/containers1.jpg": [
+      "/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/"
+    ],
+    "2012/04/decouple-nos.jpg": [
+      "/why-the-nos-will-decouple/"
+    ],
+    "2012/04/ent-flow.jpg": [
+      "/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/"
+    ],
+    "2012/04/ethernet-header.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/ethertype.jpg": [
+      "/juniper-and-cisco-comparisons-of-rib-lib-fib-and-lfib-tables/"
+    ],
+    "2012/04/flow.jpg": [
+      "/juniper-and-cisco-comparisons-of-rib-lib-fib-and-lfib-tables/"
+    ],
+    "2012/04/gre-cloud.jpg": [
+      "/open-vswitch-gre-tunnel-configuration/"
+    ],
+    "2012/04/gre.openvswitch.jpg": [
+      "/open-vswitch-gre-tunnel-configuration/"
+    ],
+    "2012/04/gui.jpg": [
+      "/configuring-the-nox-gui/"
+    ],
+    "2012/04/hyperv-tunnel.jpg": [
+      "/how-i-learned-to-hate-the-dci/"
+    ],
+    "2012/04/i2-inet01.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/inet-tables.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/inet0.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/inet32.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/internet.jpg": [
+      "/how-i-learned-to-hate-the-dci/"
+    ],
+    "2012/04/juniper_01.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/l2ol3-generic-packet.jpg": [
+      "/open-vswitch-gre-tunnel-configuration/"
+    ],
+    "2012/04/l2vpn-inet.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/mpls-0.jpg": [
+      "/juniper-default-routing-tables/"
+    ],
+    "2012/04/mpls-stacking.jpg": [
+      "/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/"
+    ],
+    "2012/04/nova-logical-arch-essex.jpg": [
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-2/"
+    ],
+    "2012/04/nox.png": [
+      "/configuring-the-nox-gui/"
+    ],
+    "2012/04/openvswitch.openflow.gre_.tutorial1.pdf": [
+      "/open-vswitch-gre-tunnel-configuration/"
+    ],
+    "2012/04/p1-login-ssh.jpg": [
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/"
+    ],
+    "2012/04/p2-image-ub.jpg": [
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/"
+    ],
+    "2012/04/p3-sec1.jpg": [
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/"
+    ],
+    "2012/04/p4-running-inst.jpg": [
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/"
+    ],
+    "2012/04/packet-header.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/pox.png": [
+      "/pox-openflow-controller-installation-screencast/"
+    ],
+    "2012/04/tcp-header.jpg": [
+      "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/"
+    ],
+    "2012/04/tor-tunnnel.jpg": [
+      "/how-i-learned-to-hate-the-dci/"
+    ],
+    "2012/05/2nics-2nets.jpg": [
+      "/openstack-essex-installation-and-configuration-screencast-from-scratch/"
+    ],
+    "2012/05/2nics-2nets3.jpg": [
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/"
+    ],
+    "2012/05/Juniper-VPLS-MPLS.png": [
+      "/mpls-vpls-configuration-with-juniper-junos/"
+    ],
+    "2012/05/Openvswitch1-300x254.jpg": [
+      "/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/"
+    ],
+    "2012/05/Openvswitch1.jpg": [
+      "/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/"
+    ],
+    "2012/05/Power-lines_729-620x349.jpg": [
+      "/sdn-for-internet-providers-use-case/"
+    ],
+    "2012/05/RIB-LIB-LFIB-FIB.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/Sage-OpenFlow-Quotes2.jpg": [
+      "/sdn-and-openflow-quotes-from-some-of-the-best/"
+    ],
+    "2012/05/brent-openx-v1-1.pptx": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/change-bad.jpg": [
+      "/help-wanted-cultural-change/"
+    ],
+    "2012/05/change-is-bad1.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/commodity-switches.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/data-center-orchestration.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/dci1.jpg": [
+      "/otv-configuration-notes/",
+      "/sdn-business-cases/"
+    ],
+    "2012/05/dp-ctl-flows.jpg": [
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/"
+    ],
+    "2012/05/first-place2.jpg": [
+      "/sdn-and-openflow-quotes-from-some-of-the-best/"
+    ],
+    "2012/05/geni.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/google-sdn.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/kool-aid1.jpg": [
+      "/help-wanted-cultural-change/"
+    ],
+    "2012/05/l2vpn-topo1.jpg": [
+      "/mpls-vpls-configuration-with-juniper-junos/"
+    ],
+    "2012/05/management-plane.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/mpls-core.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/open-vswitch-lab.png": [
+      "/install-open-vswitch-v2-0-rpm-redhat-fedora/",
+      "/open-vswitch-gre-tunnel-configuration/",
+      "/open-vswitch-on-virtualbox/",
+      "/open-vswitch-red-hat-installation/",
+      "/openvswitch-and-gre-tunnel-notes/",
+      "/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/"
+    ],
+    "2012/05/openflow2.png": [
+      "/floodlight-openflow-controller-screencast-with-hp-switches/",
+      "/open-networking-summit-2013-is-streaming/",
+      "/the-birth-unicorn-early-openflow-meeting-notes/"
+    ],
+    "2012/05/openstack-demo.jpg": [
+      "/openstack-essex-operational-demo/"
+    ],
+    "2012/05/openstack-logo-shade.png": [
+      "/building-a-windows-image-for-openstack/",
+      "/comparing-vmware-vs-openstack/",
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/",
+      "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/",
+      "/troubleshooting-common-openstack-errors/"
+    ],
+    "2012/05/sdn-controller1.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/sdn-osal-abstraction21.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/topo1.jpg": [
+      "/floodlight-openflow-controller-screencast-with-hp-switches/"
+    ],
+    "2012/05/tuple-11.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/tuples.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/05/vmvssdn.jpg": [
+      "/sdn-business-cases/"
+    ],
+    "2012/06/3-stage-clos.jpg": [
+      "/ethernet-switch-fabric-cards/"
+    ],
+    "2012/06/586_god_hates_nerds_12-25-2002-copy-150x150.jpg": [
+      "/its-ok-to-like-openflow/"
+    ],
+    "2012/06/586_god_hates_nerds_12-25-2002-copy.jpg": [
+      "/its-ok-to-like-openflow/"
+    ],
+    "2012/06/Addresses.jpg": [
+      "/openflow-starter-tutorial-lab-1/"
+    ],
+    "2012/06/Lab11.jpg": [
+      "/openflow-starter-tutorial-lab-1/"
+    ],
+    "2012/06/Lab24.jpg": [
+      "/openflow-tutorial-lab-2/"
+    ],
+    "2012/06/Lab31.jpg": [
+      "/openflow-tutorial-lab-3/"
+    ],
+    "2012/06/OF-logo1-150x150.jpg": [
+      "/openflow-openvswitch-lab/"
+    ],
+    "2012/06/SDN-API1.jpg": [
+      "/the-northbound-api-2/"
+    ],
+    "2012/06/SDN-API2.jpg": [
+      "/openflow-tutorial-lab-3/"
+    ],
+    "2012/06/SDN-Abstraction.jpg": [
+      "/the-northbound-api-2/"
+    ],
+    "2012/06/Topology-overview.jpg": [
+      "/openflow-starter-tutorial-lab-1/"
+    ],
+    "2012/06/VMware-v-ostack.jpg": [
+      "/comparing-vmware-vs-openstack/"
+    ],
+    "2012/06/WebUI-Flows.jpg": [
+      "/openflow-starter-tutorial-lab-1/"
+    ],
+    "2012/06/all-stacks1.png": [
+      "/the-best-mpls-lecture-on-the-net/"
+    ],
+    "2012/06/comparingvmware-andopenstack-120530155543-phpapp02.pdf": [
+      "/comparing-vmware-vs-openstack/"
+    ],
+    "2012/06/crossbar.jpg": [
+      "/ethernet-switch-fabric-cards/"
+    ],
+    "2012/06/features.jpg": [
+      "/cisco-onepk-about-time/"
+    ],
+    "2012/06/hates-nerds1.jpg": [
+      "/its-ok-to-like-openflow/"
+    ],
+    "2012/06/leaf-spine.jpg": [
+      "/ethernet-switch-fabric-cards/"
+    ],
+    "2012/06/market-share.jpg": [
+      "/cisco-onepk-about-time/"
+    ],
+    "2012/06/misaligned-bridge-api.jpg": [
+      "/the-northbound-api-2/"
+    ],
+    "2012/06/mpls-flow2.jpg": [
+      "/the-best-mpls-lecture-on-the-net/"
+    ],
+    "2012/06/mpls-stacking4.jpg": [
+      "/the-best-mpls-lecture-on-the-net/"
+    ],
+    "2012/06/network-interfaces.jpg": [
+      "/openflow-openvswitch-lab/"
+    ],
+    "2012/06/network-virtualization-jpg2.png": [
+      "/the-best-mpls-lecture-on-the-net/"
+    ],
+    "2012/06/onepk.jpg": [
+      "/cisco-onepk-about-time/"
+    ],
+    "2012/06/open-trap-300x210.jpg": [
+      "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/"
+    ],
+    "2012/06/open-trap-300x2101.jpg": [
+      "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/"
+    ],
+    "2012/06/open-trap.jpg": [
+      "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/"
+    ],
+    "2012/06/open-vswitch-lab.png": [
+      "/install-open-vswitch-networking-red-hat-fedora-20/",
+      "/installing-openvswitch-and-kvm-on-centos-6-2/",
+      "/openflow-openvswitch-lab/"
+    ],
+    "2012/06/ovs-tap.jpg": [
+      "/how-to-build-an-sdn-lab-without-needing-openflow-hardware/",
+      "/openflow-openvswitch-lab/"
+    ],
+    "2012/06/slide1.jpg": [
+      "/cisco-onepk-about-time/"
+    ],
+    "2012/06/tcp-dump-ping2.jpg": [
+      "/openflow-tutorial-lab-3/"
+    ],
+    "2012/07/2-hosts-tunnel.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/Blue-circuit-board.jpg": [
+      "/tcams-sdnopenflow-and-why-we-care/"
+    ],
+    "2012/07/Floodlight-UI.jpg": [
+      "/floodlight-gui-topology-addition/"
+    ],
+    "2012/07/Ghetto-Lisa.jpg": [
+      "/nicira-acquisition-by-vmware-winners-and-losers/"
+    ],
+    "2012/07/Google-sitemap.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/Horizontal-alto.jpg": [
+      "/new-ietf-sdn-drafts/"
+    ],
+    "2012/07/Image-Widget.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/Island.jpg": [
+      "/configuring-an-openflow-pox-sdn-controller-and-hp-switches/"
+    ],
+    "2012/07/Island2.jpg": [
+      "/how-to-build-an-sdn-lab-without-needing-openflow-hardware/"
+    ],
+    "2012/07/Network-Tunnels.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/OF-logo.jpg": [
+      "/floodlight-openflow-controller-gui-applet/"
+    ],
+    "2012/07/Posix1.jpg": [
+      "/sdn-apis-this-all-feels-pretty-familair/"
+    ],
+    "2012/07/Posix11.tiff": [
+      "/artboard-vector-drawing-app-review/"
+    ],
+    "2012/07/SDNi1.jpg": [
+      "/new-ietf-sdn-drafts/"
+    ],
+    "2012/07/SEO.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/W3-total-cache.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/artboard-wtf.jpg": [
+      "/artboard-vector-drawing-app-review/"
+    ],
+    "2012/07/askimet.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/gre-jumbo.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/mpls-tp2.jpg": [
+      "/new-ietf-sdn-drafts/"
+    ],
+    "2012/07/mysql-quantum-paste.txt": [
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/"
+    ],
+    "2012/07/nervous.jpeg": [
+      "/why-community-counts/"
+    ],
+    "2012/07/network.jpg": [
+      "/floodlight-gui-topology-addition/"
+    ],
+    "2012/07/nova-quantum-update.txt": [
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/"
+    ],
+    "2012/07/old-movie1.jpg": [
+      "/sdn-apis-this-all-feels-pretty-familair/"
+    ],
+    "2012/07/overlays3.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/ovs-fwding.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/ovs-gre-15001.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/parliament2.jpg": [
+      "/new-ietf-sdn-drafts/"
+    ],
+    "2012/07/ping.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/prettify1.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/rear-view2-300x198.jpg": [
+      "/sdn-apis-this-all-feels-pretty-familair/"
+    ],
+    "2012/07/rear-view2.jpg": [
+      "/sdn-apis-this-all-feels-pretty-familair/"
+    ],
+    "2012/07/simple-scoail.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/simple-social-widget.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/traffic-island.jpg": [
+      "/configuring-an-openflow-pox-sdn-controller-and-hp-switches/"
+    ],
+    "2012/07/twitter-button-widget.jpg": [
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/07/unicorn-rainbow.jpg": [
+      "/configuring-an-openflow-pox-sdn-controller-and-hp-switches/"
+    ],
+    "2012/07/vxlan-1500.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/07/vxlan-jumbo.jpg": [
+      "/configuring-vxlan-and-gre-tunnels-on-openvswitch/"
+    ],
+    "2012/08/1-Geo-Location1.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/20G-img2.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/2key.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/API-Keys.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/Agregate-new.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Big-pic.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/CapWap.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/Chef1.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/Claire-Chaplais-wpcf_60x41.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/Clients-by-Vendors.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Cloud-Uni3-350x304.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/Cloud-Uni3.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/Enterprise.Wireless.png": [
+      "/enterprise-802-11-wireless-growth-part-3/",
+      "/enterprise-wireless-and-wired-traffic-part2/",
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Ferro-wpcf_60x39.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/Flavor.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/Foskett-Headshot-wpcf_60x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/GPN-v1.4.pdf": [
+      "/software-defined-data-center-slidedeck/"
+    ],
+    "2012/08/Gaddis-wpcf_41x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/Hollingsworth1-wpcf_44x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/IP-add1.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/Installing.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/Marget-wpcf_48x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/Paul-Small.png": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/Plankers-wpcf_60x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/SCSI4.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/Sec-Group.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/Session-Time-Vendor1.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Sessions-by-Vendor.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Summary.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Topology-Python-Installer.jpg": [
+      "/openstack-essex-installer-script/"
+    ],
+    "2012/08/Topology-demo2.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/Traffic-by-Vendor.jpg": [
+      "/why-enterprise-wireless-networks-got-it-right/"
+    ],
+    "2012/08/Unicorn-code.jpg": [
+      "/quantum-openstack-python-installer/"
+    ],
+    "2012/08/VXLan.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/Windows-VM2.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/all-hosts-gre.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/all-hosts-vxlan.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/brent-salisbury1-wpcf_60x60.jpeg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/cabling-bad.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/cat-leadership2-350x228.jpg": [
+      "/thoughts-from-the-packetpusher-show-112-sdns-sdns-potential-as-a-displacement-technology/"
+    ],
+    "2012/08/cat-leadership2.jpg": [
+      "/thoughts-from-the-packetpusher-show-112-sdns-sdns-potential-as-a-displacement-technology/"
+    ],
+    "2012/08/cmcnamara-headshot-2011-color-scaled-wpcf_42x60.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/cute-baby-pengions.png": [
+      "/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/"
+    ],
+    "2012/08/datacenter.jpg": [
+      "/software-defined-data-center-slidedeck/"
+    ],
+    "2012/08/exports.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/glance.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/gre-spoke-to-hp.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/gre-spoke-to-hp2.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/keystone.sh_.txt": [
+      "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/",
+      "/openstack-essex-installation-and-configuration-screencast-from-scratch/"
+    ],
+    "2012/08/main-menu.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/merge-instance1.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/mfMcNamara-60x60.jpeg": [
+      "/network-field-day-4/"
+    ],
+    "2012/08/nic-driver.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/no-tunel.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/nova-conf1.txt": [
+      "/openstack-essex-installation-walkthrough-from-scratch-part2/"
+    ],
+    "2012/08/oStackEssex.py_4.txt": [
+      "/openstack-essex-installer-script/"
+    ],
+    "2012/08/openstack-logo1.jpg": [
+      "/openstack-essex-installer-script/",
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/ove-hub-show.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/post-config.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/py-quantum.py_.txt": [
+      "/quantum-openstack-python-installer/"
+    ],
+    "2012/08/python2.png": [
+      "/quantum-openstack-python-installer/"
+    ],
+    "2012/08/quantum-py1.jpg": [
+      "/quantum-openstack-python-installer/"
+    ],
+    "2012/08/remove-quantum.sh_.txt": [
+      "/quantum-openstack-python-installer/"
+    ],
+    "2012/08/role.jpg": [
+      "/rackspace-openstack-installation-on-a-kvm-vm/"
+    ],
+    "2012/08/select-driver1.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/spoke-to-hub.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/spoke-to-spoke-gre.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/spoke-to-spoke-vxlan.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/stack-cleanup.sh_.txt": [
+      "/openstack-essex-installer-script/"
+    ],
+    "2012/08/tux-copy.jpg": [
+      "/nested-kvm-hypervisor-support/"
+    ],
+    "2012/08/unicorn-accountant.jpg": [
+      "/the-hp-public-cloud-and-openstack/"
+    ],
+    "2012/08/vxlan-spoke-to-hp.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/08/windows-FW.jpg": [
+      "/building-a-windows-image-for-openstack/"
+    ],
+    "2012/08/xrdp-login-350x178.jpg": [
+      "/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/"
+    ],
+    "2012/08/xrdp-logo.jpg": [
+      "/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/"
+    ],
+    "2012/09/802.11-Growth-Linear.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/AWS.jpg": [
+      "/does-the-cost-of-cloud-iaas-intersect-the-local-vm/"
+    ],
+    "2012/09/Average-Wired-Orion.jpg": [
+      "/enterprise-wireless-and-wired-traffic-part2/"
+    ],
+    "2012/09/BDF.jpg": [
+      "/the-death-of-the-wired-enterprise-network/"
+    ],
+    "2012/09/Client-Summary-by-Vendor.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/Client-by-Vendor21.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/Cloud-Cost.jpg": [
+      "/does-the-cost-of-cloud-iaas-intersect-the-local-vm/"
+    ],
+    "2012/09/Control-Plane.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/Control.Plane_.BGP_.Tiers_.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/IDF.jpg": [
+      "/the-death-of-the-wired-enterprise-network/"
+    ],
+    "2012/09/JohnCrop.jpeg": [
+      "/network-field-day-4/"
+    ],
+    "2012/09/Kitten-PC1-334x350.jpg": [
+      "/python-tutorial-functions-and-passing-lists-and-dictionaries-with-simple-examples/"
+    ],
+    "2012/09/Kitten-PC1.jpg": [
+      "/python-tutorial-functions-and-passing-lists-and-dictionaries-with-simple-examples/"
+    ],
+    "2012/09/Kitty-Coder.jpg": [
+      "/python-tutorial-classes-objects-methods-init-and-simple-examples/"
+    ],
+    "2012/09/MPLS.Policy.Application.east_.west_2.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/MPLS.Policy.Application1.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/MPLS.VPN_.SDN_.RFC_.shadow.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/OVS-Path-1024x430.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/OVS-Path.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/Python-Header.png": [
+      "/python-tutorial-functions-and-passing-lists-and-dictionaries-with-simple-examples/"
+    ],
+    "2012/09/Q1-2012.jpg": [
+      "/does-the-cost-of-cloud-iaas-intersect-the-local-vm/"
+    ],
+    "2012/09/SDN.LAB_.Openflow2.jpg": [
+      "/openflow-openvswitch-and-kvm-sdn-lab-installation-app/"
+    ],
+    "2012/09/Session-Time-by-Vendor.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/Sessions-by-vendors.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/Traffic-Control_02.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/Traffic-bt-Vendor1.jpg": [
+      "/enterprise-802-11-wireless-growth-part-3/"
+    ],
+    "2012/09/Wireless-Controller.jpg": [
+      "/enterprise-wireless-and-wired-traffic-part2/"
+    ],
+    "2012/09/bad.cabling.networks-310x350.jpg": [
+      "/the-death-of-the-wired-enterprise-network/"
+    ],
+    "2012/09/bad.cabling.networks.jpg": [
+      "/the-death-of-the-wired-enterprise-network/"
+    ],
+    "2012/09/bridged.snapshot.virtualbox.jpg": [
+      "/openvswitch-and-openflow-lab-preparation/"
+    ],
+    "2012/09/bunker-lab.png": [
+      "/openflow-openvswitch-and-kvm-sdn-lab-installation-app/"
+    ],
+    "2012/09/clintonswedding-wpcf_60x49.jpeg": [
+      "/network-field-day-4/"
+    ],
+    "2012/09/default.django.web_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.admin_.console.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.admin_.py_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.hello_.world_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.hello_.world_.views_.py_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.manage.project.settings.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.polls_.app_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.polls_.app_1.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/django.urls_.py_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/flow3.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/forwarding-engines-1024x618.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/forwarding-engines.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/johnherbert-wpcf_60x60.jpeg": [
+      "/network-field-day-4/"
+    ],
+    "2012/09/junos-tables2.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/l3vpn.draft_.topo_.jpg": [
+      "/ietf-draft-bgp-signaled-end-system-ip-vpns/"
+    ],
+    "2012/09/mode.py_.django.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/network-planes.jpg": [
+      "/the-control-plane-data-plane-and-forwarding-plane-in-networks/"
+    ],
+    "2012/09/openflow-lab.png": [
+      "/floodlight-openflow-controller-gui-applet/",
+      "/how-to-build-an-sdn-lab-without-needing-openflow-hardware/",
+      "/openflow-starter-tutorial-lab-1/",
+      "/openflow-tutorial-lab-2/",
+      "/openflow-tutorial-lab-3/",
+      "/openvswitch-and-openflow-lab-preparation/"
+    ],
+    "2012/09/python.png": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/python1.png": [
+      "/python-tutorial-classes-objects-methods-init-and-simple-examples/"
+    ],
+    "2012/09/settings.py_.db_.django.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/synch.db_.django.super_.user_.jpg": [
+      "/django-installation-and-first-app-tutorial/"
+    ],
+    "2012/09/term21.jpg": [
+      "/openflow-openvswitch-and-kvm-sdn-lab-installation-app/"
+    ],
+    "2012/09/unicorn-accountant.jpg": [
+      "/does-the-cost-of-cloud-iaas-intersect-the-local-vm/"
+    ],
+    "2012/10/Edison-Phonograph.jpg": [
+      "/why-we-expect-more-from-technology-providers-we-dont-have-a-choice/"
+    ],
+    "2012/10/HP-SDN-Cloud.jpg": [
+      "/hp-announces-their-sdn-controller/"
+    ],
+    "2012/10/HP-SDN-Ecosystem.jpg": [
+      "/hp-announces-their-sdn-controller/"
+    ],
+    "2012/10/HP-SDN-Layers.jpg": [
+      "/hp-announces-their-sdn-controller/"
+    ],
+    "2012/10/Internet-Change.png": [
+      "/sdn-using-dns-naming-for-classification/"
+    ],
+    "2012/10/MediaCenter_Red1.png": [
+      "/spirent-communications-looks-toward-the-enterprise/"
+    ],
+    "2012/10/NFD-Logo.jpg": [
+      "/network-field-day-4/"
+    ],
+    "2012/10/Power-lines_729-620x349.jpg": [
+      "/network-management-system-nms-statseeker/"
+    ],
+    "2012/10/Required.v1.3.Openflow.Feilds.jpg": [
+      "/sdn-using-dns-naming-for-classification/"
+    ],
+    "2012/10/SDN-Abstraction-Layers.jpg": [
+      "/sdn-using-names/"
+    ],
+    "2012/10/SDN-DNS-DC.jpg": [
+      "/sdn-using-names/"
+    ],
+    "2012/10/SDN-Policy.jpg": [
+      "/sdn-using-names/"
+    ],
+    "2012/10/SDN-SIMPLE-DNS.jpg": [
+      "/sdn-using-names/"
+    ],
+    "2012/10/SDN-SP.jpg": [
+      "/sdn-using-names/"
+    ],
+    "2012/10/Sec-Policy-SDN-Naming-border.jpg": [
+      "/sdn-using-dns-naming-for-classification/"
+    ],
+    "2012/10/TE-OpenFlow-Names-border1.jpg": [
+      "/sdn-using-dns-naming-for-classification/"
+    ],
+    "2012/10/access-idf-port-audit.jpg": [
+      "/network-management-system-nms-statseeker/"
+    ],
+    "2012/10/avoidbandwidthbandits.jpg": [
+      "/spirent-communications-looks-toward-the-enterprise/"
+    ],
+    "2012/10/brocade_logo.jpg": [
+      "/brocade-on-sdn-at-network-field-day/"
+    ],
+    "2012/10/broken.computer.jpg": [
+      "/wireshark-install-on-mac-os-x/"
+    ],
+    "2012/10/cisco-logo.jpg": [
+      "/mvpn-multicast-with-multi-protocol-bgp-mpls-vpn-on-cisco-ios/",
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/export-wordpress-database.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/folsom-glance.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/future1.jpg": [
+      "/why-we-expect-more-from-technology-providers-we-dont-have-a-choice/"
+    ],
+    "2012/10/hybrid-sdn-scale.jpg": [
+      "/hybrid-sdn-deployments/"
+    ],
+    "2012/10/import-author2.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/import-upload-error.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/map101.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map11.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map111.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map12.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map13.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map14.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map2.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map3.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map4.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map5.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map6.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map7.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map8.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/map9.jpg": [
+      "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/"
+    ],
+    "2012/10/netns.quantum.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/openflow-lab.png": [
+      "/hp-announces-their-sdn-controller/",
+      "/top-10-reasons-i-think-sdn-openflow-will-gain-momentum/"
+    ],
+    "2012/10/openstack-contributions1.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/openstack.folsom.isolation.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/openstack.tenant.vlans_1.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/opestack-releases.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/php.ini-upload21.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/route.table_.openstack.quantum.jpg": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/10/sdn-agility-hp.jpg": [
+      "/hp-announces-their-sdn-controller/"
+    ],
+    "2012/10/sdn-naming.jpg": [
+      "/hybrid-sdn-deployments/"
+    ],
+    "2012/10/sdn.paths_.jpg": [
+      "/sdn-using-dns-naming-for-classification/"
+    ],
+    "2012/10/torn-install.p_h_p.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/upload-after.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/upload-before.jpg": [
+      "/install-wordpress-on-ubuntu/"
+    ],
+    "2012/10/wordpress-logo.jpg": [
+      "/install-wordpress-on-ubuntu/",
+      "/my-top-10-essential-wordpress-plugins/"
+    ],
+    "2012/11/3-tier-compact-2-982x1024.jpg": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/3-tier-compact-2.jpg": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/Cariden-NOS1.jpg": [
+      "/cisco-acquisition-of-cariden/"
+    ],
+    "2012/11/NFD-Logo3-150x150.png": [
+      "/juniper-networks-at-network-field-day-4/"
+    ],
+    "2012/11/NFV_SDN_White_Paper.pdf": [
+      "/sdn-use-cases-for-service-providers/"
+    ],
+    "2012/11/Quantum_Information_Processing.jpg": [
+      "/cisco-acquisition-of-cariden/"
+    ],
+    "2012/11/SP-Use-Cases1.jpg": [
+      "/sdn-use-cases-for-service-providers/"
+    ],
+    "2012/11/application.jpg": [
+      "/cisco-acquisition-of-cariden/"
+    ],
+    "2012/11/aws.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/11/bad-cell-wireless2.jpg": [
+      "/why-consumers-of-u-s-wireless-carriers-need-a-google/"
+    ],
+    "2012/11/bigtap.png": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/brand-sdn.jpg": [
+      "/software-defined-network-sdn-looking-toward-2013-part-1/"
+    ],
+    "2012/11/bvs-pure-overlay.png": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/cariden-analytics.jpg": [
+      "/cisco-acquisition-of-cariden/"
+    ],
+    "2012/11/currupt-politicians.jpg": [
+      "/bad-idea-list-itu-un-plan-to-regulate-the-internet/"
+    ],
+    "2012/11/devops-openstack-lab.png": [
+      "/openstack-folsom-quantum-devstack-installation-tutorial/"
+    ],
+    "2012/11/devops-sm.jpeg": [
+      "/openstack-multi-node-devstack-nova-network-tutorial/",
+      "/openstack-quantum-devstack-on-a-laptop-with-vmware-fusion/"
+    ],
+    "2012/11/disruption-sdn1.jpg": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/ecosystem.jpg": [
+      "/sdn-use-cases-for-service-providers/"
+    ],
+    "2012/11/google-storm-trooper.jpg": [
+      "/why-consumers-of-u-s-wireless-carriers-need-a-google/"
+    ],
+    "2012/11/hybrid-network.png": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/hybrid.jpg": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/juniper_01.jpg": [
+      "/juniper-networks-at-network-field-day-4/"
+    ],
+    "2012/11/nested-hardware-virtualization.jpg": [
+      "/openstack-quantum-devstack-on-a-laptop-with-vmware-fusion/"
+    ],
+    "2012/11/openstack-devstack-crop.jpg": [
+      "/updated-devstack-opendaylight-vm-image-for-openstack-icehouse/"
+    ],
+    "2012/11/openstack-png2-150x150.png": [
+      "/openstack-quantum-devstack-on-a-laptop-with-vmware-fusion/"
+    ],
+    "2012/11/programming.jpg": [
+      "/tutorial-to-build-a-floodlight-sdn-openflow-controller-module/"
+    ],
+    "2012/11/pure-openflow.png": [
+      "/bigswitch-announces-sdn-ga-products-and-pure-disruption/"
+    ],
+    "2012/11/remember-when.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/11/standards.jpg": [
+      "/software-defined-network-sdn-looking-toward-2013-part-2/"
+    ],
+    "2012/11/telco2.jpg": [
+      "/sdn-use-cases-for-service-providers/"
+    ],
+    "2012/11/top-apps.png": [
+      "/5-useful-mac-apps-snagit-evernote-screenflow-reeder-and-daisydisk/"
+    ],
+    "2012/11/unicorn-security-sdn3.jpg": [
+      "/the-potential-impact-of-software-defined-networking-sdn-on-security/"
+    ],
+    "2012/11/virt-data-model-vyatta.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/11/virt.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/11/vyatta-dci.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/11/vyatta-logo.crop_.jpg": [
+      "/brocade-acquisition-of-vyatta/"
+    ],
+    "2012/12/ATT000291.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/ATT000353.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/ATT000446.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/ATT000477.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/ATT000508.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/ATT000539.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Best-Cat-Videos-2012.jpg": [
+      "/best-cat-videos-of-2012/"
+    ],
+    "2012/12/FowMod-OpenFlow.jpg": [
+      "/floodlight-openflow-controller-using-the-static-flow-entry-pusher/"
+    ],
+    "2012/12/Google-DC.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-Datacenter-Stormtrooper.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-Droid.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-Pool-Table.png": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-Tape.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-dc3.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-hard-drives.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-racks2.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-tape-robot.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Google-worldwide.png": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Googles-server-room.png": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/Huawei-SOX1.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/Huawei-testbed.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/NSP-Juniper-Application.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/NSP-Network-Marketshare1.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/brocade-ostack-sdn.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/build-ovs-650x200.jpg": [
+      "/open-vswitch-red-hat-installation/"
+    ],
+    "2012/12/build-ovs.jpg": [
+      "/open-vswitch-red-hat-installation/"
+    ],
+    "2012/12/cacti-nms.png": [
+      "/cacti-network-management-installation-tutorial/"
+    ],
+    "2012/12/cacti-plugins.jpg": [
+      "/cacti-network-management-installation-tutorial/"
+    ],
+    "2012/12/cacti_host_template_cisco_6500.xml_.txt": [
+      "/cacti-network-management-installation-tutorial/"
+    ],
+    "2012/12/colage.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/devops-netops.jpg": [
+      "/software-defined-network-sdn-looking-toward-2013-part-2/"
+    ],
+    "2012/12/fail-cabling.jpg": [
+      "/public-cloud-network-as-a-service/"
+    ],
+    "2012/12/frenetic.jpg": [
+      "/software-defined-network-sdn-looking-toward-2013-part-1/"
+    ],
+    "2012/12/g-ee.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-at-night.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-data-center-colored-pipes.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter-places-04.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter-places-10.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter-places-121.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter-tech-14.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter-tech-15.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-datacenter2.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/google-header-post.jpg": [
+      "/google-data-center-pictures-year-in-review/"
+    ],
+    "2012/12/nsp-world-sdn.jpg": [
+      "/programming-the-nsp-vendors-on-sdn-for-sp-operators/"
+    ],
+    "2012/12/skbuff-post-comment.jpg": [
+      "/open-vswitch-red-hat-installation/"
+    ],
+    "2012/12/skbuff.h.pre_.jpg": [
+      "/open-vswitch-red-hat-installation/"
+    ],
+    "2012/12/youtube-kitty-osi.jpg": [
+      "/how-headers-encapsulate-in-the-osi-stack/"
+    ],
+    "2013/01/Flow-Factory4.jpg": [
+      "/sdn-openflow-policy-abstractions/"
+    ],
+    "2013/01/Flow-factory2.jpg": [
+      "/openflow-coarse-vs-fine-flows/"
+    ],
+    "2013/01/Hybrid-OpenFlow-SDN.png": [
+      "/openflow-sdn-hybrid-deployment-strategies/"
+    ],
+    "2013/01/Hybrid-Openflow.jpg": [
+      "/hybrid-sdn-deployments/"
+    ],
+    "2013/01/OpenFlow-Coarse.png": [
+      "/openflow-coarse-vs-fine-flows/"
+    ],
+    "2013/01/OpenFlow-Granular.png": [
+      "/openflow-coarse-vs-fine-flows/"
+    ],
+    "2013/01/OpenStack-Flat-Network-Manager.jpg": [
+      "/installing-openstack-grizzly-with-devstack/",
+      "/openstack-multi-node-devstack-nova-network-tutorial/"
+    ],
+    "2013/01/OpenStack-Nova-Network-Topology.jpg": [
+      "/installing-openstack-grizzly-with-devstack/",
+      "/openstack-multi-node-devstack-nova-network-tutorial/"
+    ],
+    "2013/01/OpenStack-PS.jpg": [
+      "/installing-openstack-grizzly-with-devstack/",
+      "/openstack-multi-node-devstack-nova-network-tutorial/"
+    ],
+    "2013/01/Risk.jpg": [
+      "/openflow-sdn-hybrid-deployment-strategies/"
+    ],
+    "2013/01/SDN-Path-Steering.jpg": [
+      "/hybrid-sdn-deployments/"
+    ],
+    "2013/01/SDN-Policy.jpg": [
+      "/sdn-openflow-policy-abstractions/"
+    ],
+    "2013/01/SDN-Quantum.jpg": [
+      "/hybrid-sdn-deployments/"
+    ],
+    "2013/01/bad-decision1.jpg": [
+      "/openflow-proactive-vs-reactive-flows/",
+      "/sdn-business-cases/"
+    ],
+    "2013/01/brctl-show-openstack.jpg": [
+      "/installing-openstack-grizzly-with-devstack/",
+      "/openstack-multi-node-devstack-nova-network-tutorial/"
+    ],
+    "2013/01/censored-kitty-cat.jpeg": [
+      "/the-sdn-impact-on-net-neutrality/"
+    ],
+    "2013/01/nova-manage-OpenStack.jpg": [
+      "/installing-openstack-grizzly-with-devstack/",
+      "/openstack-multi-node-devstack-nova-network-tutorial/"
+    ],
+    "2013/01/optical.jpg": [
+      "/plexxi-capacity-planning-done-right/"
+    ],
+    "2013/01/plexxi-sdn.jpg": [
+      "/plexxi-capacity-planning-done-right/"
+    ],
+    "2013/01/sdn-flow-policy-factory.jpg": [
+      "/sdn-openflow-policy-abstractions/"
+    ],
+    "2013/01/tcam.png": [
+      "/openflow-proactive-vs-reactive-flows/"
+    ],
+    "2013/02/Normal-Pipeline.png": [
+      "/hybrid-openflow-using-the-normal-action/"
+    ],
+    "2013/02/OpenFlow-Pipeline-650x452.png": [
+      "/hybrid-openflow-using-the-normal-action/"
+    ],
+    "2013/02/Paul-Baran-Distributed-Comm-Systems.png": [
+      "/more-details-about-the-cisco-one-controller-announced/"
+    ],
+    "2013/02/about-plugin.jpg": [
+      "/installing-wireshark-on-linux-for-openflow-packet-captures/"
+    ],
+    "2013/02/cisco-one-controller-openflow-hybrid.png": [
+      "/more-details-about-the-cisco-one-controller-announced/"
+    ],
+    "2013/02/cisco-one-controller-openflow.png": [
+      "/more-details-about-the-cisco-one-controller-announced/"
+    ],
+    "2013/02/cisco-one-controller.png": [
+      "/more-details-about-the-cisco-one-controller-announced/"
+    ],
+    "2013/02/normal-OF.jpg": [
+      "/hybrid-openflow-using-the-normal-action/"
+    ],
+    "2013/02/openflow-normal-rule-650x212.png": [
+      "/hybrid-openflow-using-the-normal-action/"
+    ],
+    "2013/02/openflow-spec-v1.3.0.pdf": [
+      "/floodlight-openflow-controller-using-the-static-flow-entry-pusher/",
+      "/hybrid-openflow-using-the-normal-action/",
+      "/opendaylight-openflow-tutorial/",
+      "/the-good-and-bad-of-wireless/"
+    ],
+    "2013/02/openflow.so_.jpg": [
+      "/installing-wireshark-on-linux-for-openflow-packet-captures/"
+    ],
+    "2013/02/vendor-confusion.jpeg": [
+      "/more-vendors-define-their-sdn-strategy/"
+    ],
+    "2013/02/wireshark-openflow.jpg": [
+      "/installing-wireshark-on-linux-for-openflow-packet-captures/"
+    ],
+    "2013/02/wireshark.jpg": [
+      "/installing-wireshark-on-linux-for-openflow-packet-captures/"
+    ],
+    "2013/03/Big-Light-Architecture1.png": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/03/Change2.png": [
+      "/be-the-steamroller-not-the-road/"
+    ],
+    "2013/03/Cisco-Catalyst-3850-Cavium.png": [
+      "/network-processing-units-npu-for-the-win/"
+    ],
+    "2013/03/Cisco-Prime-Wireless.png": [
+      "/the-good-and-bad-of-wireless/"
+    ],
+    "2013/03/DC-SP-SDN.png": [
+      "/be-the-steamroller-not-the-road/"
+    ],
+    "2013/03/NAC-Wireless-Magic-Quadrant.png": [
+      "/the-good-and-bad-of-wireless/"
+    ],
+    "2013/03/Network-Field-Day-5.jpeg": [
+      "/sdn-dominates-nfd5/"
+    ],
+    "2013/03/Network-Field-Day-5.png": [
+      "/networking-field-day-5-a-community-event/"
+    ],
+    "2013/03/OpenFlow-Hybrid-HP.png": [
+      "/configure-an-hp-openflow-switch-for-floodlight/"
+    ],
+    "2013/03/PBB-Topology.png": [
+      "/putting-together-provider-bridging-provider-backbone-bridging-s-tags-and-c-tags/"
+    ],
+    "2013/03/PBB.png": [
+      "/putting-together-provider-bridging-provider-backbone-bridging-s-tags-and-c-tags/"
+    ],
+    "2013/03/PBB1.jpeg": [
+      "/putting-together-provider-bridging-provider-backbone-bridging-s-tags-and-c-tags/"
+    ],
+    "2013/03/Ruckus-wireless-enterprise.png": [
+      "/the-good-and-bad-of-wireless/"
+    ],
+    "2013/03/SDN-Management.png": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/03/SDN-New-v-Old.png": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/03/SDN-ODM1-650x282.png": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/03/Wireless-Marketshare.png": [
+      "/the-good-and-bad-of-wireless/"
+    ],
+    "2013/03/monolith-sdn-comparison1.png": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/03/openvswitch-VM.png": [
+      "/open-vswitch-on-virtualbox/"
+    ],
+    "2013/03/openvswitch-virtualbox.png": [
+      "/open-vswitch-on-virtualbox/"
+    ],
+    "2013/03/whitebox.jpeg": [
+      "/big-switch-introduces-switch-light/"
+    ],
+    "2013/04/Cisco-ONE-Controller-Login.jpeg": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/Cisco-ONE-OpenFlow.png": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/Cisco-ONE1.png": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/Internet-OpenFlow-SDN-Part1-Amp.mp3": [
+      "/sdn-openflow-and-opendaylight-updates-and-recordings/"
+    ],
+    "2013/04/Internet-OpenFlow-SDN-Vendors-Part2-amp.mp3": [
+      "/sdn-openflow-and-opendaylight-updates-and-recordings/"
+    ],
+    "2013/04/ONS-Schedule-day1.png": [
+      "/open-networking-summit-2013-is-streaming/"
+    ],
+    "2013/04/ONS-Schedule-day2.png": [
+      "/open-networking-summit-2013-is-streaming/"
+    ],
+    "2013/04/ONS-Schedule-day3.png": [
+      "/open-networking-summit-2013-is-streaming/"
+    ],
+    "2013/04/OpenDaylight-Match-Add-Flow.png": [
+      "/opendaylight-openflow-tutorial/"
+    ],
+    "2013/04/OpenDaylight-ONS-ODP.mp3": [
+      "/importing-opendaylight-into-eclipse/"
+    ],
+    "2013/04/OpenDaylight-OpenFlow-Switch-650x405.png": [
+      "/opendaylight-openflow-tutorial/"
+    ],
+    "2013/04/OpenDaylight-Output-port.png": [
+      "/opendaylight-openflow-tutorial/"
+    ],
+    "2013/04/OpenDaylight-QA.mp3": [
+      "/sdn-openflow-and-opendaylight-updates-and-recordings/"
+    ],
+    "2013/04/OpenFlow-Packet-Flowmod.png": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/Openflow-Programming-header-sm.jpeg": [
+      "/floodlight-openflow-controller-using-the-static-flow-entry-pusher/",
+      "/importing-opendaylight-into-eclipse/"
+    ],
+    "2013/04/Static-Flow.png": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/TIF-Forwarding.png": [
+      "/the-cisco-one-sdn-controller/"
+    ],
+    "2013/04/stop-cant-do-it-sm.jpeg": [
+      "/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/",
+      "/sdn-openflow-and-opendaylight-updates-and-recordings/"
+    ],
+    "2013/04/unicorn-accountant.jpeg": [
+      "/installing-openstack-grizzly-with-devstack/"
+    ],
+    "2013/05/ODP-Pen-Test.png": [
+      "/pre-built-opendaylight-vm-images/"
+    ],
+    "2013/05/OpenDaylight-Logo-sm.jpeg": [
+      "/opendaylight-openflow-tutorial/",
+      "/opendaylight-openstack-integration-devstack-fedora-20/",
+      "/pre-built-opendaylight-vm-images/"
+    ],
+    "2013/05/OpenFlow-Dissector.png": [
+      "/pre-built-opendaylight-vm-images/"
+    ],
+    "2013/05/OpenFlow-Dissector1.jpg": [
+      "/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/"
+    ],
+    "2013/05/OpenFlow-Packet-Flowmod.png": [
+      "/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/"
+    ],
+    "2013/05/openflow2.jpeg": [
+      "/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/",
+      "/configure-an-hp-openflow-switch-for-floodlight/"
+    ],
+    "2013/06/OFP_normal.png": [
+      "/the-openflow-overlay/"
+    ],
+    "2013/06/OFP_normal_rules.png": [
+      "/the-openflow-overlay/"
+    ],
+    "2013/06/The-OpenFlow-Overlay.png": [
+      "/the-openflow-overlay/"
+    ],
+    "2013/06/incrementalism1.png": [
+      "/the-openflow-overlay/"
+    ],
+    "2013/06/osgi-maven.jpeg": [
+      "/opendaylight-maven-and-osgi-dev-notes/"
+    ],
+    "2013/09/BSN-NFD6.pdf": [
+      "/sdn-product-rundown-september/"
+    ],
+    "2013/09/Nuage_NFD6_TechFieldDay_12sep13.pdf": [
+      "/sdn-product-rundown-september/"
+    ],
+    "2013/09/ovsdb-tables.png": [
+      "/getting-started-ovsdb/"
+    ],
+    "2013/09/ovsdb-vswitchd.png": [
+      "/getting-started-ovsdb/"
+    ],
+    "2013/09/sdncentral-v3.pptx": [
+      "/sdn-product-rundown-september/"
+    ],
+    "2013/10/Network-Routing-in-the-Underlay-Fabric.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/Network-Virtualization-Overlay.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/Network-Virtualization-Underlay.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/Open-Source.jpeg": [
+      "/getting-started-ovsdb/"
+    ],
+    "2013/10/Overlay-Tenant.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/VLAN-Fail1.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/VXLAN-VNI-Tenancy.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/Wireshark-OpenFlow.jpeg": [
+      "/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/",
+      "/installing-wireshark-on-linux-for-openflow-packet-captures/"
+    ],
+    "2013/10/fragile-architecture.jpeg": [
+      "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/"
+    ],
+    "2013/10/ovsdb-json.png": [
+      "/getting-started-ovsdb/"
+    ],
+    "2013/10/unmarshall.png": [
+      "/getting-started-ovsdb/"
+    ],
+    "2013/11/openstack-logo.jpg": [
+      "/installing-openstack-ml2-neutron-plugin-devstack-fedora/"
+    ],
+    "2013/11/redhat-ovs-sdn.jpeg": [
+      "/install-open-vswitch-v2-redhat-fedora-19/",
+      "/new-opportunity-red-hat/"
+    ],
+    "2013/11/slide-cat-shark-duck1.jpeg": [
+      "/installing-openstack-ml2-neutron-plugin-devstack-fedora/"
+    ],
+    "2013/11/under-the-hood-scenario-1-ovs-compute.jpeg": [
+      "/installing-openstack-ml2-neutron-plugin-devstack-fedora/"
+    ],
+    "2014/02/Horizon-OpenDaylight-e1392513990486.jpg": [
+      "/opendaylight-openstack-integration-devstack-fedora-20/"
+    ],
+    "2014/02/OVSDB-Architecture.png": [
+      "/opendaylight-openstack-integration-devstack-fedora-20/"
+    ],
+    "2014/02/Overlay-OpenDaylight-OVSDB-OpenFlow.png": [
+      "/opendaylight-openstack-integration-devstack-fedora-20/"
+    ],
+    "2014/02/VirtualBox-HostOnly-Networks.png": [
+      "/opendaylight-openstack-integration-devstack-fedora-20/"
+    ],
+    "2014/02/VirtualBox-HostOnly-Nics.png": [
+      "/opendaylight-openstack-integration-devstack-fedora-20/"
+    ],
+    "2014/03/Network-Overlay.jpeg": [
+      "/setting-overlays-open-vswitch/"
+    ],
+    "2014/03/Overlays-Blog-650x494.jpeg": [
+      "/setting-overlays-open-vswitch/"
+    ],
+    "2014/06/cat_are_you_fucking_kidding_me-.jpg": [
+      "/brents-technology-bookmarks-from-june/"
+    ],
+    "2014/10/Iceberg-SocketPlane-Virt-Net.png": [
+      "/network-iceberg/"
+    ],
+    "2014/10/SocketPlane-Banner2.png": [
+      "/network-iceberg/"
+    ],
+    "2015/01/go-docker.png": [
+      "/golang-network-ops/"
+    ],
+    "2015/01/twitter-gopher-banner-small.jpg": [
+      "/golang-network-ops/"
+    ],
+    "2015/02/1-update-golang-e1423885000615.jpg": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2-update-golang-e1423884940974.jpg": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-05-29.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-06-15.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-06-42-650x309.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-06-56.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-09-42.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/2015-02-07_19-10-29.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/3-update-golang-e1423884956970.jpg": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/Docker-Gopher-Banner.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/02/docker-logo.png": [
+      "/docker-one-liners/"
+    ],
+    "2015/02/slpha.png": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/04/Docker-Microsoft-Azure-Banner.jpg": [
+      "/using-docker-machine-to-provision-on-microsoft-azure/"
+    ],
+    "2015/04/Intellij-Manage-Repositories-e1427850904203.jpg": [
+      "/installing-golang-ide-support-intellij/"
+    ],
+    "2015/04/Subnet-VPC-660x500.jpg": [
+      "/docker-machine-provisioning-on-aws/"
+    ],
+    "2015/04/Subnet-VPC.jpg": [
+      "/docker-machine-provisioning-on-aws/"
+    ],
+    "2015/04/docker-penguin-gopher-banner.jpg": [
+      "/normalizing-the-cloud-with-docker-machine/"
+    ],
+    "2015/05/Docker-large_h-dark.png": [
+      "/running-docker-machine-on-digital-ocean/"
+    ],
+    "2015/05/docker-turtles-banner-network-copy.jpg": [
+      "/10-examples-of-how-to-get-docker-container-ip-address/"
+    ],
+    "2015/05/docker_logo_banner.png": [
+      "/running-docker-machine-on-rackspace-public-cloud/"
+    ],
+    "2015/06/Cloud-Bandwidth-smaller1.jpg": [
+      "/building-network-tools-using-docker/"
+    ],
+    "2015/06/Cloud-Bandwidth.jpg": [
+      "/building-network-tools-using-docker/"
+    ],
+    "2015/06/build_ship_run-banner.jpg": [
+      "/docker-on-google-compute-engine-using-docker-machine/"
+    ],
+    "2015/06/docker-build-text.png": [
+      "/building-network-tools-using-docker/"
+    ],
+    "2015/08/angry_panda_vs_chef.gif": [
+      "/time-to-ditch-the-definition-of-sdn/"
+    ],
+    "2016/03/docker_networking-banner1.png": [
+      "/configuring-macvlan-ipvlan-linux-networking/",
+      "/measuring-network-bandwidth-using-iperf-and-docker/"
+    ],
+    "2016/03/gobgp-purple.jpg": [
+      "/gobgp-control-plane-evolving-software-networking/"
+    ],
+    "2019/12/elastiflow-1-1-660x301.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-2-660x188.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-2.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-3-660x639.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-3.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-4-1-660x558.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-4-1.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-5-660x620.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-5.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-6-660x723.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-6.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2019/12/elastiflow-header.png": [
+      "/open-source-flow-monitoring-and-visualization/"
+    ],
+    "2020/01/image-660x257.png": [
+      "/getting-started-with-the-rust-programming-language/"
+    ],
+    "2020/01/memory-vulns-linux-660x513.png": [
+      "/getting-started-with-the-rust-programming-language/"
+    ],
+    "2020/01/rustacean-banner.png": [
+      "/getting-started-with-the-rust-programming-language/"
+    ],
+    "2023/04/robot-overlord.png": [
+      "/ai-and-networking/"
+    ]
+  },
+  "page_to_assets": {
+    "/10-examples-of-how-to-get-docker-container-ip-address/": [
+      "2015/05/docker-turtles-banner-network-copy.jpg"
+    ],
+    "/5-useful-mac-apps-snagit-evernote-screenflow-reeder-and-daisydisk/": [
+      "2012/11/top-apps.png"
+    ],
+    "/ai-and-networking/": [
+      "2023/04/robot-overlord.png"
+    ],
+    "/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/": [
+      "2012/04/containers1.jpg",
+      "2012/04/ent-flow.jpg",
+      "2012/04/mpls-stacking.jpg",
+      "2013/04/stop-cant-do-it-sm.jpeg"
+    ],
+    "/artboard-vector-drawing-app-review/": [
+      "2012/07/Posix11.tiff",
+      "2012/07/artboard-wtf.jpg"
+    ],
+    "/bad-idea-list-itu-un-plan-to-regulate-the-internet/": [
+      "2012/11/currupt-politicians.jpg"
+    ],
+    "/basic-mplsvpn-using-cisco-ios/": [
+      "2012/04/4-node.jpg"
+    ],
+    "/be-the-steamroller-not-the-road/": [
+      "2013/03/Change2.png",
+      "2013/03/DC-SP-SDN.png"
+    ],
+    "/best-cat-videos-of-2012/": [
+      "2012/12/Best-Cat-Videos-2012.jpg"
+    ],
+    "/big-switch-introduces-switch-light/": [
+      "2013/03/Big-Light-Architecture1.png",
+      "2013/03/SDN-Management.png",
+      "2013/03/SDN-New-v-Old.png",
+      "2013/03/SDN-ODM1-650x282.png",
+      "2013/03/monolith-sdn-comparison1.png",
+      "2013/03/whitebox.jpeg"
+    ],
+    "/bigswitch-announces-sdn-ga-products-and-pure-disruption/": [
+      "2012/11/3-tier-compact-2-982x1024.jpg",
+      "2012/11/3-tier-compact-2.jpg",
+      "2012/11/bigtap.png",
+      "2012/11/bvs-pure-overlay.png",
+      "2012/11/disruption-sdn1.jpg",
+      "2012/11/hybrid-network.png",
+      "2012/11/hybrid.jpg",
+      "2012/11/pure-openflow.png"
+    ],
+    "/brents-technology-bookmarks-from-june/": [
+      "2014/06/cat_are_you_fucking_kidding_me-.jpg"
+    ],
+    "/brocade-acquisition-of-vyatta/": [
+      "2012/11/aws.jpg",
+      "2012/11/remember-when.jpg",
+      "2012/11/virt-data-model-vyatta.jpg",
+      "2012/11/virt.jpg",
+      "2012/11/vyatta-dci.jpg",
+      "2012/11/vyatta-logo.crop_.jpg"
+    ],
+    "/brocade-on-sdn-at-network-field-day/": [
+      "2012/10/brocade_logo.jpg"
+    ],
+    "/building-a-windows-image-for-openstack/": [
+      "2012/05/openstack-logo-shade.png",
+      "2012/08/20G-img2.jpg",
+      "2012/08/Installing.jpg",
+      "2012/08/SCSI4.jpg",
+      "2012/08/Windows-VM2.jpg",
+      "2012/08/nic-driver.jpg",
+      "2012/08/select-driver1.jpg",
+      "2012/08/windows-FW.jpg"
+    ],
+    "/building-network-tools-using-docker/": [
+      "2015/06/Cloud-Bandwidth-smaller1.jpg",
+      "2015/06/Cloud-Bandwidth.jpg",
+      "2015/06/docker-build-text.png"
+    ],
+    "/cacti-network-management-installation-tutorial/": [
+      "2012/12/cacti-nms.png",
+      "2012/12/cacti-plugins.jpg",
+      "2012/12/cacti_host_template_cisco_6500.xml_.txt"
+    ],
+    "/cisco-acquisition-of-cariden/": [
+      "2012/11/Cariden-NOS1.jpg",
+      "2012/11/Quantum_Information_Processing.jpg",
+      "2012/11/application.jpg",
+      "2012/11/cariden-analytics.jpg"
+    ],
+    "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/": [
+      "2012/06/open-trap-300x210.jpg",
+      "2012/06/open-trap-300x2101.jpg",
+      "2012/06/open-trap.jpg"
+    ],
+    "/cisco-onepk-about-time/": [
+      "2012/06/features.jpg",
+      "2012/06/market-share.jpg",
+      "2012/06/onepk.jpg",
+      "2012/06/slide1.jpg"
+    ],
+    "/comparing-vmware-vs-openstack/": [
+      "2012/05/openstack-logo-shade.png",
+      "2012/06/VMware-v-ostack.jpg",
+      "2012/06/comparingvmware-andopenstack-120530155543-phpapp02.pdf"
+    ],
+    "/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/": [
+      "2013/05/OpenFlow-Dissector1.jpg",
+      "2013/05/OpenFlow-Packet-Flowmod.png",
+      "2013/05/openflow2.jpeg",
+      "2013/10/Wireshark-OpenFlow.jpeg"
+    ],
+    "/configure-an-hp-openflow-switch-for-floodlight/": [
+      "2013/03/OpenFlow-Hybrid-HP.png",
+      "2013/05/openflow2.jpeg"
+    ],
+    "/configuring-an-openflow-pox-sdn-controller-and-hp-switches/": [
+      "2012/07/Island.jpg",
+      "2012/07/traffic-island.jpg",
+      "2012/07/unicorn-rainbow.jpg"
+    ],
+    "/configuring-macvlan-ipvlan-linux-networking/": [
+      "2016/03/docker_networking-banner1.png"
+    ],
+    "/configuring-the-nox-gui/": [
+      "2012/04/gui.jpg",
+      "2012/04/nox.png"
+    ],
+    "/configuring-vxlan-and-gre-tunnels-on-openvswitch/": [
+      "2012/07/2-hosts-tunnel.jpg",
+      "2012/07/Network-Tunnels.jpg",
+      "2012/07/gre-jumbo.jpg",
+      "2012/07/overlays3.jpg",
+      "2012/07/ovs-fwding.jpg",
+      "2012/07/ovs-gre-15001.jpg",
+      "2012/07/vxlan-1500.jpg",
+      "2012/07/vxlan-jumbo.jpg"
+    ],
+    "/django-installation-and-first-app-tutorial/": [
+      "2012/09/default.django.web_.jpg",
+      "2012/09/django.admin_.console.jpg",
+      "2012/09/django.admin_.py_.jpg",
+      "2012/09/django.hello_.world_.jpg",
+      "2012/09/django.hello_.world_.views_.py_.jpg",
+      "2012/09/django.manage.project.settings.jpg",
+      "2012/09/django.polls_.app_.jpg",
+      "2012/09/django.polls_.app_1.jpg",
+      "2012/09/django.urls_.py_.jpg",
+      "2012/09/mode.py_.django.jpg",
+      "2012/09/python.png",
+      "2012/09/settings.py_.db_.django.jpg",
+      "2012/09/synch.db_.django.super_.user_.jpg"
+    ],
+    "/docker-machine-provisioning-on-aws/": [
+      "2015/04/Subnet-VPC-660x500.jpg",
+      "2015/04/Subnet-VPC.jpg"
+    ],
+    "/docker-on-google-compute-engine-using-docker-machine/": [
+      "2015/06/build_ship_run-banner.jpg"
+    ],
+    "/docker-one-liners/": [
+      "2015/02/docker-logo.png"
+    ],
+    "/does-the-cost-of-cloud-iaas-intersect-the-local-vm/": [
+      "2012/09/AWS.jpg",
+      "2012/09/Cloud-Cost.jpg",
+      "2012/09/Q1-2012.jpg",
+      "2012/09/unicorn-accountant.jpg"
+    ],
+    "/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/": [
+      "2013/10/Network-Routing-in-the-Underlay-Fabric.jpeg",
+      "2013/10/Network-Virtualization-Overlay.jpeg",
+      "2013/10/Network-Virtualization-Underlay.jpeg",
+      "2013/10/Overlay-Tenant.jpeg",
+      "2013/10/VLAN-Fail1.jpeg",
+      "2013/10/VXLAN-VNI-Tenancy.jpeg",
+      "2013/10/fragile-architecture.jpeg"
+    ],
+    "/enterprise-802-11-wireless-growth-part-3/": [
+      "2012/08/Enterprise.Wireless.png",
+      "2012/09/802.11-Growth-Linear.jpg",
+      "2012/09/Client-Summary-by-Vendor.jpg",
+      "2012/09/Client-by-Vendor21.jpg",
+      "2012/09/Session-Time-by-Vendor.jpg",
+      "2012/09/Sessions-by-vendors.jpg",
+      "2012/09/Traffic-bt-Vendor1.jpg"
+    ],
+    "/enterprise-wireless-and-wired-traffic-part2/": [
+      "2012/08/Enterprise.Wireless.png",
+      "2012/09/Average-Wired-Orion.jpg",
+      "2012/09/Wireless-Controller.jpg"
+    ],
+    "/ethernet-switch-fabric-cards/": [
+      "2012/06/3-stage-clos.jpg",
+      "2012/06/crossbar.jpg",
+      "2012/06/leaf-spine.jpg"
+    ],
+    "/floodlight-gui-topology-addition/": [
+      "2012/07/Floodlight-UI.jpg",
+      "2012/07/network.jpg"
+    ],
+    "/floodlight-openflow-controller-gui-applet/": [
+      "2012/07/OF-logo.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/floodlight-openflow-controller-screencast-with-hp-switches/": [
+      "2012/05/openflow2.png",
+      "2012/05/topo1.jpg"
+    ],
+    "/floodlight-openflow-controller-using-the-static-flow-entry-pusher/": [
+      "2012/12/FowMod-OpenFlow.jpg",
+      "2013/02/openflow-spec-v1.3.0.pdf",
+      "2013/04/Openflow-Programming-header-sm.jpeg"
+    ],
+    "/getting-started-ovsdb/": [
+      "2013/09/ovsdb-tables.png",
+      "2013/09/ovsdb-vswitchd.png",
+      "2013/10/Open-Source.jpeg",
+      "2013/10/ovsdb-json.png",
+      "2013/10/unmarshall.png"
+    ],
+    "/getting-started-with-the-rust-programming-language/": [
+      "2020/01/image-660x257.png",
+      "2020/01/memory-vulns-linux-660x513.png",
+      "2020/01/rustacean-banner.png"
+    ],
+    "/gobgp-control-plane-evolving-software-networking/": [
+      "2016/03/gobgp-purple.jpg"
+    ],
+    "/golang-network-ops/": [
+      "2015/01/go-docker.png",
+      "2015/01/twitter-gopher-banner-small.jpg"
+    ],
+    "/google-data-center-pictures-year-in-review/": [
+      "2012/12/ATT000291.jpg",
+      "2012/12/ATT000353.jpg",
+      "2012/12/ATT000446.jpg",
+      "2012/12/ATT000477.jpg",
+      "2012/12/ATT000508.jpg",
+      "2012/12/ATT000539.jpg",
+      "2012/12/Google-DC.jpg",
+      "2012/12/Google-Datacenter-Stormtrooper.jpg",
+      "2012/12/Google-Droid.jpg",
+      "2012/12/Google-Pool-Table.png",
+      "2012/12/Google-Tape.jpg",
+      "2012/12/Google-dc3.jpg",
+      "2012/12/Google-hard-drives.jpg",
+      "2012/12/Google-racks2.jpg",
+      "2012/12/Google-tape-robot.jpg",
+      "2012/12/Google-worldwide.png",
+      "2012/12/Googles-server-room.png",
+      "2012/12/colage.jpg",
+      "2012/12/g-ee.jpg",
+      "2012/12/google-at-night.jpg",
+      "2012/12/google-data-center-colored-pipes.jpg",
+      "2012/12/google-datacenter-places-04.jpg",
+      "2012/12/google-datacenter-places-10.jpg",
+      "2012/12/google-datacenter-places-121.jpg",
+      "2012/12/google-datacenter-tech-14.jpg",
+      "2012/12/google-datacenter-tech-15.jpg",
+      "2012/12/google-datacenter2.jpg",
+      "2012/12/google-header-post.jpg"
+    ],
+    "/help-wanted-cultural-change/": [
+      "2012/05/change-bad.jpg",
+      "2012/05/kool-aid1.jpg"
+    ],
+    "/how-headers-encapsulate-in-the-osi-stack/": [
+      "2012/12/youtube-kitty-osi.jpg"
+    ],
+    "/how-i-learned-to-hate-the-dci/": [
+      "2012/04/hyperv-tunnel.jpg",
+      "2012/04/internet.jpg",
+      "2012/04/tor-tunnnel.jpg"
+    ],
+    "/how-to-build-an-sdn-lab-without-needing-openflow-hardware/": [
+      "2012/06/ovs-tap.jpg",
+      "2012/07/Island2.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/hp-announces-their-sdn-controller/": [
+      "2012/10/HP-SDN-Cloud.jpg",
+      "2012/10/HP-SDN-Ecosystem.jpg",
+      "2012/10/HP-SDN-Layers.jpg",
+      "2012/10/openflow-lab.png",
+      "2012/10/sdn-agility-hp.jpg"
+    ],
+    "/hybrid-openflow-using-the-normal-action/": [
+      "2013/02/Normal-Pipeline.png",
+      "2013/02/OpenFlow-Pipeline-650x452.png",
+      "2013/02/normal-OF.jpg",
+      "2013/02/openflow-normal-rule-650x212.png",
+      "2013/02/openflow-spec-v1.3.0.pdf"
+    ],
+    "/hybrid-sdn-deployments/": [
+      "2012/10/hybrid-sdn-scale.jpg",
+      "2012/10/sdn-naming.jpg",
+      "2013/01/Hybrid-Openflow.jpg",
+      "2013/01/SDN-Path-Steering.jpg",
+      "2013/01/SDN-Quantum.jpg"
+    ],
+    "/ietf-draft-bgp-signaled-end-system-ip-vpns/": [
+      "2012/09/Control.Plane_.BGP_.Tiers_.jpg",
+      "2012/09/MPLS.Policy.Application.east_.west_2.jpg",
+      "2012/09/MPLS.Policy.Application1.jpg",
+      "2012/09/MPLS.VPN_.SDN_.RFC_.shadow.jpg",
+      "2012/09/Traffic-Control_02.jpg",
+      "2012/09/l3vpn.draft_.topo_.jpg"
+    ],
+    "/importing-opendaylight-into-eclipse/": [
+      "2013/04/OpenDaylight-ONS-ODP.mp3",
+      "2013/04/Openflow-Programming-header-sm.jpeg"
+    ],
+    "/install-open-vswitch-networking-red-hat-fedora-20/": [
+      "2012/06/open-vswitch-lab.png"
+    ],
+    "/install-open-vswitch-v2-0-rpm-redhat-fedora/": [
+      "2012/05/open-vswitch-lab.png"
+    ],
+    "/install-open-vswitch-v2-redhat-fedora-19/": [
+      "2013/11/redhat-ovs-sdn.jpeg"
+    ],
+    "/install-wordpress-on-ubuntu/": [
+      "2012/10/export-wordpress-database.jpg",
+      "2012/10/import-author2.jpg",
+      "2012/10/import-upload-error.jpg",
+      "2012/10/php.ini-upload21.jpg",
+      "2012/10/torn-install.p_h_p.jpg",
+      "2012/10/upload-after.jpg",
+      "2012/10/upload-before.jpg",
+      "2012/10/wordpress-logo.jpg"
+    ],
+    "/installing-golang-ide-support-intellij/": [
+      "2015/02/1-update-golang-e1423885000615.jpg",
+      "2015/02/2-update-golang-e1423884940974.jpg",
+      "2015/02/2015-02-07_19-05-29.png",
+      "2015/02/2015-02-07_19-06-15.png",
+      "2015/02/2015-02-07_19-06-42-650x309.png",
+      "2015/02/2015-02-07_19-06-56.png",
+      "2015/02/2015-02-07_19-09-42.png",
+      "2015/02/2015-02-07_19-10-29.png",
+      "2015/02/3-update-golang-e1423884956970.jpg",
+      "2015/02/Docker-Gopher-Banner.png",
+      "2015/02/slpha.png",
+      "2015/04/Intellij-Manage-Repositories-e1427850904203.jpg"
+    ],
+    "/installing-openstack-grizzly-with-devstack/": [
+      "2013/01/OpenStack-Flat-Network-Manager.jpg",
+      "2013/01/OpenStack-Nova-Network-Topology.jpg",
+      "2013/01/OpenStack-PS.jpg",
+      "2013/01/brctl-show-openstack.jpg",
+      "2013/01/nova-manage-OpenStack.jpg",
+      "2013/04/unicorn-accountant.jpeg"
+    ],
+    "/installing-openstack-ml2-neutron-plugin-devstack-fedora/": [
+      "2013/11/openstack-logo.jpg",
+      "2013/11/slide-cat-shark-duck1.jpeg",
+      "2013/11/under-the-hood-scenario-1-ovs-compute.jpeg"
+    ],
+    "/installing-openvswitch-and-kvm-on-centos-6-2/": [
+      "2012/01/virt-manager.png",
+      "2012/06/open-vswitch-lab.png"
+    ],
+    "/installing-wireshark-on-linux-for-openflow-packet-captures/": [
+      "2013/02/about-plugin.jpg",
+      "2013/02/openflow.so_.jpg",
+      "2013/02/wireshark-openflow.jpg",
+      "2013/02/wireshark.jpg",
+      "2013/10/Wireshark-OpenFlow.jpeg"
+    ],
+    "/its-ok-to-like-openflow/": [
+      "2012/06/586_god_hates_nerds_12-25-2002-copy-150x150.jpg",
+      "2012/06/586_god_hates_nerds_12-25-2002-copy.jpg",
+      "2012/06/hates-nerds1.jpg"
+    ],
+    "/juniper-and-cisco-comparisons-of-rib-lib-fib-and-lfib-tables/": [
+      "2012/04/ethertype.jpg",
+      "2012/04/flow.jpg"
+    ],
+    "/juniper-default-routing-tables/": [
+      "2012/04/bgp-l3vpn1.jpg",
+      "2012/04/bgp-l3vpn2.jpg",
+      "2012/04/i2-inet01.jpg",
+      "2012/04/inet-tables.jpg",
+      "2012/04/inet0.jpg",
+      "2012/04/inet32.jpg",
+      "2012/04/juniper_01.jpg",
+      "2012/04/l2vpn-inet.jpg",
+      "2012/04/mpls-0.jpg"
+    ],
+    "/juniper-networks-at-network-field-day-4/": [
+      "2012/11/NFD-Logo3-150x150.png",
+      "2012/11/juniper_01.jpg"
+    ],
+    "/measuring-network-bandwidth-using-iperf-and-docker/": [
+      "2016/03/docker_networking-banner1.png"
+    ],
+    "/more-details-about-the-cisco-one-controller-announced/": [
+      "2013/02/Paul-Baran-Distributed-Comm-Systems.png",
+      "2013/02/cisco-one-controller-openflow-hybrid.png",
+      "2013/02/cisco-one-controller-openflow.png",
+      "2013/02/cisco-one-controller.png"
+    ],
+    "/more-vendors-define-their-sdn-strategy/": [
+      "2013/02/vendor-confusion.jpeg"
+    ],
+    "/mpls-vpls-configuration-with-juniper-junos/": [
+      "2012/05/Juniper-VPLS-MPLS.png",
+      "2012/05/l2vpn-topo1.jpg"
+    ],
+    "/mvpn-multicast-with-multi-protocol-bgp-mpls-vpn-on-cisco-ios/": [
+      "2012/10/cisco-logo.jpg"
+    ],
+    "/my-top-10-essential-wordpress-plugins/": [
+      "2012/07/Google-sitemap.jpg",
+      "2012/07/Image-Widget.jpg",
+      "2012/07/SEO.jpg",
+      "2012/07/W3-total-cache.jpg",
+      "2012/07/askimet.jpg",
+      "2012/07/ping.jpg",
+      "2012/07/prettify1.jpg",
+      "2012/07/simple-scoail.jpg",
+      "2012/07/simple-social-widget.jpg",
+      "2012/07/twitter-button-widget.jpg",
+      "2012/10/wordpress-logo.jpg"
+    ],
+    "/nested-kvm-hypervisor-support/": [
+      "2012/08/tux-copy.jpg"
+    ],
+    "/network-field-day-4/": [
+      "2012/08/Claire-Chaplais-wpcf_60x41.jpg",
+      "2012/08/Ferro-wpcf_60x39.jpg",
+      "2012/08/Foskett-Headshot-wpcf_60x60.jpg",
+      "2012/08/Gaddis-wpcf_41x60.jpg",
+      "2012/08/Hollingsworth1-wpcf_44x60.jpg",
+      "2012/08/Marget-wpcf_48x60.jpg",
+      "2012/08/Paul-Small.png",
+      "2012/08/Plankers-wpcf_60x60.jpg",
+      "2012/08/brent-salisbury1-wpcf_60x60.jpeg",
+      "2012/08/cmcnamara-headshot-2011-color-scaled-wpcf_42x60.jpg",
+      "2012/08/mfMcNamara-60x60.jpeg",
+      "2012/09/JohnCrop.jpeg",
+      "2012/09/clintonswedding-wpcf_60x49.jpeg",
+      "2012/09/johnherbert-wpcf_60x60.jpeg",
+      "2012/10/NFD-Logo.jpg"
+    ],
+    "/network-iceberg/": [
+      "2014/10/Iceberg-SocketPlane-Virt-Net.png",
+      "2014/10/SocketPlane-Banner2.png"
+    ],
+    "/network-management-system-nms-statseeker/": [
+      "2012/10/Power-lines_729-620x349.jpg",
+      "2012/10/access-idf-port-audit.jpg"
+    ],
+    "/network-processing-units-npu-for-the-win/": [
+      "2013/03/Cisco-Catalyst-3850-Cavium.png"
+    ],
+    "/networking-field-day-5-a-community-event/": [
+      "2013/03/Network-Field-Day-5.png"
+    ],
+    "/new-ietf-sdn-drafts/": [
+      "2012/07/Horizontal-alto.jpg",
+      "2012/07/SDNi1.jpg",
+      "2012/07/mpls-tp2.jpg",
+      "2012/07/parliament2.jpg"
+    ],
+    "/new-opportunity-red-hat/": [
+      "2013/11/redhat-ovs-sdn.jpeg"
+    ],
+    "/nicira-acquisition-by-vmware-winners-and-losers/": [
+      "2012/07/Ghetto-Lisa.jpg"
+    ],
+    "/normalizing-the-cloud-with-docker-machine/": [
+      "2015/04/docker-penguin-gopher-banner.jpg"
+    ],
+    "/open-networking-summit-2013-is-streaming/": [
+      "2012/05/openflow2.png",
+      "2013/04/ONS-Schedule-day1.png",
+      "2013/04/ONS-Schedule-day2.png",
+      "2013/04/ONS-Schedule-day3.png"
+    ],
+    "/open-source-flow-monitoring-and-visualization/": [
+      "2019/12/elastiflow-1-1-660x301.png",
+      "2019/12/elastiflow-2-660x188.png",
+      "2019/12/elastiflow-2.png",
+      "2019/12/elastiflow-3-660x639.png",
+      "2019/12/elastiflow-3.png",
+      "2019/12/elastiflow-4-1-660x558.png",
+      "2019/12/elastiflow-4-1.png",
+      "2019/12/elastiflow-5-660x620.png",
+      "2019/12/elastiflow-5.png",
+      "2019/12/elastiflow-6-660x723.png",
+      "2019/12/elastiflow-6.png",
+      "2019/12/elastiflow-header.png"
+    ],
+    "/open-vswitch-gre-tunnel-configuration/": [
+      "2012/04/1-bridge.jpg",
+      "2012/04/gre-cloud.jpg",
+      "2012/04/gre.openvswitch.jpg",
+      "2012/04/l2ol3-generic-packet.jpg",
+      "2012/04/openvswitch.openflow.gre_.tutorial1.pdf",
+      "2012/05/open-vswitch-lab.png"
+    ],
+    "/open-vswitch-on-virtualbox/": [
+      "2012/05/open-vswitch-lab.png",
+      "2013/03/openvswitch-VM.png",
+      "2013/03/openvswitch-virtualbox.png"
+    ],
+    "/open-vswitch-red-hat-installation/": [
+      "2012/05/open-vswitch-lab.png",
+      "2012/12/build-ovs-650x200.jpg",
+      "2012/12/build-ovs.jpg",
+      "2012/12/skbuff-post-comment.jpg",
+      "2012/12/skbuff.h.pre_.jpg"
+    ],
+    "/opendaylight-maven-and-osgi-dev-notes/": [
+      "2013/06/osgi-maven.jpeg"
+    ],
+    "/opendaylight-openflow-tutorial/": [
+      "2013/02/openflow-spec-v1.3.0.pdf",
+      "2013/04/OpenDaylight-Match-Add-Flow.png",
+      "2013/04/OpenDaylight-OpenFlow-Switch-650x405.png",
+      "2013/04/OpenDaylight-Output-port.png",
+      "2013/05/OpenDaylight-Logo-sm.jpeg"
+    ],
+    "/opendaylight-openstack-integration-devstack-fedora-20/": [
+      "2013/05/OpenDaylight-Logo-sm.jpeg",
+      "2014/02/Horizon-OpenDaylight-e1392513990486.jpg",
+      "2014/02/OVSDB-Architecture.png",
+      "2014/02/Overlay-OpenDaylight-OVSDB-OpenFlow.png",
+      "2014/02/VirtualBox-HostOnly-Networks.png",
+      "2014/02/VirtualBox-HostOnly-Nics.png"
+    ],
+    "/openflow-coarse-vs-fine-flows/": [
+      "2013/01/Flow-factory2.jpg",
+      "2013/01/OpenFlow-Coarse.png",
+      "2013/01/OpenFlow-Granular.png"
+    ],
+    "/openflow-openvswitch-and-kvm-sdn-lab-installation-app/": [
+      "2012/09/SDN.LAB_.Openflow2.jpg",
+      "2012/09/bunker-lab.png",
+      "2012/09/term21.jpg"
+    ],
+    "/openflow-openvswitch-lab/": [
+      "2012/06/OF-logo1-150x150.jpg",
+      "2012/06/network-interfaces.jpg",
+      "2012/06/open-vswitch-lab.png",
+      "2012/06/ovs-tap.jpg"
+    ],
+    "/openflow-proactive-vs-reactive-flows/": [
+      "2013/01/bad-decision1.jpg",
+      "2013/01/tcam.png"
+    ],
+    "/openflow-sdn-hybrid-deployment-strategies/": [
+      "2013/01/Hybrid-OpenFlow-SDN.png",
+      "2013/01/Risk.jpg"
+    ],
+    "/openflow-starter-tutorial-lab-1/": [
+      "2012/06/Addresses.jpg",
+      "2012/06/Lab11.jpg",
+      "2012/06/Topology-overview.jpg",
+      "2012/06/WebUI-Flows.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/openflow-tutorial-lab-2/": [
+      "2012/06/Lab24.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/openflow-tutorial-lab-3/": [
+      "2012/06/Lab31.jpg",
+      "2012/06/SDN-API2.jpg",
+      "2012/06/tcp-dump-ping2.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/": [
+      "2012/05/2nics-2nets3.jpg",
+      "2012/05/dp-ctl-flows.jpg",
+      "2012/05/openstack-logo-shade.png",
+      "2012/07/mysql-quantum-paste.txt",
+      "2012/07/nova-quantum-update.txt",
+      "2012/08/keystone.sh_.txt"
+    ],
+    "/openstack-essex-installation-and-configuration-screencast-from-scratch/": [
+      "2012/05/2nics-2nets.jpg",
+      "2012/08/keystone.sh_.txt"
+    ],
+    "/openstack-essex-installation-walkthrough-from-scratch-part2/": [
+      "2012/08/nova-conf1.txt"
+    ],
+    "/openstack-essex-installer-script/": [
+      "2012/08/Topology-Python-Installer.jpg",
+      "2012/08/oStackEssex.py_4.txt",
+      "2012/08/openstack-logo1.jpg",
+      "2012/08/stack-cleanup.sh_.txt"
+    ],
+    "/openstack-essex-operational-demo/": [
+      "2012/05/openstack-demo.jpg"
+    ],
+    "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/": [
+      "2012/04/p1-login-ssh.jpg",
+      "2012/04/p2-image-ub.jpg",
+      "2012/04/p3-sec1.jpg",
+      "2012/04/p4-running-inst.jpg",
+      "2012/05/openstack-logo-shade.png"
+    ],
+    "/openstack-essex-scripted-installation-on-ubuntu-12-04-part-2/": [
+      "2012/04/nova-logical-arch-essex.jpg"
+    ],
+    "/openstack-folsom-quantum-devstack-installation-tutorial/": [
+      "2012/10/folsom-glance.jpg",
+      "2012/10/netns.quantum.jpg",
+      "2012/10/openstack-contributions1.jpg",
+      "2012/10/openstack.folsom.isolation.jpg",
+      "2012/10/openstack.tenant.vlans_1.jpg",
+      "2012/10/opestack-releases.jpg",
+      "2012/10/route.table_.openstack.quantum.jpg",
+      "2012/11/devops-openstack-lab.png"
+    ],
+    "/openstack-multi-node-devstack-nova-network-tutorial/": [
+      "2012/11/devops-sm.jpeg",
+      "2013/01/OpenStack-Flat-Network-Manager.jpg",
+      "2013/01/OpenStack-Nova-Network-Topology.jpg",
+      "2013/01/OpenStack-PS.jpg",
+      "2013/01/brctl-show-openstack.jpg",
+      "2013/01/nova-manage-OpenStack.jpg"
+    ],
+    "/openstack-quantum-devstack-on-a-laptop-with-vmware-fusion/": [
+      "2012/11/devops-sm.jpeg",
+      "2012/11/nested-hardware-virtualization.jpg",
+      "2012/11/openstack-png2-150x150.png"
+    ],
+    "/openvswitch-and-gre-tunnel-notes/": [
+      "2012/02/gre-tap1.jpeg",
+      "2012/02/lab-gre.jpeg",
+      "2012/05/open-vswitch-lab.png"
+    ],
+    "/openvswitch-and-openflow-lab-preparation/": [
+      "2012/09/bridged.snapshot.virtualbox.jpg",
+      "2012/09/openflow-lab.png"
+    ],
+    "/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/": [
+      "2012/05/Openvswitch1-300x254.jpg",
+      "2012/05/Openvswitch1.jpg",
+      "2012/05/open-vswitch-lab.png"
+    ],
+    "/otv-configuration-notes/": [
+      "2012/05/dci1.jpg"
+    ],
+    "/plexxi-capacity-planning-done-right/": [
+      "2013/01/optical.jpg",
+      "2013/01/plexxi-sdn.jpg"
+    ],
+    "/pox-openflow-controller-installation-screencast/": [
+      "2012/04/pox.png"
+    ],
+    "/pre-built-opendaylight-vm-images/": [
+      "2013/05/ODP-Pen-Test.png",
+      "2013/05/OpenDaylight-Logo-sm.jpeg",
+      "2013/05/OpenFlow-Dissector.png"
+    ],
+    "/programming-the-nsp-vendors-on-sdn-for-sp-operators/": [
+      "2012/12/Huawei-SOX1.jpg",
+      "2012/12/Huawei-testbed.jpg",
+      "2012/12/NSP-Juniper-Application.jpg",
+      "2012/12/NSP-Network-Marketshare1.jpg",
+      "2012/12/brocade-ostack-sdn.jpg",
+      "2012/12/nsp-world-sdn.jpg"
+    ],
+    "/public-cloud-network-as-a-service/": [
+      "2012/08/Big-pic.jpg",
+      "2012/08/Topology-demo2.jpg",
+      "2012/08/VXLan.jpg",
+      "2012/08/all-hosts-gre.jpg",
+      "2012/08/all-hosts-vxlan.jpg",
+      "2012/08/cabling-bad.jpg",
+      "2012/08/gre-spoke-to-hp.jpg",
+      "2012/08/gre-spoke-to-hp2.jpg",
+      "2012/08/no-tunel.jpg",
+      "2012/08/ove-hub-show.jpg",
+      "2012/08/spoke-to-hub.jpg",
+      "2012/08/spoke-to-spoke-gre.jpg",
+      "2012/08/spoke-to-spoke-vxlan.jpg",
+      "2012/08/vxlan-spoke-to-hp.jpg",
+      "2012/12/fail-cabling.jpg"
+    ],
+    "/putting-together-provider-bridging-provider-backbone-bridging-s-tags-and-c-tags/": [
+      "2013/03/PBB-Topology.png",
+      "2013/03/PBB.png",
+      "2013/03/PBB1.jpeg"
+    ],
+    "/python-tutorial-classes-objects-methods-init-and-simple-examples/": [
+      "2012/09/Kitty-Coder.jpg",
+      "2012/09/python1.png"
+    ],
+    "/python-tutorial-functions-and-passing-lists-and-dictionaries-with-simple-examples/": [
+      "2012/09/Kitten-PC1-334x350.jpg",
+      "2012/09/Kitten-PC1.jpg",
+      "2012/09/Python-Header.png"
+    ],
+    "/quantum-openstack-python-installer/": [
+      "2012/08/Unicorn-code.jpg",
+      "2012/08/py-quantum.py_.txt",
+      "2012/08/python2.png",
+      "2012/08/quantum-py1.jpg",
+      "2012/08/remove-quantum.sh_.txt"
+    ],
+    "/rackspace-openstack-installation-on-a-kvm-vm/": [
+      "2012/08/Chef1.jpg",
+      "2012/08/Cloud-Uni3-350x304.jpg",
+      "2012/08/Cloud-Uni3.jpg",
+      "2012/08/IP-add1.jpg",
+      "2012/08/exports.jpg",
+      "2012/08/glance.jpg",
+      "2012/08/main-menu.jpg",
+      "2012/08/openstack-logo1.jpg",
+      "2012/08/post-config.jpg",
+      "2012/08/role.jpg"
+    ],
+    "/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/": [
+      "2012/10/cisco-logo.jpg",
+      "2012/10/map101.jpg",
+      "2012/10/map11.jpg",
+      "2012/10/map111.jpg",
+      "2012/10/map12.jpg",
+      "2012/10/map13.jpg",
+      "2012/10/map14.jpg",
+      "2012/10/map2.jpg",
+      "2012/10/map3.jpg",
+      "2012/10/map4.jpg",
+      "2012/10/map5.jpg",
+      "2012/10/map6.jpg",
+      "2012/10/map7.jpg",
+      "2012/10/map8.jpg",
+      "2012/10/map9.jpg"
+    ],
+    "/running-docker-machine-on-digital-ocean/": [
+      "2015/05/Docker-large_h-dark.png"
+    ],
+    "/running-docker-machine-on-rackspace-public-cloud/": [
+      "2015/05/docker_logo_banner.png"
+    ],
+    "/sdn-and-openflow-quotes-from-some-of-the-best/": [
+      "2012/05/Sage-OpenFlow-Quotes2.jpg",
+      "2012/05/first-place2.jpg"
+    ],
+    "/sdn-apis-this-all-feels-pretty-familair/": [
+      "2012/07/Posix1.jpg",
+      "2012/07/old-movie1.jpg",
+      "2012/07/rear-view2-300x198.jpg",
+      "2012/07/rear-view2.jpg"
+    ],
+    "/sdn-business-cases/": [
+      "2012/05/RIB-LIB-LFIB-FIB.jpg",
+      "2012/05/brent-openx-v1-1.pptx",
+      "2012/05/change-is-bad1.jpg",
+      "2012/05/commodity-switches.jpg",
+      "2012/05/data-center-orchestration.jpg",
+      "2012/05/dci1.jpg",
+      "2012/05/geni.jpg",
+      "2012/05/google-sdn.jpg",
+      "2012/05/management-plane.jpg",
+      "2012/05/mpls-core.jpg",
+      "2012/05/sdn-controller1.jpg",
+      "2012/05/sdn-osal-abstraction21.jpg",
+      "2012/05/tuple-11.jpg",
+      "2012/05/tuples.jpg",
+      "2012/05/vmvssdn.jpg",
+      "2013/01/bad-decision1.jpg"
+    ],
+    "/sdn-dominates-nfd5/": [
+      "2013/03/Network-Field-Day-5.jpeg"
+    ],
+    "/sdn-for-internet-providers-use-case/": [
+      "2012/05/Power-lines_729-620x349.jpg"
+    ],
+    "/sdn-openflow-and-opendaylight-updates-and-recordings/": [
+      "2013/04/Internet-OpenFlow-SDN-Part1-Amp.mp3",
+      "2013/04/Internet-OpenFlow-SDN-Vendors-Part2-amp.mp3",
+      "2013/04/OpenDaylight-QA.mp3",
+      "2013/04/stop-cant-do-it-sm.jpeg"
+    ],
+    "/sdn-openflow-policy-abstractions/": [
+      "2013/01/Flow-Factory4.jpg",
+      "2013/01/SDN-Policy.jpg",
+      "2013/01/sdn-flow-policy-factory.jpg"
+    ],
+    "/sdn-product-rundown-september/": [
+      "2013/09/BSN-NFD6.pdf",
+      "2013/09/Nuage_NFD6_TechFieldDay_12sep13.pdf",
+      "2013/09/sdncentral-v3.pptx"
+    ],
+    "/sdn-use-cases-for-service-providers/": [
+      "2012/11/NFV_SDN_White_Paper.pdf",
+      "2012/11/SP-Use-Cases1.jpg",
+      "2012/11/ecosystem.jpg",
+      "2012/11/telco2.jpg"
+    ],
+    "/sdn-using-dns-naming-for-classification/": [
+      "2012/10/Internet-Change.png",
+      "2012/10/Required.v1.3.Openflow.Feilds.jpg",
+      "2012/10/Sec-Policy-SDN-Naming-border.jpg",
+      "2012/10/TE-OpenFlow-Names-border1.jpg",
+      "2012/10/sdn.paths_.jpg"
+    ],
+    "/sdn-using-names/": [
+      "2012/10/SDN-Abstraction-Layers.jpg",
+      "2012/10/SDN-DNS-DC.jpg",
+      "2012/10/SDN-Policy.jpg",
+      "2012/10/SDN-SIMPLE-DNS.jpg",
+      "2012/10/SDN-SP.jpg"
+    ],
+    "/setting-overlays-open-vswitch/": [
+      "2014/03/Network-Overlay.jpeg",
+      "2014/03/Overlays-Blog-650x494.jpeg"
+    ],
+    "/software-defined-data-center-slidedeck/": [
+      "2012/08/GPN-v1.4.pdf",
+      "2012/08/datacenter.jpg"
+    ],
+    "/software-defined-network-sdn-looking-toward-2013-part-1/": [
+      "2012/11/brand-sdn.jpg",
+      "2012/12/frenetic.jpg"
+    ],
+    "/software-defined-network-sdn-looking-toward-2013-part-2/": [
+      "2012/11/standards.jpg",
+      "2012/12/devops-netops.jpg"
+    ],
+    "/spirent-communications-looks-toward-the-enterprise/": [
+      "2012/10/MediaCenter_Red1.png",
+      "2012/10/avoidbandwidthbandits.jpg"
+    ],
+    "/tcams-sdnopenflow-and-why-we-care/": [
+      "2012/07/Blue-circuit-board.jpg"
+    ],
+    "/the-best-mpls-lecture-on-the-net/": [
+      "2012/06/all-stacks1.png",
+      "2012/06/mpls-flow2.jpg",
+      "2012/06/mpls-stacking4.jpg",
+      "2012/06/network-virtualization-jpg2.png"
+    ],
+    "/the-birth-unicorn-early-openflow-meeting-notes/": [
+      "2012/05/openflow2.png"
+    ],
+    "/the-cisco-one-sdn-controller/": [
+      "2013/04/Cisco-ONE-Controller-Login.jpeg",
+      "2013/04/Cisco-ONE-OpenFlow.png",
+      "2013/04/Cisco-ONE1.png",
+      "2013/04/OpenFlow-Packet-Flowmod.png",
+      "2013/04/Static-Flow.png",
+      "2013/04/TIF-Forwarding.png"
+    ],
+    "/the-control-plane-data-plane-and-forwarding-plane-in-networks/": [
+      "2012/09/Control-Plane.jpg",
+      "2012/09/OVS-Path-1024x430.jpg",
+      "2012/09/OVS-Path.jpg",
+      "2012/09/flow3.jpg",
+      "2012/09/forwarding-engines-1024x618.jpg",
+      "2012/09/forwarding-engines.jpg",
+      "2012/09/junos-tables2.jpg",
+      "2012/09/network-planes.jpg"
+    ],
+    "/the-death-of-the-wired-enterprise-network/": [
+      "2012/09/BDF.jpg",
+      "2012/09/IDF.jpg",
+      "2012/09/bad.cabling.networks-310x350.jpg",
+      "2012/09/bad.cabling.networks.jpg"
+    ],
+    "/the-good-and-bad-of-wireless/": [
+      "2013/02/openflow-spec-v1.3.0.pdf",
+      "2013/03/Cisco-Prime-Wireless.png",
+      "2013/03/NAC-Wireless-Magic-Quadrant.png",
+      "2013/03/Ruckus-wireless-enterprise.png",
+      "2013/03/Wireless-Marketshare.png"
+    ],
+    "/the-hp-public-cloud-and-openstack/": [
+      "2012/08/1-Geo-Location1.jpg",
+      "2012/08/2key.jpg",
+      "2012/08/API-Keys.jpg",
+      "2012/08/CapWap.jpg",
+      "2012/08/Flavor.jpg",
+      "2012/08/Sec-Group.jpg",
+      "2012/08/merge-instance1.jpg",
+      "2012/08/unicorn-accountant.jpg"
+    ],
+    "/the-northbound-api-2/": [
+      "2012/06/SDN-API1.jpg",
+      "2012/06/SDN-Abstraction.jpg",
+      "2012/06/misaligned-bridge-api.jpg"
+    ],
+    "/the-openflow-overlay/": [
+      "2013/06/OFP_normal.png",
+      "2013/06/OFP_normal_rules.png",
+      "2013/06/The-OpenFlow-Overlay.png",
+      "2013/06/incrementalism1.png"
+    ],
+    "/the-potential-impact-of-software-defined-networking-sdn-on-security/": [
+      "2012/11/unicorn-security-sdn3.jpg"
+    ],
+    "/the-sdn-impact-on-net-neutrality/": [
+      "2013/01/censored-kitty-cat.jpeg"
+    ],
+    "/thoughts-from-the-packetpusher-show-112-sdns-sdns-potential-as-a-displacement-technology/": [
+      "2012/08/cat-leadership2-350x228.jpg",
+      "2012/08/cat-leadership2.jpg"
+    ],
+    "/time-to-ditch-the-definition-of-sdn/": [
+      "2015/08/angry_panda_vs_chef.gif"
+    ],
+    "/top-10-reasons-i-think-sdn-openflow-will-gain-momentum/": [
+      "2012/10/openflow-lab.png"
+    ],
+    "/troubleshooting-common-openstack-errors/": [
+      "2012/05/openstack-logo-shade.png"
+    ],
+    "/tutorial-to-build-a-floodlight-sdn-openflow-controller-module/": [
+      "2012/11/programming.jpg"
+    ],
+    "/updated-devstack-opendaylight-vm-image-for-openstack-icehouse/": [
+      "2012/11/openstack-devstack-crop.jpg"
+    ],
+    "/using-docker-machine-to-provision-on-microsoft-azure/": [
+      "2015/04/Docker-Microsoft-Azure-Banner.jpg"
+    ],
+    "/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/": [
+      "2012/04/1-slide11.jpg",
+      "2012/04/2intro-summ.jpg",
+      "2012/04/IP-Header-Packet2.jpg",
+      "2012/04/ethernet-header.jpg",
+      "2012/04/packet-header.jpg",
+      "2012/04/tcp-header.jpg"
+    ],
+    "/why-community-counts/": [
+      "2012/07/nervous.jpeg"
+    ],
+    "/why-consumers-of-u-s-wireless-carriers-need-a-google/": [
+      "2012/11/bad-cell-wireless2.jpg",
+      "2012/11/google-storm-trooper.jpg"
+    ],
+    "/why-enterprise-wireless-networks-got-it-right/": [
+      "2012/08/Agregate-new.jpg",
+      "2012/08/Clients-by-Vendors.jpg",
+      "2012/08/Enterprise.Wireless.png",
+      "2012/08/Session-Time-Vendor1.jpg",
+      "2012/08/Sessions-by-Vendor.jpg",
+      "2012/08/Summary.jpg",
+      "2012/08/Traffic-by-Vendor.jpg"
+    ],
+    "/why-the-nos-will-decouple/": [
+      "2012/04/decouple-nos.jpg"
+    ],
+    "/why-we-expect-more-from-technology-providers-we-dont-have-a-choice/": [
+      "2012/10/Edison-Phonograph.jpg",
+      "2012/10/future1.jpg"
+    ],
+    "/wireshark-install-on-mac-os-x/": [
+      "2012/10/broken.computer.jpg"
+    ],
+    "/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/": [
+      "2012/08/cute-baby-pengions.png",
+      "2012/08/xrdp-login-350x178.jpg",
+      "2012/08/xrdp-logo.jpg"
+    ]
+  }
+}

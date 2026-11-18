@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="sidebar-layout archive-layout">
+  <section class="main-column archive-page">
+    <header class="page-heading"><p class="eyebrow">Browse by year</p><h1>Post archive</h1></header>
+    {{ $posts := where site.RegularPages "Section" "posts" }}
+    {{ range $posts.GroupByDate "2006" }}
+      <section class="year-group"><h2>{{ .Key }}</h2><div class="article-list">
+        {{ range .Pages }}{{ partial "article-card.html" . }}{{ end }}
+      </div></section>
+    {{ end }}
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

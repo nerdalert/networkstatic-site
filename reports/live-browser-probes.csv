@@ -1,0 +1,14 @@
+requested_url,retrieval_method,attempt,attempted_on,result,http_status,status_source,final_url,content_type,cache_age,transport_or_tool_error,notes
+https://networkstatic.net/,web.open,1,2026-11-17,fetched,not exposed,web tool,https://networkstatic.net/,text/html,crawled today,,Homepage listing showed eight posts and 23 archive pages.
+https://networkstatic.net/page/2/,web.open,1,2026-11-17,fetched,not exposed,web tool,https://networkstatic.net/page/2/,text/html,crawled two months ago,,Archive page 2 listing; cache is stale relative to this migration pass.
+https://networkstatic.net/page/3/,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Direct URL attempt.
+https://networkstatic.net/page/3/,web.click from page 2 older-posts link,2,2026-11-17,tool-cache-miss,not exposed,web tool,,,,Failed to fetch https://networkstatic.net/page/3/: Cache miss,Retry through the archive pagination link.
+https://networkstatic.net/page/4/,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Direct URL attempt.
+https://networkstatic.net/page/5/,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Direct URL attempt.
+https://networkstatic.net/page/23/,web.open,1,2026-11-17,fetched,not exposed,web tool,https://networkstatic.net/page/23/,text/html,crawled today,,Archive page 23 listing.
+https://networkstatic.net/chatgpt-project-docs/,web.open,1,2026-11-17,fetch-gateway-error,502,web tool,,,,Failed to fetch https://networkstatic.net/chatgpt-project-docs/: (502) Bad Gateway,The tool reported 502; this does not prove the origin server returned that status.
+https://networkstatic.net/sitemap_index.xml,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Direct URL attempt.
+https://networkstatic.net/wp-json/wp/v2/posts?per_page=1,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Direct URL attempt.
+https://networkstatic.net/open-v-switch-red-hat-installation/,web.open,1,2026-11-17,tool-inaccessible,not exposed,web tool,,,,URL is not accessible via this tool,Target linked by verified article; current route not confirmed.
+https://networkstatic.net/ai-and-networking/,web.open,1,2026-11-17,fetched,not exposed,web tool,https://networkstatic.net/ai-and-networking/,text/html,crawled four months ago,,Full article view available from stale web cache; title differs from backup title.
+https://networkstatic.net/installing-openvswitch-and-kvm-on-centos-6-2/,web.click from archive page 23,1,2026-11-17,fetched,not exposed,web tool,https://networkstatic.net/installing-openvswitch-and-kvm-on-centos-6-2/,text/html,crawled today,,Full article view available; full comparison evidence is in content-verification.csv.

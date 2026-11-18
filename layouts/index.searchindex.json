@@ -1,0 +1,7 @@
+{{- $records := slice -}}
+{{- range site.RegularPages -}}
+  {{- if in (slice "posts" "pages") .Section -}}
+  {{- $records = $records | append (dict "title" .Title "url" .RelPermalink "summary" (.Summary | plainify | htmlUnescape) "content" (.Plain | htmlUnescape | truncate 12000) "date" (.Date.Format "2006-01-02") "tags" .Params.tags "categories" .Params.categories) -}}
+  {{- end -}}
+{{- end -}}
+{{- $records | jsonify -}}

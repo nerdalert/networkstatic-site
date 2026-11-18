@@ -1,0 +1,192 @@
+permalink,wp_id,type,title,source_status,source_password_protected,reconciliation_status,body_verification_status,conversion_issue_count,link_exception_count,publish_eligible,eligibility_reasons,fidelity_status,text_exact,code_exact,links_exact,media_exact
+/bio/,6,page,Brent Salisbury's Bio,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/how-to-deploy-mpls-vpns-on-cisco-gear/,10,post,How to deploy MPLS VPN's on Cisco gear,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/nexus-3000/,7,post,Nexus 3000,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/death-to-the-firewall/,24,post,Death to the Firewall,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/mvpn-multicast-with-multi-protocol-bgp-mpls-vpn-on-cisco-ios/,27,post,MVPN Multicast with Multi-Protocol BGP MPLS VPN on Cisco IOS,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-new-mpls-and-transport-roles-merge/,30,post,The MPLS and transport roles merge,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/top-10-reasons-i-think-sdn-openflow-will-gain-momentum/,33,post,Top 10 Reasons I think SDN Openflow will gain momentum,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/installing-openvswitch-and-kvm-on-centos-6-2/,111,post,Installing Openvswitch and KVM on CentOS 6.2,publish,no,route-and-title-match-only,full-body-verified,0,0,yes,,pass,yes,yes,yes,yes
+/installing-nox-openflow-controller-on-ubuntu-11-10/,128,post,Installing NOX OpenFlow Controller on Ubuntu 11.10,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/my-notes-from-2/,132,post,OpenStack on Ubuntu 11.10 Installation,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/installing-open-vswitch-with-kvm/,163,post,Installing Open vSwitch with KVM,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openvswitch-and-gre-tunnel-notes/,174,post,OpenVswitch and GRE tunnel notes,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/february-2012-sdn-thoughts-2/,209,post,February 2012 SDN Thoughts,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/otv-configuration-notes/,223,post,OTV configuration notes,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/network-processing-units-npu-for-the-win/,6065,post,Network Processor Units (NPU) FTW,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/why-the-nos-will-decouple/,224,post,Why the NOS will decouple,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/what-are-ethernet-ip-and-tcp-headers-in-wireshark-captures/,274,post,"What are Ethernet, IP and TCP Headers in Wireshark Captures",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/how-i-learned-to-hate-the-dci/,287,post,How I Learned to Hate the DCI,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/how-headers-encapsulate-in-the-osi-stack/,296,post,How Headers Encapsulate in the OSI stack,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/basic-mplsvpn-using-cisco-ios/,311,post,Basic MPLS/VPN with Cisco IOS,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/an-no-brainer-use-case-for-mpls-in-the-enterprise-pci-compliance/,325,post,Use case for MPLS in the Enterprise for PCI Compliance,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/juniper-and-cisco-comparisons-of-rib-lib-fib-and-lfib-tables/,349,post,"Juniper and Cisco Comparisons of RIB, LIB, FIB and LFIB Tables",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/juniper-default-routing-tables/,360,post,Juniper Default Routing Tables,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/installing-and-configuring-openvswitch-on-ubuntu-12-04-precise-pangolin/,376,post,Installing and Configuring OpenvSwitch on Ubuntu 12.04 (Precise Pangolin),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/open-vswitch-gre-tunnel-configuration/,390,post,Open vSwitch GRE Tunnel Configuration,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/pox-openflow-controller-installation-screencast/,432,post,POX Openflow Controller Installation Screencast,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/nox-openflow-controller-installation-screencast/,441,post,NOX OpenFlow Controller Installation Screencast Ubuntu 11.10,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-scripted-installation-on-ubuntu-12-04-part-1/,450,post,OpenStack Essex Scripted Installation on Ubuntu 12.04 (Part 1),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-scripted-installation-on-ubuntu-12-04-part-2/,472,post,OpenStack Essex Scripted Installation on Ubuntu 12.04 (Part 2),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/google0d5477471e9d4160-html/,490,page,,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/configuring-the-nox-gui/,497,post,Configuring the NOX GUI,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/floodlight-openflow-controller-screencast-with-hp-switches/,509,post,Floodlight OpenFlow Controller Screencast with HP Switches,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-operational-demo/,515,post,OpenStack Essex Operational Demo,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-installation-and-configuration-screencast-from-scratch/,525,post,OpenStack Essex Installation and Configuration Screencast from Scratch (Part 1),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-installation-walkthrough-from-scratch-part2/,537,post,OpenStack Essex Installation Walkthrough from Scratch (Part2),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-installation-walkthrough-from-scratch-part3/,539,post,OpenStack Essex Installation Walkthrough from Scratch (Part3),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/troubleshooting-common-openstack-errors/,545,post,Troubleshooting Common OpenStack Errors,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-and-quantum-installation-using-openvswitch-from-scratch/,617,post,OpenStack Essex and Quantum Installation using OpenvSwitch from Scratch,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-for-internet-providers-use-case/,673,post,SDN for Internet Providers Use Case,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-business-cases/,588,post,SDN Use Cases,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/mpls-vpls-configuration-with-juniper-junos/,718,post,MPLS VPLS configuration with Juniper JunOS,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-and-openflow-quotes-from-some-of-the-best/,729,post,SDN and OpenFlow Quotes from some of the Best,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/help-wanted-cultural-change/,747,post,Help Wanted: Cultural Change,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openvswitch-configure-from-packages-and-attaching-to-a-floodlight-openflow-controller/,768,post,OpenvSwitch Configure from Packages and Attaching to a Floodlight OpenFlow Controller,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/nox-openflow-controller-install-on-ubuntu-12-04-precise-lts/,771,post,NOX OpenFlow Controller Install on Ubuntu 12.04,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/ethernet-switch-fabric-cards/,789,post,Ethernet Switch Fabric Cards,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-best-mpls-lecture-on-the-net/,804,post,The Best MPLS Lecture on the Net,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/the-northbound-api-2/,967,post,The Northbound API- A Big Little Problem,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/,1005,post,Cisco Networkers Live CLUS or whatever we call it now SDN Predictions,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openflow-starter-tutorial-lab-1/,1081,post,OpenFlow Starter Tutorial Lab #1,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: crayon,pass,yes,yes,yes,yes
+/openflow-tutorial-lab-2/,1089,post,OpenFlow Starter Tutorial Lab #2,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openflow-tutorial-lab-3/,1096,post,OpenFlow Starter Tutorial Lab #3,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openflow-openvswitch-lab/,1074,post,Getting Started OpenFlow OpenvSwitch Tutorial Lab : Setup,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/cisco-onepk-about-time/,1162,post,"Cisco onePK Announcement, big Surprise or About Time?",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/comparing-vmware-vs-openstack/,1388,post,Comparing Vmware vs. OpenStack,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/its-ok-to-like-openflow/,1405,post,It's OK to Like OpenFlow,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-birth-unicorn-early-openflow-meeting-notes/,1442,post,The Birth of an SDN Unicorn - Early OpenFlow Meeting Notes,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/configuring-vxlan-and-gre-tunnels-on-openvswitch/,1485,post,Configuring VXLAN and GRE Tunnels on OpenvSwitch,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/tcams-sdnopenflow-and-why-we-care/,1503,post,"TCAMs, SDN/OpenFlow and Why We Care",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/new-ietf-sdn-drafts/,1538,post,New IETF SDN Drafts,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/artboard-vector-drawing-app-review/,1573,post,Artboard Vector Drawing App Review,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/floodlight-gui-topology-addition/,1615,post,SDN Floodlight Controller GUI Topology Video and Install,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/my-top-10-essential-wordpress-plugins/,1653,post,My Top 10 Essential Wordpress Plugins,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-apis-this-all-feels-pretty-familair/,1568,post,SDN APIs- I Think I Have Seen This Movie Before,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/configuring-an-openflow-pox-sdn-controller-and-hp-switches/,1754,post,Configuring an OpenFlow POX SDN Controller and HP Switches,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/how-to-build-an-sdn-lab-without-needing-openflow-hardware/,1765,post,How to Build an SDN Lab without Needing OpenFlow Hardware,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/nicira-acquisition-by-vmware-winners-and-losers/,1837,post,Nicira Acquisition by VMWare Winners and Losers,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/why-community-counts/,1851,post,Why Community Counts,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/floodlight-openflow-controller-gui-applet/,1878,post,Floodlight OpenFlow Controller GUI Applet,publish,no,route-and-title-match-only,not checked,1,1,yes,documented shortcode/media presentation exceptions: youtube|documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/thoughts-from-the-packetpusher-show-112-sdns-sdns-potential-as-a-displacement-technology/,1917,post,Thoughts from the PacketPusher Show 112 SDN's SDN’s Potential as a Displacement Technology,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-essex-installer-script/,1938,post,OpenStack Essex Installer Script,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/,1985,post,XRDP Installation: An Easy Remote Desktop Setup for Linux,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/building-a-windows-image-for-openstack/,2007,post,Building a Windows Image for OpenStack,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/why-enterprise-wireless-networks-got-it-right/,2039,post,Why Enterprise Wireless Networks Got it Right,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/quantum-openstack-python-installer/,2071,post,Quantum OpenStack Scripted Python Install,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/rackspace-openstack-installation-on-a-kvm-vm/,2112,post,Rackspace OpenStack Installation on a KVM VM,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-hp-public-cloud-and-openstack/,2300,post,The HP Public Cloud and OpenStack,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/public-cloud-network-as-a-service/,2307,post,Public Cloud and Network as a Service,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/nested-kvm-hypervisor-support/,2371,post,Nested KVM Hypervisor Support,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/software-defined-data-center-slidedeck/,2398,post,Software Defined Data Center Slidedeck,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: slideshare,pass,yes,yes,yes,yes
+/python-tutorial-functions-and-passing-lists-and-dictionaries-with-simple-examples/,2410,post,Python Tutorial: Functions and Passing Lists and Dictionaries with Simple Examples,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/python-tutorial-classes-objects-methods-init-and-simple-examples/,2452,post,"Python Tutorial: Classes, Objects, Methods, init and Simple Examples",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/enterprise-wireless-and-wired-traffic-part2/,2495,post,Enterprise Wireless and Wired: A Byte is a Byte (Part 2),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/enterprise-802-11-wireless-growth-part-3/,2499,post,Enterprise 802.11 Wireless Growth (Part 3),publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/django-installation-and-first-app-tutorial/,2695,post,Django Installation and First App Tutorial,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-death-of-the-wired-enterprise-network/,2720,post,The Death of the Wired Enterprise Network,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/ietf-draft-bgp-signaled-end-system-ip-vpns/,2677,post,IETF Draft - BGP-signaled end-system IP/VPNs Contrail,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/does-the-cost-of-cloud-iaas-intersect-the-local-vm/,2799,post,Does the Cost of Cloud IaaS Intersect the Local VM?,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openvswitch-and-openflow-lab-preparation/,2819,post,OpenvSwitch and OpenFlow Lab Preparation,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/openflow-openvswitch-and-kvm-sdn-lab-installation-app/,2823,post,"OpenFlow, OpenvSwitch and KVM SDN Lab Installation App",publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/the-control-plane-data-plane-and-forwarding-plane-in-networks/,2875,post,"The Control Plane, Data Plane and Forwarding Plane in Networks",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/hp-announces-their-sdn-controller/,2902,post,HP Announces Their SDN Controller,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-folsom-quantum-devstack-installation-tutorial/,2919,post,OpenStack Folsom Quantum Devstack Installation Tutorial,publish,no,route-and-title-match-only,not checked,2,0,yes,documented shortcode/media presentation exceptions: crayon|youtube,pass,yes,yes,yes,yes
+/network-field-day-4/,2962,post,Network Field Day 4,publish,no,route-and-title-match-only,not checked,0,0,yes,media-only exceptions are documented and accepted under the staging review,pass-with-media-exceptions,yes,yes,yes,no
+/sdn-using-names/,2990,post,SDN Using Names,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/network-management-system-nms-statseeker/,3012,post,Network Management System NMS - Statseeker,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-using-dns-naming-for-classification/,3082,post,SDN Using DNS Naming for Classification,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/spirent-communications-looks-toward-the-enterprise/,3103,post,Spirent Communications Looks Toward the Enterprise,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/hybrid-sdn-deployments/,3246,post,Hybrid SDN Deployments,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/brocade-on-sdn-at-network-field-day/,3257,post,Brocade on SDN at Network Field Day,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/why-we-expect-more-from-technology-providers-we-dont-have-a-choice/,3298,post,Why We Expect More From Technology Providers? We Don't Have a Choice,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/revisiting-the-vcider-sdn-solution-prior-to-cisco-acquisition/,3309,post,Revisiting the vCider SDN Solution Prior to Cisco Acquisition,publish,no,route-and-title-match-only,not checked,1,0,yes,documented unavailable media: 2011/09/vCider.Cassandra.benchmarks.pdf|media-only exceptions are documented and accepted under the staging review,pass-with-media-exceptions,yes,yes,yes,no
+/install-wordpress-on-ubuntu/,3355,post,Install WordPress on Ubuntu,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/wireshark-install-on-mac-os-x/,3489,post,WireShark Install on Mac OS X,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/articles/,1786,page,NetworkStatic's Reading For Technologists,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/5-useful-mac-apps-snagit-evernote-screenflow-reeder-and-daisydisk/,3568,post,5 Useful Mac Apps - Snagit EverNote ScreenFlow Reeder and DaisyDisk,publish,no,route-match-title-differs,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/the-potential-impact-of-software-defined-networking-sdn-on-security/,3585,post,The Potential Impact of Software Defined Networking SDN on Security,publish,no,route-and-title-match-only,not checked,2,0,yes,documented shortcode/media presentation exceptions: slideshare|youtube,pass,yes,yes,yes,yes
+/brocade-acquisition-of-vyatta/,3720,post,Brocade Acquisition of Vyatta,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/openstack-quantum-devstack-on-a-laptop-with-vmware-fusion/,3749,post,OpenStack Quantum DevStack on a Laptop with VMware Fusion,publish,no,route-and-title-match-only,not checked,2,0,yes,documented shortcode/media presentation exceptions: crayon|youtube,pass,yes,yes,yes,yes
+/juniper-networks-at-network-field-day-4/,3787,post,Juniper Networks at Network Field Day #4,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/tutorial-to-build-a-floodlight-sdn-openflow-controller-module/,3821,post,Tutorial to Build a FloodLight SDN OpenFlow Controller Module,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/bigswitch-announces-sdn-ga-products-and-pure-disruption/,3909,post,BigSwitch Announces SDN GA Products and Pure Disruption,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-use-cases-for-service-providers/,3996,post,SDN Use Cases for Service Providers,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/why-consumers-of-u-s-wireless-carriers-need-a-google/,4164,post,Why Consumers of U.S. Wireless Carriers Need a Google,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/networkstatic-in-the-lab/,4244,page,In The Lab,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/speculation/,4249,page,Speculation,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/study-time/,4252,page,Fundamentals,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/programming/,4255,page,Programming,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/software-defined-network-sdn-looking-toward-2013-part-1/,4353,post,Software Defined Network (SDN) -Looking Toward 2013 - Part 1,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/software-defined-network-sdn-looking-toward-2013-part-2/,4554,post,Software Defined Network (SDN) -Looking Toward 2013 - Part 2,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/bad-idea-list-itu-un-plan-to-regulate-the-internet/,4714,post,Bad Idea List: ITU UN Plan To Regulate The Internet,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/cisco-acquisition-of-cariden/,4820,post,Cisco acquisition of Cariden,publish,no,route-and-title-match-only,not checked,1,0,yes,documented unavailable media: 2012/08/Infrastructure_SDN.pdf|media-only exceptions are documented and accepted under the staging review,pass-with-media-exceptions,yes,yes,yes,no
+/open-vswitch-red-hat-installation/,4867,post,Open vSwitch Red Hat Installation,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/programming-the-nsp-vendors-on-sdn-for-sp-operators/,4911,post,Programming the NSP: Vendors on SDN for SP Operators,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/cacti-network-management-installation-tutorial/,4938,post,Cacti Network Management Installation Tutorial,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/floodlight-openflow-controller-using-the-static-flow-entry-pusher/,4974,post,Floodlight OpenFlow Controller: Using the Static Flow Entry Pusher,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/google-data-center-pictures-year-in-review/,5222,post,Google Data Center Pictures: Year in Review,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/best-cat-videos-of-2012/,5300,post,Best Cat Videos of 2012,publish,no,route-and-title-match-only,not checked,1,12,yes,documented shortcode/media presentation exceptions: youtube|documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/plexxi-capacity-planning-done-right/,5354,post,Plexxi Capacity Planning Done Right,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-openflow-policy-abstractions/,5376,post,SDN OpenFlow Policy Abstractions,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/openflow-proactive-vs-reactive-flows/,5421,post,OpenFlow: Proactive vs Reactive Flows,publish,no,route-and-title-match-only,not checked,0,1,yes,documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/openflow-coarse-vs-fine-flows/,5452,post,OpenFlow: Coarse vs. Fine Flows,publish,no,route-and-title-match-only,not checked,0,1,yes,documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/openflow-sdn-hybrid-deployment-strategies/,5477,post,OpenFlow: SDN Hybrid Deployment Strategies,publish,no,route-and-title-match-only,not checked,0,1,yes,documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/openstack-multi-node-devstack-nova-network-tutorial/,5558,post,OpenStack Multi-Node DevStack Nova Network Tutorial,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-sdn-impact-on-net-neutrality/,5599,post,The SDN Impact on Net Neutrality,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: citeLink URL had one extra leading hyphen; normalized in review output,pass,yes,yes,yes,yes
+/installing-wireshark-on-linux-for-openflow-packet-captures/,5672,post,Installing Wireshark On Linux for OpenFlow Packet Captures,publish,no,route-and-title-match-only,not checked,1,1,yes,documented shortcode/media presentation exceptions: youtube|documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/more-details-about-the-cisco-one-controller-announced/,5707,post,More Details About The Cisco ONE Controller Announced,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/more-vendors-define-their-sdn-strategy/,5758,post,More Vendors Define Their SDN Strategy,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: citeLink URL had one extra leading hyphen; normalized in review output,pass,yes,yes,yes,yes
+/hybrid-openflow-using-the-normal-action/,5819,post,Hybrid OpenFlow Using The Normal Action,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/putting-together-provider-bridging-provider-backbone-bridging-s-tags-and-c-tags/,5866,post,"Putting Together Provider Bridging, Provider Backbone Bridging, S-Tags and C-Tags",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/networking-field-day-5-a-community-event/,5886,post,Networking Field Day #5 - A Community Event,publish,no,route-match-title-differs,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/the-good-and-bad-of-wireless/,5931,post,The Good and Bad of Wireless,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/open-vswitch-on-virtualbox/,5982,post,Open vSwitch on VirtualBox,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/configure-an-hp-openflow-switch-for-floodlight/,6008,post,Configure an HP OpenFlow Switch for Floodlight,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/be-the-steamroller-not-the-road/,6033,post,Be The Steamroller Not The Road,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/big-switch-introduces-switch-light/,6095,post,Big Switch Introduces Switch Light,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/sdn-dominates-nfd5/,6136,post,SDN Dominates NFD#5,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/installing-openstack-grizzly-with-devstack/,6212,post,Installing OpenStack Grizzly with DevStack,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-cisco-one-sdn-controller/,6266,post,The Cisco ONE SDN Controller,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: vimeo,pass,yes,yes,yes,yes
+/opendaylight-openflow-tutorial/,6308,post,OpenDaylight OpenFlow Tutorial,publish,no,route-and-title-match-only,not checked,2,0,yes,documented shortcode/media presentation exceptions: image_frame URL had one extra leading h; normalized in review output|youtube,pass,yes,yes,yes,yes
+/importing-opendaylight-into-eclipse/,6358,post,Importing OpenDaylight Into Eclipse,publish,no,route-and-title-match-only,not checked,1,1,yes,documented shortcode/media presentation exceptions: youtube|documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/open-networking-summit-2013-is-streaming/,6376,post,Open Networking Summit 2013 Is Streaming,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/sdn-openflow-and-opendaylight-updates-and-recordings/,6429,post,"SDN, OpenFlow and OpenDaylight Updates and Recordings",publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/pre-built-opendaylight-vm-images/,6505,post,Pre-Built OpenDaylight VM Images,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/compiling-wireshark-to-install-the-openflow-dissector-on-a-mac/,6582,post,Compiling Wireshark to Install the OpenFlow Dissector on a MAC,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/opendaylight-maven-and-osgi-dev-notes/,6627,post,OpenDaylight Maven and OSGI Dev Notes,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/the-openflow-overlay/,6709,post,The OpenFlow Overlay,publish,no,route-and-title-match-only,not checked,1,2,yes,documented shortcode/media presentation exceptions: youtube|documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/sdn-product-rundown-september/,6885,post,SDN Product Rundown from September,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: gview,pass,yes,yes,yes,yes
+/getting-started-ovsdb/,6911,post,Getting Started With OVSDB,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/eliminating-vlans-and-fragility-in-the-underlay-with-network-virtualization/,6994,post,Eliminating VLANs and Fragility in the Underlay with Network Virtualization,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: citeLink URL had one extra leading hyphen; normalized in review output,pass,yes,yes,yes,yes
+/installing-mininet-opendaylight-open-vswitch/,7046,post,"Installing Mininet, OpenDaylight and Open vSwitch",publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/install-open-vswitch-v2-redhat-fedora-19/,7065,post,Install Open vSwitch v2 from Source on Red Hat Fedora 19,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/installing-openstack-ml2-neutron-plugin-devstack-fedora/,7090,post,Installing OpenStack ML2 Neutron Plugin with DevStack on Fedora,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: youtube,pass,yes,yes,yes,yes
+/install-open-vswitch-v2-0-rpm-redhat-fedora/,7121,post,Install Open vSwitch v2.0 from RPM on RedHat Fedora,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/new-opportunity-red-hat/,7149,post,New Opportunity at Red Hat,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/install-open-vswitch-networking-red-hat-fedora-20/,7157,post,Install Open vSwitch Networking on Red Hat Fedora 20,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/opendaylight-openstack-integration-devstack-fedora-20/,7176,post,OpenDaylight OpenStack Integration with DevStack on Fedora,publish,no,route-and-title-match-only,not checked,2,0,yes,documented shortcode/media presentation exceptions: crayon|youtube,pass,yes,yes,yes,yes
+/setting-overlays-open-vswitch/,7334,post,Setting Up Overlays on Open vSwitch,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: crayon,pass,yes,yes,yes,yes
+/updated-devstack-opendaylight-vm-image-for-openstack-icehouse/,7374,post,Updated DevStack OpenDaylight VM Image for OpenStack IceHouse,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/brents-technology-bookmarks-from-june/,7397,post,Brent's Technology Bookmarks from June,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/network-iceberg/,7411,post,The Network Iceberg,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/golang-network-ops/,7441,post,Golang for Network Ops,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/installing-golang-ide-support-intellij/,7478,post,Installing Golang IDE Support in Intellij,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/docker-one-liners/,7519,post,Docker Command One Liners,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/starting-ovsdb-and-vswitchd-in-openvswitch-with-debugging-enabled/,7543,post,Starting OVSDB and vSwitchd in OpenvSwitch with Debugging Enabled,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/using-docker-machine-to-provision-on-microsoft-azure/,7553,post,Using Docker Machine to Provision on Microsoft Azure,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/normalizing-the-cloud-with-docker-machine/,7546,post,Normalizing the Cloud with Docker Machine,publish,no,route-and-title-match-only,not checked,0,1,yes,documented per-link exceptions; preserved source links are audited separately,pass,yes,yes,yes,yes
+/docker-machine-provisioning-on-aws/,7559,post,Docker Machine Provisioning on AWS,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/running-docker-machine-on-rackspace-public-cloud/,7615,post,Running Docker Machine on Rackspace Public Cloud,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/10-examples-of-how-to-get-docker-container-ip-address/,7626,post,10 Examples of how to get Docker Container IP Address,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/running-docker-machine-on-digital-ocean/,7646,post,Running Docker Machine on Digital Ocean,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/building-network-tools-using-docker/,7767,post,Building Network Tools using Docker,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/docker-on-google-compute-engine-using-docker-machine/,7747,post,Docker on Google Compute Engine Using Docker Machine,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/time-to-ditch-the-definition-of-sdn/,7820,post,Time to Ditch the Definition of SDN,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/configuring-macvlan-ipvlan-linux-networking/,7836,post,Configuring Macvlan and Ipvlan Linux Networking,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/gobgp-control-plane-evolving-software-networking/,7852,post,GoBGP - A Control Plane Evolving Software Networking,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/measuring-network-bandwidth-using-iperf-and-docker/,7878,post,Measuring Network Bandwidth using Iperf and Docker,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/open-source-flow-monitoring-and-visualization/,7902,post,Open Source Flow Monitoring and Visualization,publish,no,route-and-title-match-only,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/getting-started-with-the-rust-programming-language/,7949,post,Getting Started with the Rust Programming Language,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: fancy_list,pass,yes,yes,yes,yes
+/ai-and-networking/,7963,post,AI and Networking,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
+/chatgpt-project-docs/,7986,live-only,ChatGPT your Project Docs,publish,no,verified-live-only,full-body-verified,0,0,yes,"live-only source verified as public, published, unprotected, and body/media exact; staging gates remain required|live-only article body/status/media verified against public REST and route evidence",pass-live-verified,yes,yes,yes,yes

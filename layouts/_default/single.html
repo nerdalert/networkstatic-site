@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="sidebar-layout article-layout">
+  <article class="main-column article-page" data-section="{{ .Section }}">
+    <header class="article-header">
+      {{ with .Params.categories }}<p class="eyebrow">{{ delimit . " / " }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ with .Params.author }}<span>By {{ . }}</span>{{ end }}{{ if and .Lastmod (gt .Lastmod .Date) }}<span>Updated {{ .Lastmod.Format "January 2, 2006" }}</span>{{ end }}</div>
+      {{ with .Params.tags }}<div class="tag-list">{{ range . }}<a href="{{ "tag/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
+    </header>
+    <div class="article-body">{{ .Content }}</div>
+    <nav class="post-nav" aria-label="Article navigation">
+      {{ with .PrevInSection }}<a href="{{ .RelPermalink }}"><small>Previous</small><span>{{ .Title }}</span></a>{{ end }}
+      {{ with .NextInSection }}<a href="{{ .RelPermalink }}"><small>Next</small><span>{{ .Title }}</span></a>{{ end }}
+    </nav>
+  </article>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

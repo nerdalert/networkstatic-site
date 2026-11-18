@@ -1,0 +1,46 @@
++++
+title = "Spirent Communications Looks Toward the Enterprise"
+date = "2012-10-16T21:54:02+00:00"
+lastmod = "2012-11-27T17:12:47+00:00"
+author = "Brent Salisbury"
+wp_id = 3103
+categories = ["Tools"]
+tags = ["Network Field Day"]
+description = ""
+url = "/spirent-communications-looks-toward-the-enterprise/"
+image = "/wp-content/uploads/2012/10/avoidbandwidthbandits.jpg"
+source_status = "publish"
+source_password_protected = false
+migration_generated = true
+source_content_sha256 = "c311ee7c6b9c9938f5b0403bbe4a3301e01e6d1ed2ebe46db0bae446e330cd53"
+conversion_version = "0.11.0"
+review_only = false
+draft = false
++++
+
+Spirent Communications Looks toward the Enterprise with new products and new angles to existing products. Spirent has traditionally gone after service provider markets with their product offerings. They are branching out and I liked a couple of their ideas quite a bit. It is nice to write a post in my "Tools" category, we do not exactly have a lot of those in the current networking industry today. Second blog post in one <a href="{{< relurl "/network-management-system-nms-statseeker/" >}}" target="_blank">week</a> around tools! Certainly reflects the <a href="http://www.zdnet.com/juniper-networks-forrester-networks-are-at-a-breaking-point-7000005705/" target="_blank">desperate</a> (forgive me for a link including Forrester, but its amusing and true that times are bad) times we are in as we try and absorb exponential <a href="{{< relurl "/enterprise-802-11-wireless-growth-part-3/" >}}" target="_blank">growth</a> on stalled frameworks. As a sponsor of Network Field Day #4 Spirent did a two hour presentation on three different products which I will run through and give my reaction in an <a href="http://www.blogwithintegrity.com" target="_blank">independent</a> manner.
+<h4>Infrastructure Test Optimization</h4>
+<a href="{{< relurl "/wp-content/uploads/2012/10/MediaCenter_Red1.png" >}}"><img class="alignright  wp-image-3248" title="MediaCenter_Red-brent-salisbury" src="{{< relurl "/wp-content/uploads/2012/10/MediaCenter_Red1.png" >}}" alt="MediaCenter_Red-networkstatic" width="230" height="230" /></a>The <a href="http://www.spirent.com" target="_blank">Spirent</a> product for traffic generation and validation is their <a href="http://www.spirent.com/Networks-and-Applications/Infrastructure_Test_Optimization" target="_blank">Infrastrcuture Test Optimization platform</a>. Spirent is looking to break into the Enterprise which perked my ears. Traffic generators have been something that if lucky an enterprise may be big enough to get but the pricing can quickly kill it. The application delivers on physical or VM. I liked the interface quite a bit. A UI is normally something that Engineers destroy, because well, they are engineers. It has a play button that was quite slick and drag and drop protocols in and out for the various options. Those are typically big long arguments being passed to a method in the CLI that has been abstracted nicely into something usable by anyone. Delegates <a href="http://lamejournal.com/about/" target="_blank">John Herbert</a> and <a href="http://www.colinmcnamara.com" target="_blank">Colin McNamara</a> both had good questions as to how much root exposure does a user get under the hood or via an API, the answer was not much. I think that is to be expected, if someone wants under the hood granularity, then they are going after open source packages since they can manage an operate the additional complexity themselves.
+
+Spirent is looking to build community around the enterprise traffic generation and testing product. Sharing traffic profiles amongst customers would be something that I would be interested in. I love to see other organizations benchmarks, bandwidth and metrics. How much Internet bandwidth should we provision? How much latency do you have to a remote branch? There is no right or wrong answer there, but base-lining against peer organizations is the path I use more times than not for validation. I love other peoples data. Delegate <a href="https://twitter.com/pandom_" target="_blank">Anthony Burke</a>, had a hell of an idea in the presentation, to give credits as incentive to share data +1.
+<h4>Spirent Infrastructure Test Optimization</h4>
+Spirent  has a product called <a href="http://www.spirent.com/Networks-and-Applications/Infrastructure_Test_Optimization" target="_blank">Infrastructure Test Optimization</a> that was the most interesting product for me that I had no idea they had. They partner with <a href="http://www.mrv.com/optical-transport/" target="_blank">MRV</a> for the physical link building which achieves a true replicated L1 through L7 testbed. The tools for networking (or lack thereof) is near and dear to my heart. Rarely can a return on investment (ROI) be found in purchasing tools to monitor and optimize the network much less proof upcoming projects or architecture changes to verify design. The portion of this product that interests me the most is what would this product look like with SDN? Mapping a port from A to Z is garbage in garbage out with flow based port mappings. That roadmap is not public yet so that was an embargoed topic. I will update when/if I see a change there.
+<ul>
+	<li>Great writeup from the intrepid <a href="http://thenetworksherpa.com/get-more-juice-from-your-network-lab/" target="_blank">John Harrington</a> <a href="https://twitter.com/NetworkSherpa" target="_blank">@NetworkSherpa</a> on his reaction.</li>
+</ul>
+<h4>Rant on Current Networking Industry Validation Ability in Software</h4>
+Software developers have a multi billion dollar  software testing and tooling industry around quality assurance (QA) with well defined practices for testing such as Installation, Compatibility, Smoke, Sanity, Acceptance, Alpha, Beta the list goes on. Network engineers, we have <a href="http://etherealmind.com/install-gns3-on-max-os-x-leopard/" target="_blank">GNS3</a> for Cisco IOS, <a href="http://brezular.wordpress.com/2012/08/04/how-to-run-junos-installed-on-qemu-on-virtualbox-part1-introduction/" target="_blank">Olive</a> (if you can get it installed) for JunOS and for Brocade a <a href="http://community.brocade.com/docs/DOC-2416" target="_blank">simulator</a> that <a href="http://packetpushers.net/author/ecbanks/" target="_blank">@ecbanks</a> tweeted recently that I did not know about. But that is merely testing logical configurations with proprietary operating systems.
+<h4>Spirent Security in Application Aware Networks</h4>
+Spirent had a security <a href="http://www.spirent.com/Networks-and-Applications/App_Aware_Security" target="_blank">product</a> discussion and demo. Kudos to Spirent for the demo working. There were some demos during the event that had some problems. The products have loads of breadth to them so rather than butcher there product I recommend taking a peak at the demo below for a good idea of one of it's capabilities if interested in the security aspect.
+
+http://vimeo.com/51255235
+
+<strong><em>Video 1:</em></strong> Demo of the Spirent Security Product.
+<h4>Summary</h4>
+Prior to NFD I thought they were purely services without products. What interests me is their focus on software and tooling. With the networking industry begrudgingly leaning towards abstractions with importance placed on software in networking that should position Spirent well.
+
+I was glad Spirent was a sponsor of Network Field Day. There is some perceived risk in this for some reason. The idea of talking to Tech Field Day <a href="http://techfieldday.com/delegate/" target="_blank">Delegates</a> drives many in marketing, legal and product nuts. The delegates are the customer base for these companies from  all verticals acting as representatives for community. If a company cannot embrace that concept then they have much worse problems than potential flaws in products and should rethink customer engagement. That said, there is always risk but I hope NFD4 helps companies realize that we take utmost pride in our independence and integrity along with respect for the companies taking a perceived risk in conditions out of their control. At the end of the day, folks like Gartner and Forrester mean nothing to the engineer architect truly making the architectural decisions, the complexity of computing today is well beyond a (or should be at least) C-Level pointing a quadrant and saying do this because they say so. It is collective community voice through interactions and sharing each of our successes and pain points with one another to begin having collective vision to drive products based on the consumers need and not the vendors revenue goals.
+
+I am probably a decent example of why it is a good thing to participate in NFD. While I challenged a concept or two, I was throughly impressed with the Spirent traffic generator. I am even more excited to see where the network testing software goes in future releases. If Spirent embraces commodity hardware coupled with SDN, networking folks will begin  having real tools while eliminating the barrier to entry for the enterprise in cost of proprietary L1 hardware.
+
+Check <a href="{{< relurl "/bio/" >}}">Bio</a> for disclaimer, wasn't paid, no stake, independent etc etc.

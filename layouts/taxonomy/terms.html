@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="sidebar-layout archive-layout">
+  <section class="main-column archive-page">
+    <header class="page-heading"><p class="eyebrow">Browse topics</p><h1>{{ .Title }}</h1></header>
+    <ul class="taxonomy-list">
+      {{ range .Data.Terms.Alphabetical }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a><span>{{ .Count }}</span></li>{{ end }}
+    </ul>
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

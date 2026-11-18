@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="sidebar-layout archive-layout">
+  <section class="main-column archive-page">
+    <header class="page-heading"><p class="eyebrow">Author</p><h1>Brent Salisbury</h1></header>
+    <div class="article-list">
+      {{ range where site.RegularPages "Params.author" "Brent Salisbury" }}{{ partial "article-card.html" . }}{{ end }}
+    </div>
+  </section>
+  {{ partial "profile-sidebar.html" . }}
+</div>
+{{ end }}

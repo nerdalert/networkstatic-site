@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NetworkStatic mark">
+  <rect width="64" height="64" rx="15" fill="#102b3f"/>
+  <g fill="none" stroke="#74c9ed" stroke-width="3">
+    <path d="M16 18 32 31 48 18M16 46 32 31 48 46M16 18v28M48 18v28"/>
+  </g>
+  <g fill="#f6fbfd" stroke="#0879b9" stroke-width="2">
+    <circle cx="16" cy="18" r="5"/><circle cx="48" cy="18" r="5"/><circle cx="16" cy="46" r="5"/><circle cx="48" cy="46" r="5"/><circle cx="32" cy="31" r="6"/>
+  </g>
+</svg>

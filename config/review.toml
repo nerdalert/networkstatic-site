@@ -1,0 +1,16 @@
+# Isolated local review configuration. WordPress-derived sources are drafts;
+# this is the only build that enables them, and its output is gitignored.
+baseURL = "http://localhost:1313/"
+contentDir = "migration-review/build-content"
+staticDir = ["static", "migration-review/generated/static"]
+disableKinds = ["RSS", "sitemap"]
+enableRobotsTXT = false
+
+[pagination]
+  disableAliases = true
+
+[outputs]
+  home = ["HTML", "SearchIndex"]
+
+[params]
+  disableRSSLink = true

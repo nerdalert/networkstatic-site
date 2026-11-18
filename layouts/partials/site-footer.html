@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>NetworkStatic</span>
+    <span>Networking, Programming &amp; Infrastructure</span>
+    <nav class="social-links" aria-label="Social profiles">
+      {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" rel="me noopener noreferrer">LinkedIn</a>{{ end }}
+      {{ with .Site.Params.social.twitter }}<a href="{{ . }}" rel="me noopener noreferrer">X</a>{{ end }}
+      {{ with .Site.Params.social.github }}<a href="{{ . }}" rel="me noopener noreferrer">GitHub</a>{{ end }}
+    </nav>
+    {{ if not .Site.Params.disableRSSLink }}<a href="{{ "index.xml" | relURL }}">RSS</a>{{ end }}
+  </div>
+</footer>
