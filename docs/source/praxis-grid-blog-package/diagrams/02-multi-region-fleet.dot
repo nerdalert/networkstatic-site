@@ -1,0 +1,16 @@
+digraph MultiRegion {
+  graph [rankdir=LR, bgcolor="#F7F8FA", pad="0.4", nodesep="0.65", ranksep="1.05", splines=polyline, fontname="DejaVu Sans", labelloc=t, labeljust=l, label="MULTI-SITE FLEET  /  ILLUSTRATIVE DEPLOYMENT", fontsize=24, fontcolor="#282D33"];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#B6C1CB", penwidth=2, fontname="DejaVu Sans", fontsize=16, margin="0.22,0.20"];
+  edge [penwidth=2.2, arrowsize=0.85, color="#D80000", fontname="DejaVu Sans", fontsize=12, fontcolor="#414850"];
+  user [label="Application\nInference request", fillcolor="#FFF5F5", color="#E00000"];
+  ingress [label="Ingress gateway\nAuth + model + local routing state", fillcolor="#FFF1F1", color="#E00000", penwidth=3];
+  user -> ingress [label="edge chosen by DNS / GLB"];
+  subgraph cluster_east {label="SITE A  /  EAST"; style="rounded,filled"; color="#CCD3DA"; fillcolor="#F1F4F7"; fontname="DejaVu Sans"; fontsize=17; eastgw [label="Provider gateway A\nmTLS + local policy"]; eastpool [label="llm-d pool\nEPP → vLLM workers", fillcolor="#FFFFFF"]; eastgw -> eastpool [label="local scheduler"];}
+  subgraph cluster_west {label="SITE B  /  WEST"; style="rounded,filled"; color="#CCD3DA"; fillcolor="#F1F4F7"; fontname="DejaVu Sans"; fontsize=17; westgw [label="Provider gateway B\nmTLS + local policy"]; westpool [label="Pool B\nFramework-specific worker routing", fillcolor="#FFFFFF"]; westgw -> westpool;}
+  subgraph cluster_eu {label="SITE C  /  RESTRICTED"; style="rounded,filled"; color="#CCA7A7"; fillcolor="#FCF0F0"; fontname="DejaVu Sans"; fontsize=17; eugw [label="Provider gateway C\nOnly allowed tenants", color="#D80000"]; eupool [label="Local pool C\nEligible only by policy"]; eugw -> eupool;}
+  external [label="Frontier API\nOptional configured burst route\nCredential + residency checks", style="rounded,dashed,filled", fillcolor="#FFFFFF", color="#8D969F"];
+  ingress -> eastgw [label="preferred mTLS hop"];
+  ingress -> westgw [label="conditional fallback"];
+  ingress -> eugw [label="authorized only", color="#7E8790"];
+  ingress -> external [style=dashed, color="#7E8790", label="illustrative / conditional"];
+}

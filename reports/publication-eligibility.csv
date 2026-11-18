@@ -190,3 +190,4 @@ permalink,wp_id,type,title,source_status,source_password_protected,reconciliatio
 /getting-started-with-the-rust-programming-language/,7949,post,Getting Started with the Rust Programming Language,publish,no,route-and-title-match-only,not checked,1,0,yes,documented shortcode/media presentation exceptions: fancy_list,pass,yes,yes,yes,yes
 /ai-and-networking/,7963,post,AI and Networking,publish,no,route-match-title-differs,not checked,0,0,yes,,pass,yes,yes,yes,yes
 /chatgpt-project-docs/,7986,live-only,ChatGPT your Project Docs,publish,no,verified-live-only,full-body-verified,0,0,no,excluded by migration publication policy,pass-live-verified,yes,yes,yes,yes
+/praxis-grid-distributed-ai-inference-routing/,,post,"Praxis Proxy AI Grid: Routing Across Models, Clusters, and Regions",publish,no,new authored article,user approved publication,,,yes,,new authored content,,,,

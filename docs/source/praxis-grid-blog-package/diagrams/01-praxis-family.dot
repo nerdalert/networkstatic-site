@@ -1,0 +1,21 @@
+digraph PraxisFamily {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.38", nodesep="0.65", ranksep="1.00", splines=polyline, fontname="DejaVu Sans", label="PRAXIS  /  COMPONENT RESPONSIBILITIES", labelloc=t, labeljust=l, fontsize=25, fontcolor="#282D33"];
+  node [shape=box, style="rounded,filled", fillcolor="#FFFFFF", color="#B6C1CB", penwidth=2, fontname="DejaVu Sans", fontsize=17, margin="0.28,0.21", fontcolor="#22282D"];
+  edge [fontname="DejaVu Sans", fontsize=13, color="#E00000", fontcolor="#454D55", penwidth=2.4, arrowsize=0.9];
+  caller [label="Client / workload\nModel, Responses, MCP, A2A", fillcolor="#FFF7F7", color="#E00000"];
+  ai [label="Praxis AI\nModel-aware filters, protocols, credentials", fillcolor="#FFF1F1", color="#E00000", penwidth=3];
+  core [label="Praxis Core\nListeners, filters, TLS, upstream HTTP/TCP\nPingora default • Hyper opt-in", fillcolor="#F1F4F6"];
+  backend [label="Backend / provider gateway\nRuns inference or reaches an API", fillcolor="#F1F4F6"];
+  caller -> ai [label="HTTP request"];
+  ai -> core [label="proxy pipeline"];
+  core -> backend [label="inference hop"];
+  policy [label="Praxis Policy\nIdentity • authorization • budgets\nOnly when integrated into the gateway", fillcolor="#FFFFFF", color="#7B8791"];
+  grid [label="Praxis Grid (AGN)\nOperator, discovery, admission, state\nOutside the inference request path", fillcolor="#FFFFFF", color="#E00000"];
+  overlay [label="Accepted local route state\nVersioned overlay / site signal store", fillcolor="#FFFAF7"];
+  policy -> ai [style=dashed, color="#6A747D", label="configured policy hook"];
+  grid -> overlay [style=dashed, color="#6A747D", label="publish / refresh"];
+  overlay -> ai [style=dashed, color="#6A747D", label="read locally"];
+  {rank=same; policy; grid}
+  key [shape=note, label="SOLID RED  Request path\nDASHED GRAY  Policy/control input", fontsize=12, fillcolor="#F1F3F5", color="#D2D7DC"];
+  {rank=same; key; backend}
+}

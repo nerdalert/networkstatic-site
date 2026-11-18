@@ -1,0 +1,23 @@
+digraph Agentic {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.38", nodesep="0.68", ranksep="1.10", splines=polyline, fontname="DejaVu Sans", label="AGENT TRAFFIC  /  REPEATED AUTHORIZATION BOUNDARIES", labelloc=t, labeljust=l, fontsize=24, fontcolor="#282D33"];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#BDC7D0", penwidth=2, fontname="DejaVu Sans", fontsize=16, margin="0.23,0.19"];
+  edge [color="#D80000", penwidth=2.2, arrowsize=0.86, fontname="DejaVu Sans", fontsize=12, fontcolor="#49515A"];
+  user [label="User request\nTenant identity", fillcolor="#FFF5F5", color="#D80000"];
+  ingress_gateway [label="Gateway identity + policy\nAuthorize model and budget", fillcolor="#FFF1F1", color="#D80000", penwidth=3];
+  model [label="Model call\nRouted by Praxis AI / Grid"];
+  choice [label="Tool or delegation requested\nNot automatically authorized", fillcolor="#FFFDF8", color="#BE9A7D"];
+  policy [label="Explicit permission gate\nCaller • tenant • tool • budget", fillcolor="#FFF1F1", color="#D80000"];
+  mcp [label="MCP tool\nScoped credential + audit", fillcolor="#F0F5F6"];
+  a2a [label="A2A delegated agent\nIndependent downstream policy", fillcolor="#F0F5F6"];
+  state [label="Responses / Conversations\nOwner-tagged state
+New request re-enters gateway policy", fillcolor="#FFFDF8", color="#AA9D85"];
+  {rank=same; user; ingress_gateway; model}
+  {rank=same; choice; policy}
+  {rank=same; mcp; a2a}
+  user -> ingress_gateway -> model -> choice -> policy;
+  policy -> mcp [label="permitted call"];
+  policy -> a2a [label="permitted delegation"];
+  mcp -> state [label="tool result / resume"];
+  a2a -> state [label="task result / resume"];
+
+}

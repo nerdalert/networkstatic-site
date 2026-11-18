@@ -1,0 +1,19 @@
+digraph ConsistentPolicy {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.42", nodesep="0.75", ranksep="0.85", splines=polyline, fontname="DejaVu Sans", label="FLEET POLICY  /  SHARED ACCOUNTING IS NOT SHARED AUTHORIZATION", fontsize=23, fontcolor="#282D33", labelloc=t, labeljust=l];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#B6C1CB", penwidth=2, fontname="DejaVu Sans", fontsize=16, margin="0.27,0.19"];
+  edge [color="#D80000", penwidth=2.2, arrowsize=0.86, fontname="DejaVu Sans", fontsize=12, fontcolor="#47505A"];
+  caller [label="Same tenant • different ingress sites\nUse verified, stable accounting identity", fillcolor="#FFF1F1", color="#D80000", penwidth=3];
+  east [label="Consumer Gateway EAST\nAuthentication → authorization\nEstimated token reservation"];
+  west [label="Consumer Gateway WEST\nAuthentication → authorization\nEstimated token reservation"];
+  counter [label="Shared Valkey budget\nAI token limiter (feature-gated)\nAtomic reservation / reconciliation", fillcolor="#FFF6F6", color="#D80000", penwidth=3];
+  provider [label="Eligible provider gateways\nSeparate mTLS / provider policy\nModel inference", fillcolor="#F0F4F6"];
+  note [label="Scope warning: Grid test uses\nBasic Auth + fixed rule key.\nGeneral per-tenant keying is follow-up.", shape=note, fillcolor="#FFFDF8", color="#A9A09A", fontsize=13];
+  caller -> east; caller -> west;
+  east -> counter [label="reserve / settle", dir=both];
+  west -> counter [label="reserve / settle", dir=both];
+  east -> provider [label="if admitted"];
+  west -> provider [label="if admitted"];
+  note -> counter [style=dotted, arrowhead=none, color="#8F979F"];
+  {rank=same; east; west}
+  {rank=same; note; counter; provider}
+}

@@ -1,0 +1,10 @@
+digraph TrustPlanes {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.4", nodesep="0.75", ranksep="1.12", splines=polyline, fontname="DejaVu Sans", labelloc=t, labeljust=l, label="TRUST AND STATE  /  TWO DIFFERENT PATHS", fontsize=24, fontcolor="#282D33"];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#C0C9D2", penwidth=2, fontname="DejaVu Sans", fontsize=16, margin="0.24,0.18"];
+  edge [arrowsize=0.86, penwidth=2.3, color="#D80000", fontname="DejaVu Sans", fontsize=12, fontcolor="#49515A"];
+  subgraph cluster_control {label="CONTROL PLANE  /  ASYNCHRONOUS"; style="rounded,filled"; color="#C5CED7"; fillcolor="#F0F3F6"; fontname="DejaVu Sans"; fontsize=17; kube [label="Kubernetes CRDs\nGridNetwork, GridSite, Provider"]; op_a [label="Site A operator\nScrape + reconcile"]; op_b [label="Site B operator\nScrape + reconcile"]; overlay [label="Local accepted route state\nOverlay / signals store", fillcolor="#FFF9F9", color="#D80000"]; kube -> op_a [style=dashed, color="#78848D"]; op_a -> op_b [style=dashed, dir=both, color="#78848D", label="SWIM membership always\nSignals: gossip OR mTLS poll"]; op_a -> overlay [style=dashed, color="#78848D", label="publish locally"];}
+  subgraph cluster_data {label="DATA PLANE  /  REQUESTS"; style="rounded,filled"; color="#D8BBC0"; fillcolor="#FFF5F5"; fontname="DejaVu Sans"; fontsize=17; caller [label="Client / workload"]; edgegw [label="Consumer / edge gateway\nClient auth + route decision", color="#D80000", penwidth=3]; providergw [label="Provider gateway\nPeer mTLS + local authorization"]; engine [label="Private model backend\nOr scoped final-hop API"]; caller -> edgegw [label="TLS"]; edgegw -> providergw [label="authenticated mTLS hop"]; providergw -> engine [label="authorized final hop"];}
+  overlay -> edgegw [style=dashed, color="#78848D", label="read locally"];
+  legend [shape=note, fontsize=13, label="SOLID RED = inference requests\nDASHED GRAY = state/control\nSWIM does not authorize requests", fillcolor="#FFFFFF"];
+  {rank=same; legend; kube}
+}

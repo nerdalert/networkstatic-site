@@ -1,0 +1,21 @@
+digraph RoutingDecision {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.42", nodesep="0.48", ranksep="0.62", splines=ortho, fontname="DejaVu Sans", labelloc=t, labeljust=l, label="REQUEST ROUTING  /  GATES BEFORE OPTIMIZATION", fontsize=24, fontcolor="#282D33"];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#B6C1CB", penwidth=2, fontname="DejaVu Sans", fontsize=17, margin="0.25,0.16"];
+  edge [color="#DC0000", penwidth=2.3, arrowsize=0.9];
+  incoming [label="Inbound AI request", fillcolor="#FFF1F1", color="#DC0000"];
+  auth [label="1. Authenticate principal\nGateway identity contract"];
+  permissions [label="2. Authorize model / provider\nTenant and tool permissions"];
+  geography [label="3. Filter placement constraints\nSite trust, geography, sovereignty"];
+  admit [label="4. Determine admission\nReady • fresh • accepts new work"];
+  pick [label="5. Select within allowed tier\nLocality • score • weights • affinity", fillcolor="#FFF1F1", color="#DC0000"];
+  forward [label="6. Forward to provider gateway\nPeer mTLS + provider-side checks", fillcolor="#F0F5F6"];
+  denied [label="DENY\n401 / 403, as configured", color="#D00000", fillcolor="#FBE9E9"];
+  noroute [label="NO ELIGIBLE DESTINATION\nGateway route error / configured fallback", color="#8C6363", fillcolor="#FAF0F0"];
+  incoming -> auth -> permissions -> geography -> admit -> pick -> forward;
+  auth -> denied [style=dashed, color="#8B9197"];
+  permissions -> denied [style=dashed, color="#8B9197"];
+  geography -> noroute [style=dashed, color="#8B9197"];
+  admit -> noroute [style=dashed, color="#8B9197"];
+  {rank=same; denied; permissions}
+  {rank=same; noroute; admit}
+}

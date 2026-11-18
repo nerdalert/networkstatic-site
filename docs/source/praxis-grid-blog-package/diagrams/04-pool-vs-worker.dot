@@ -1,0 +1,12 @@
+digraph SiteWorker {
+  graph [rankdir=TB, bgcolor="#F7F8FA", pad="0.42", nodesep="0.52", ranksep="1.08", splines=polyline, fontname="DejaVu Sans", label="TWO SCHEDULING SCALES  /  SITE FIRST, WORKER SECOND", fontsize=23, fontcolor="#282D33", labelloc=t, labeljust=l];
+  node [shape=box, style="rounded,filled", fillcolor=white, color="#B6C1CB", penwidth=2, fontname="DejaVu Sans", fontsize=17, margin="0.25,0.18"];
+  edge [penwidth=2.3, color="#DC0000", arrowsize=0.86, fontname="DejaVu Sans", fontcolor="#45515A", fontsize=12];
+  req [label="Inference request\nModel + tenant + state", fillcolor="#FFF5F5", color="#DC0000"];
+  grid [label="Praxis Gateway / Grid route\nChoose eligible site or pool\nBased on local accepted state", fillcolor="#FFF1F1", color="#DC0000", penwidth=3];
+  req -> grid;
+  subgraph cluster_llmd {label="SELECTED LLM-D POOL  /  IMPLEMENTED SIGNAL INTEGRATION"; style="rounded,filled"; color="#CBD4DC"; fillcolor="#F1F4F7"; fontsize=16; fontname="DejaVu Sans"; epp [label="llm-d Endpoint Picker (EPP)\nSchedules request to a worker"]; w1 [label="vLLM worker 1\nQueue / KV state"]; w2 [label="vLLM worker 2\nQueue / KV state"]; epp -> w1 [label="per-request pick"]; epp -> w2;}
+  subgraph cluster_dynamo {label="ALTERNATIVE  /  PROPOSED GRID ADAPTER"; style="rounded,dashed,filled"; color="#B5BDC4"; fillcolor="#FAFAFA"; fontsize=16; fontname="DejaVu Sans"; dynamo [label="Dynamo frontend / router\nOwn worker / KV-aware routing", style="rounded,dashed,filled"]; dw [label="Dynamo workers\nDynamo-specific metrics", style="rounded,dashed,filled"]; dynamo -> dw [style=dashed, color="#858E96"];}
+  grid -> epp [label="supported llm-d pool"];
+  grid -> dynamo [style=dashed, color="#858E96", label="requires adapter validation"];
+}
