@@ -32,4 +32,4 @@ When asked to prepare a post:
 
 ## Build
 
-The site uses Hugo 0.170.0 and the CleanWhite theme pinned in `THEME_COMMIT`. Run `make build-production-preview HUGO=/opt/homebrew/bin/hugo-0.170.0` to build and audit a local production preview.
+The site uses Hugo 0.170.0 and the CleanWhite theme pinned in `THEME_COMMIT`. With Hugo 0.170.0 on your `PATH`, run `make build-production-preview` to build and audit a local production preview.
