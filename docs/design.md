@@ -12,4 +12,4 @@ The home page, archive, search, taxonomy, author, and article layouts use a righ
 
 ## Implementation status
 
-The pinned CleanWhite checkout is installed at `c4c7f2171e4c8244a8588fd6a101c48154ae1229`, and Hugo 0.170.0 builds run successfully. The home page and article layouts were visually reviewed locally; the right sidebar shows the user-provided portrait, the approved bio, and LinkedIn, X, and GitHub icons. Bluesky is omitted. The local project-subpath staging build passes its route and security audits; remote GitHub Pages deployment is pending.
+The pinned CleanWhite checkout is installed at `c4c7f2171e4c8244a8588fd6a101c48154ae1229`, and Hugo 0.170.0 builds run successfully. The home page and article layouts were visually reviewed locally and on deployed staging; the right sidebar shows the user-provided portrait, the approved bio, and LinkedIn, X, and GitHub icons. Bluesky is omitted. The local project-subpath staging build and GitHub Pages deployment pass route, noindex, and security audits. Deployment details and remote checks are recorded in `reports/migration-exceptions.md`.

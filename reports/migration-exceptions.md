@@ -28,4 +28,10 @@ Recovery attempts covered all 17 media files absent from the supplied uploads tr
 
 The local Pages build uses `https://nerdalert.github.io/networkstatic-site/`. Audit results: 519 HTML pages, 519 `noindex` pages, 184 articles, 7 migrated pages, 191 search records, 113 feeds, 1,179 RSS items, 1 sitemap, zero broken local references, and 307,640,676 output bytes. Repository, staged-file, Git-history, and generated-output scans report zero security findings. The report is `staging-local-audit.json`.
 
-GitHub Pages deployment is not recorded as complete until the public repository exists, the audited source is pushed, Actions deploys the artifact, and the remote staging URL is verified. Production DNS, custom domain configuration, and the original WordPress site remain unchanged.
+## Deployed staging verification
+
+The audited source is public at [github.com/nerdalert/networkstatic-site](https://github.com/nerdalert/networkstatic-site), commit `efae69af9f4a8660d7c6b2ea58003cf51e8e1992`. GitHub Pages is configured for Actions and deployed successfully in [Actions run 44218270273](https://github.com/nerdalert/networkstatic-site/actions/runs/44218270273). The staging URL is [https://nerdalert.github.io/networkstatic-site/](https://nerdalert.github.io/networkstatic-site/).
+
+Remote HTTP checks returned 200 for the home page, a representative article, search page and JavaScript, 191-record search index, RSS feed, sitemap, and profile photo. The home page and article carry `noindex`. Chrome rendering confirmed the home-page post list and sidebar, article text and media, and search page render correctly. The full local staging audit reports 519 HTML pages, all 519 noindex, 191 search records, 113 feeds, one sitemap, and zero broken local references. The repository/history and generated-output security scans passed with zero findings.
+
+GitHub Pages has no custom domain configured. The generated staging site is about 308 MB, below the 1 GB Pages site limit. GitHub warned that one 53.18 MB MP3 exceeds its 50 MB recommendation; it remains below the enforced 100 MB individual-file limit. Production DNS, production custom-domain configuration, and the original WordPress site remain unchanged.
