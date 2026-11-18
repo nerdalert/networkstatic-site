@@ -1,10 +1,10 @@
 {
   "mode": "staging",
   "base_url": "https://nerdalert.github.io/networkstatic-site/",
-  "html_pages": 519,
-  "article_pages": 184,
+  "html_pages": 514,
+  "article_pages": 183,
   "migrated_pages": 7,
-  "noindex_html_pages": 519,
+  "noindex_html_pages": 514,
   "approved_article_routes": [
     "/10-examples-of-how-to-get-docker-container-ip-address/",
     "/5-useful-mac-apps-snagit-evernote-screenflow-reeder-and-daisydisk/",
@@ -25,7 +25,6 @@
     "/building-a-windows-image-for-openstack/",
     "/building-network-tools-using-docker/",
     "/cacti-network-management-installation-tutorial/",
-    "/chatgpt-project-docs/",
     "/cisco-acquisition-of-cariden/",
     "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/",
     "/cisco-onepk-about-time/",
@@ -218,7 +217,6 @@
     "/building-a-windows-image-for-openstack/",
     "/building-network-tools-using-docker/",
     "/cacti-network-management-installation-tutorial/",
-    "/chatgpt-project-docs/",
     "/cisco-acquisition-of-cariden/",
     "/cisco-networkers-live-clus-or-whatever-we-call-it-now-sdn-predictions/",
     "/cisco-onepk-about-time/",
@@ -391,12 +389,12 @@
     "/wireshark-install-on-mac-os-x/",
     "/xrdp-an-easy-remote-desktop-setup-for-your-ubuntu-servers/"
   ],
-  "search_index_records": 191,
-  "rss_feed_count": 113,
-  "rss_item_count": 1179,
+  "search_index_records": 190,
+  "rss_feed_count": 111,
+  "rss_item_count": 1169,
   "sitemap_count": 1,
-  "file_count": 1281,
-  "output_bytes": 307640676,
+  "file_count": 1268,
+  "output_bytes": 306658551,
   "largest_files": [
     {
       "path": "wp-content/uploads/2013/04/OpenDaylight-QA.mp3",

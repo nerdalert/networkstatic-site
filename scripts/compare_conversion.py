@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 from convert import MediaRefs, mask_code, read_table, remove_empty_anchor_links, rewrite_internal_urls, shortcode_media_refs, shortcode_convert
+from publication_policy import is_excluded, read_exclusions
 
 ROOT = Path(__file__).resolve().parents[1]
 UPLOAD_MARKER = "/wp-content/uploads/"
@@ -449,6 +450,7 @@ def main() -> int:
     eligibility_path = ROOT / "reports/publication-eligibility.csv"
     if eligibility_path.is_file():
         fidelity_by_id = {str(row.get("wp_id", "")): row for row in rows}
+        excluded_ids, excluded_routes = read_exclusions(ROOT)
         live_verified = {str(row.get("wp_id", "")): row for row in
                          (csv.DictReader((ROOT / "reports/live-source-eligibility.csv").open(encoding="utf-8", newline=""))
                           if (ROOT / "reports/live-source-eligibility.csv").is_file() else [])}
@@ -460,6 +462,18 @@ def main() -> int:
             fidelity = fidelity_by_id.get(str(row.get("wp_id", "")))
             if not fidelity:
                 live = live_verified.get(str(row.get("wp_id", "")))
+                if is_excluded(row.get("wp_id", ""), row.get("permalink", ""), excluded_ids, excluded_routes):
+                    row["publish_eligible"] = "no"
+                    row["eligibility_reasons"] = "excluded by migration publication policy"
+                    if (live and live.get("source_status") == "publish" and live.get("password_protected") == "no"
+                            and live.get("anonymous_full_body") == "yes" and live.get("route_http_status") == "200"
+                            and not live.get("conversion_exceptions", "")):
+                        row.update({"fidelity_status": "pass-live-verified", "text_exact": "yes", "code_exact": "yes",
+                                    "links_exact": "yes", "media_exact": "yes" if live.get("media_files_verified") == "6" else "no"})
+                    else:
+                        row.update({"fidelity_status": "not-converted", "text_exact": "n/a", "code_exact": "n/a",
+                                    "links_exact": "n/a", "media_exact": "n/a"})
+                    continue
                 if (live and live.get("source_status") == "publish" and live.get("password_protected") == "no"
                         and live.get("anonymous_full_body") == "yes" and live.get("route_http_status") == "200"
                         and not live.get("conversion_exceptions", "")):

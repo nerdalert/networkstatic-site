@@ -12,6 +12,8 @@ import tomllib
 from collections import defaultdict
 from pathlib import Path, PurePosixPath
 
+from publication_policy import is_excluded, read_exclusions
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -78,6 +80,11 @@ def main() -> int:
         parser.error("production materialization is fixed to the repository content/ and static/ roots")
 
     ledger = read_csv(ROOT / "reports/publication-eligibility.csv")
+    excluded_ids, excluded_routes = read_exclusions(ROOT)
+    if any(row.get("publish_eligible") == "yes" and
+           is_excluded(row.get("wp_id", ""), row.get("permalink", ""), excluded_ids, excluded_routes)
+           for row in ledger):
+        raise SystemExit("publication eligibility marks an explicitly excluded page as eligible")
     eligible_rows = [row for row in ledger if row.get("publish_eligible") == "yes"]
     if not eligible_rows:
         raise SystemExit("refusing to materialize an empty publication allowlist")

@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from convert import ROOT as PROJECT_ROOT, sanitize_html, shortcode_convert, rewrite_internal_urls
 from parse_live_observations import ArticlePage
+from publication_policy import is_excluded, read_exclusions
 
 POST_ID = 7986
 POST_PATH = "/chatgpt-project-docs/"
@@ -29,6 +30,32 @@ def rows(path: Path) -> list[dict[str, str]]:
         return []
     with path.open(encoding="utf-8", newline="") as stream:
         return list(csv.DictReader(stream))
+
+
+def exclude_previous_output(output: Path) -> None:
+    content_path = (output / "content/posts/chatgpt-project-docs.md").resolve()
+    review_root = (ROOT / "migration-review").resolve()
+    if content_path.is_relative_to(review_root) and content_path.is_file():
+        content_path.unlink()
+    for row in rows(ROOT / "reports/live-recovered-media.csv"):
+        relative = row.get("local_review_path", "")
+        if not relative:
+            continue
+        path = (ROOT / relative).resolve()
+        if path.is_relative_to(review_root) and path.is_file():
+            path.unlink()
+    eligibility_path = ROOT / "reports/live-source-eligibility.csv"
+    eligibility_rows = rows(eligibility_path)
+    for row in eligibility_rows:
+        if str(row.get("wp_id", "")) == str(POST_ID):
+            row["publication_eligible"] = "no"
+            row["publication_reason"] = "excluded by migration publication policy"
+            row["review_content_path"] = ""
+    if eligibility_rows:
+        with eligibility_path.open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(eligibility_rows[0]), lineterminator="\n")
+            writer.writeheader()
+            writer.writerows(eligibility_rows)
 
 
 def digest(data: bytes) -> str:
@@ -98,6 +125,12 @@ def main() -> int:
         ap.error("--output-dir must be inside the ignored migration-review directory")
     if not crawl.is_relative_to((ROOT / "migration-review").resolve()):
         ap.error("--crawl-dir must be inside the ignored migration-review directory")
+
+    excluded_ids, excluded_routes = read_exclusions(ROOT)
+    if is_excluded(str(POST_ID), POST_PATH, excluded_ids, excluded_routes):
+        exclude_previous_output(output)
+        print("Live-only source excluded by publication policy; prior generated content and exclusive media removed")
+        return 0
 
     fetch_records = []
 

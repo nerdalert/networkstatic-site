@@ -189,4 +189,3 @@ wp_id,permalink,type,source_origin,source_status,password_protected,source_conte
 7902,/open-source-flow-monitoring-and-visualization/,post,backup SQL,publish,no,8b4f29c1b40af2bf0f444de7fab56601b4f078a2642ea939ddbede1841052f7f,content/posts/open-source-flow-monitoring-and-visualization.md,pass
 7949,/getting-started-with-the-rust-programming-language/,post,backup SQL,publish,no,4a9a1e3900b97f805361fd539152bfca6257d3298a66d36fb84f64bcb69d32a7,content/posts/getting-started-with-the-rust-programming-language.md,pass
 7963,/ai-and-networking/,post,backup SQL,publish,no,33828428d4b12304b4040086ca77537e279ddec2cb8d67ae376fbde4a44b20fa,content/posts/ai-and-networking.md,pass
-7986,/chatgpt-project-docs/,post,verified live-only REST API,publish,no,56a386c43b686f71e68f1ddafc96c9577614118fb18a45cc0f3f451ca01351d9,content/posts/chatgpt-project-docs.md,pass-live-verified

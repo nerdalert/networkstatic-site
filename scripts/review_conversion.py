@@ -19,6 +19,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 from convert import CONVERTER_VERSION, MediaRefs, ROOT, mask_code, read_table, remove_empty_anchor_links, rewrite_internal_urls, sanitize_html, shortcode_media_refs, shortcode_convert, source_slug, unresolved_shortcodes
+from publication_policy import is_excluded, read_exclusions
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -473,6 +474,7 @@ def main() -> int:
                             "review_content_path": (Path("migration-review/generated/content") / item["content_rel"]).as_posix()})
 
     live_eligibility = {row.get("wp_id", ""): row for row in read_rows(ROOT / "reports/live-source-eligibility.csv")}
+    excluded_ids, excluded_routes = read_exclusions(ROOT)
     for row in read_rows(ROOT / "reports/live-vs-backup.csv"):
         if row.get("classification") == "live-only":
             route = path_of(row.get("live_permalink", ""))
@@ -480,13 +482,16 @@ def main() -> int:
             verified = (live.get("source_status") == "publish" and live.get("password_protected") == "no"
                         and live.get("anonymous_full_body") == "yes" and live.get("route_http_status") == "200"
                         and not live.get("conversion_exceptions", ""))
+            excluded = is_excluded(live.get("wp_id", ""), route, excluded_ids, excluded_routes)
             publication_rows.append({"permalink": route, "wp_id": live.get("wp_id", ""), "type": "live-only",
                                      "title": row.get("live_title", ""), "source_status": live.get("source_status", "not-in-backup"),
                                      "source_password_protected": live.get("password_protected", "not-applicable"), "reconciliation_status": "verified-live-only",
                                      "body_verification_status": "full-body-verified" if verified else "unrecovered",
                                      "conversion_issue_count": len(list(filter(None, live.get("conversion_exceptions", "").split("|")))),
-                                     "link_exception_count": 0, "publish_eligible": "yes" if verified else "no",
-                                     "eligibility_reasons": "verified live-only source; conversion and public-status evidence recorded" if verified else "full article, code, links and media not recovered"})
+                                     "link_exception_count": 0, "publish_eligible": "no" if excluded else "yes" if verified else "no",
+                                     "eligibility_reasons": "excluded by migration publication policy" if excluded else
+                                         "verified live-only source; conversion and public-status evidence recorded" if verified else
+                                         "full article, code, links and media not recovered"})
 
     media_rows = []
     for relative, owners in sorted(asset_owners.items()):

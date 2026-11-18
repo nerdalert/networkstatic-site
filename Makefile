@@ -25,7 +25,7 @@ build-staging: check-hugo install-theme
 build-production-preview: check-hugo install-theme
 	rm -rf public-production-preview
 	$(HUGO) --environment production --baseURL https://networkstatic.net/ --destination public-production-preview --gc --minify
-	$(PYTHON) scripts/audit_site.py --site public-production-preview --mode production --base-url https://networkstatic.net/ --require-content
+	$(PYTHON) scripts/audit_site.py --site public-production-preview --mode production --base-url https://networkstatic.net/ --require-content --report reports/production-local-audit.json
 	$(PYTHON) scripts/security_audit.py --repo . --site public-production-preview --include-index --include-history
 
 validate:

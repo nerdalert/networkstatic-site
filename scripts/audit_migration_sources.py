@@ -66,6 +66,8 @@ def main() -> int:
     protected = [row for row in content if row.get("post_status") == "publish" and row.get("post_password", "") != ""]
     live_sources = {row.get("wp_id", ""): row for row in csv.DictReader(
         (ROOT / "reports/live-source-eligibility.csv").open(encoding="utf-8", newline=""))} if (ROOT / "reports/live-source-eligibility.csv").is_file() else {}
+    active_live_sources = {wp_id: row for wp_id, row in live_sources.items()
+                           if row.get("publication_eligible", "yes") == "yes"}
     live_media = list(csv.DictReader((ROOT / "reports/live-recovered-media.csv").open(encoding="utf-8", newline=""))) if (ROOT / "reports/live-recovered-media.csv").is_file() else []
     recovered_media = list(csv.DictReader((ROOT / "reports/missing-media-recovery.csv").open(encoding="utf-8", newline=""))) if (ROOT / "reports/missing-media-recovery.csv").is_file() else []
     metadata = defaultdict(dict)
@@ -143,7 +145,7 @@ def main() -> int:
                             "source_content_sha256": source_hash, "review_content_path": path.relative_to(ROOT).as_posix(),
                             "checks": checks})
 
-    expected = set(eligible) | set(live_sources)
+    expected = set(eligible) | set(active_live_sources)
     if seen != expected:
         errors.append(f"review source set mismatch: expected {len(expected)} eligible rows, found {len(seen)} review files")
     if seen & (set(byid) - expected):
@@ -158,6 +160,8 @@ def main() -> int:
         else:
             excluded_media.update(refs)
     for row in live_media:
+        if row.get("wp_id", "") not in active_live_sources:
+            continue
         eligible_media.add(row.get("source_path", ""))
         output_path = review / "static/wp-content/uploads" / row.get("source_path", "")
         if not output_path.is_file():
@@ -198,6 +202,7 @@ def main() -> int:
         "source_post_page_rows": len(content),
         "eligible_public_published_count": len(eligible),
         "verified_live_only_public_source_count": len(live_sources),
+        "excluded_live_only_source_count": len(live_sources) - len(active_live_sources),
         "migrated_review_count": len(records),
         "excluded_source_rows_proven_absent_from_review": sum(excluded_nonpublished.values()) + len(protected),
         "assertion_no_nonpublic_or_protected_source_migrated": not bool(seen & (set(byid) - set(eligible))),

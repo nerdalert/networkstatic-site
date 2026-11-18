@@ -1,6 +1,6 @@
 # Conversion status
 
-Eligible public sources: 190; local review pages converted: 190; publication-eligible: 191.
+Eligible public sources: 190; local review pages converted: 190; publication-eligible: 190.
 Excluded nonpublished post/page rows: 55; excluded password-protected published rows: 0.
 Referenced media copied/planned: 579 files / 295,079,461 bytes.
 Mode: local review output at `migration-review/generated`.

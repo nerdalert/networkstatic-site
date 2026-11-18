@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import shutil
+import tomllib
 from pathlib import Path
 
 
@@ -26,6 +27,17 @@ def main() -> int:
 
     shutil.rmtree(destination, ignore_errors=True)
     shutil.copytree(project_content, destination)
+    for path in destination.rglob("*.md"):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if not text.startswith("+++\n") or "\n+++\n" not in text[4:]:
+            continue
+        end = text.find("\n+++\n", 4)
+        try:
+            frontmatter = tomllib.loads(text[4:end])
+        except tomllib.TOMLDecodeError:
+            continue
+        if frontmatter.get("migration_generated") is True:
+            path.unlink()
     shutil.copytree(review_content, destination, dirs_exist_ok=True)
     print(f"Prepared review content from project pages and {review_content}")
     return 0

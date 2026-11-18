@@ -161,6 +161,12 @@ def main() -> int:
         if raw_shortcode.search(outside_code) or "{{< relurl" in outside_code:
             failures.append(f"unconverted shortcode syntax found: {page.relative_to(site)}")
         for raw, _kind in parser.refs:
+            if args.mode == "production":
+                target_url = urlparse(raw)
+                if target_url.path.startswith("/networkstatic-site/") or (
+                        target_url.netloc.lower() == "networkstatic.net"
+                        and target_url.path.startswith("/networkstatic-site/")):
+                    failures.append(f"production link retains the obsolete project subpath: {page.relative_to(site)}")
             try:
                 target = output_target(site, page, raw, base)
             except ValueError as exc:
@@ -173,7 +179,7 @@ def main() -> int:
         failures.append("no migrated article pages are present; refusing empty/placeholder staging")
     approved_routes: set[str] = set()
     approved_ids: set[str] = set()
-    if args.mode == "staging":
+    if args.mode in ("staging", "production"):
         repo = Path(__file__).resolve().parents[1]
         ledger_path = repo / "reports/publication-eligibility.csv"
         source_audit_path = repo / "reports/migration-source-audit.json"
@@ -193,7 +199,7 @@ def main() -> int:
             source_audit = json.loads(source_audit_path.read_text(encoding="utf-8"))
             source_by_id = {str(row.get("wp_id")): row for row in source_audit.get("migrated_sources", [])}
             if not source_audit.get("audit_passed"):
-                failures.append("published-source audit did not pass for the staging source set")
+                failures.append("published-source audit did not pass for the production/staging source set")
         except (OSError, csv.Error, json.JSONDecodeError):
             failures.append("publication eligibility/source-provenance ledgers are missing or invalid")
             source_by_id = {}
@@ -232,7 +238,7 @@ def main() -> int:
             failures.append("rendered article routes do not match the publication-eligible route allowlist")
 
         # The search index is an exact content allowlist, so review-only and
-        # excluded posts cannot appear in project subpath search results.
+        # excluded posts cannot appear in deployed search results.
         try:
             search_index = json.loads((site / "search-index.json").read_text(encoding="utf-8"))
             search_count = len(search_index)
@@ -242,18 +248,18 @@ def main() -> int:
             search_routes: set[str] = set()
             for record in search_index:
                 if not isinstance(record, dict) or not record.get("url"):
-                    failures.append("staging search index contains an invalid record")
+                    failures.append("deployed search index contains an invalid record")
                     continue
                 target = urlparse(urljoin(base, record["url"]))
                 if target.netloc.lower() != base_parts.netloc.lower() or not target.path.startswith(base_path):
-                    failures.append("staging search index includes a URL outside the Pages base path")
+                    failures.append("deployed search index includes a URL outside the Pages base path")
                     continue
                 relative = unquote(target.path[len(base_path):])
                 search_routes.add("/" if not relative.strip("/") else "/" + relative.strip("/") + "/")
             if search_routes != approved_routes or len(search_index) != len(search_routes):
-                failures.append("staging search index does not exactly match publication-eligible routes")
+                failures.append("deployed search index does not exactly match publication-eligible routes")
         except (OSError, json.JSONDecodeError, TypeError):
-            failures.append("staging search index is missing or invalid")
+            failures.append("deployed search index is missing or invalid")
 
         # Validate feed and sitemap URLs as well as their membership. Article
         # records must stay within the same publication allowlist.
@@ -274,15 +280,15 @@ def main() -> int:
                     feed_item_count += 1
                     target = urlparse(urljoin(base, item.findtext("link", "")))
                     if target.netloc.lower() != base_parts.netloc.lower() or not target.path.startswith(base_path):
-                        failures.append("staging RSS item points outside the Pages base path")
+                        failures.append("deployed RSS item points outside the Pages base path")
                         continue
                     relative = unquote(target.path[len(base_path):])
                     route = "/" if not relative.strip("/") else "/" + relative.strip("/") + "/"
                     local = site / (relative.strip("/") + "/index.html" if relative.strip("/") else "index.html")
                     if not local.is_file():
-                        failures.append("staging RSS item points to a missing local page")
+                        failures.append("deployed RSS item points to a missing local page")
                     if route in article_routes and route not in approved_routes:
-                        failures.append("staging RSS contains an article outside the publication allowlist")
+                        failures.append("deployed RSS contains an article outside the publication allowlist")
             elif document.tag.lower().endswith("urlset"):
                 sitemap_count += 1
                 namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -290,18 +296,18 @@ def main() -> int:
                 for item in document.findall("s:url", namespace):
                     target = urlparse(urljoin(base, item.findtext("s:loc", "", namespace)))
                     if target.netloc.lower() != base_parts.netloc.lower() or not target.path.startswith(base_path):
-                        failures.append("staging sitemap includes a URL outside the Pages base path")
+                        failures.append("deployed sitemap includes a URL outside the Pages base path")
                         continue
                     relative = unquote(target.path[len(base_path):])
                     route = "/" if not relative.strip("/") else "/" + relative.strip("/") + "/"
                     sitemap_routes.add(route)
                     local = site / (relative.strip("/") + "/index.html" if relative.strip("/") else "index.html")
                     if not local.is_file():
-                        failures.append("staging sitemap points to a missing local page")
+                        failures.append("deployed sitemap points to a missing local page")
                 if not approved_routes.issubset(sitemap_routes):
-                    failures.append("staging sitemap omits publication-eligible article routes")
+                    failures.append("deployed sitemap omits publication-eligible article routes")
         if sitemap_count == 0:
-            failures.append("staging sitemap output is missing or invalid")
+            failures.append("deployed sitemap output is missing or invalid")
     if args.mode == "review":
         audit_path = Path(__file__).resolve().parents[1] / "reports/migration-source-audit.json"
         try:

@@ -4,7 +4,8 @@
   "source_post_page_rows": 245,
   "eligible_public_published_count": 190,
   "verified_live_only_public_source_count": 1,
-  "migrated_review_count": 191,
+  "excluded_live_only_source_count": 1,
+  "migrated_review_count": 190,
   "excluded_source_rows_proven_absent_from_review": 55,
   "assertion_no_nonpublic_or_protected_source_migrated": true,
   "excluded_nonpublished_counts_by_type_status": {
@@ -15,8 +16,8 @@
   },
   "excluded_password_protected_published_count": 0,
   "excluded_counts_include_titles_or_content": false,
-  "copied_review_media_count": 585,
-  "media_used_by_eligible_sources_count": 587,
+  "copied_review_media_count": 579,
+  "media_used_by_eligible_sources_count": 581,
   "draft_only_media_copied_count": 0,
   "assertion_draft_only_media_not_copied": true,
   "tracked_review_output_files": 0,
@@ -403,25 +404,6 @@
         "source_password_empty": true,
         "source_hash_matches": true,
         "hugo_draft_flag_set": true
-      }
-    },
-    {
-      "wp_id": 7986,
-      "post_type": "post",
-      "source_origin": "verified live-only REST API",
-      "post_status": "publish",
-      "password_protected": false,
-      "source_content_sha256": "56a386c43b686f71e68f1ddafc96c9577614118fb18a45cc0f3f451ca01351d9",
-      "review_content_path": "migration-review/generated/content/posts/chatgpt-project-docs.md",
-      "checks": {
-        "content_type_allowed": true,
-        "source_status_is_publish": true,
-        "source_password_empty": true,
-        "source_hash_matches": true,
-        "hugo_draft_flag_set": true,
-        "live_api_identity_matches": true,
-        "live_public_route_verified": true,
-        "live_password_protection_absent": true
       }
     },
     {
